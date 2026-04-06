@@ -527,6 +527,178 @@ const IndustryVideosContent = () => (
   </div>
 );
 
+const facultyData = [
+  {
+    name: "Dr. Ajay Sankhe",
+    qualification: "MBBS, MD (Pediatrics)",
+    designation: "Director & Sr. Consultant – Pediatrics & Neonatology",
+    image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg"
+  },
+  {
+    name: "Dr. Vijaykumar Gawali",
+    qualification: "Clinical Research & Education",
+    designation: "NABH Assessor – Clinical Trial Program",
+    image: "/images/Clinical Research Course/faculty/Dr._Vijay.png"
+  },
+  {
+    name: "Dr. Komal Dalal",
+    qualification: "MBBS, DGO, PGDPC",
+    designation: "Clinical Research Advisor",
+    image: "/images/Clinical Research Course/faculty/Dr. Komal Dalal.png"
+  },
+  {
+    name: "Dr. Nanasaheb Memane",
+    qualification: "BAMS, MS (Ayurveda)",
+    designation: "HOD – Ayurveda",
+    image: "/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane.png"
+  },
+  {
+    name: "Dr. Sivaprasad Gourabathini",
+    qualification: "MBBS, MS, MCh (Urology)",
+    designation: "Consultant Urologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Siva Prasad Gourabathini.png"
+  },
+  {
+    name: "Dr. Girish Rathod",
+    qualification: "MBBS, MS (Orthopaedics)",
+    designation: "HOD – Orthopaedics",
+    image: "/images/Clinical Research Course/faculty/Dr. Girish Rathod.png"
+  },
+  {
+    name: "Dr. Nirmal Raut",
+    qualification: "MD, ECMO, PDCR",
+    designation: "Consultant Medical Oncology",
+    image: "/images/Clinical Research Course/faculty/Dr. Nirmal Raut.png"
+  },
+  {
+    name: "Dr. Ajay Godse",
+    qualification: "MD, FAASM",
+    designation: "Consultant Pulmonologist & Sleep Specialist",
+    image: "/images/Clinical Research Course/faculty/Dr. Ajay Godse.png"
+  },
+  {
+    name: "Dr. Ameya Joshi",
+    qualification: "MBBS, MD, DNB (Endocrinology)",
+    designation: "Consultant Endocrinologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Ameya Joshi.png"
+  },
+  {
+    name: "Dr. Shubham Jain",
+    qualification: "DM, MD, MBBS",
+    designation: "Consultant Gastroenterologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Shubham Jain.png"
+  },
+  {
+    name: "Dr. Jyotsna Zope",
+    qualification: "MD, DNB (Nephrology)",
+    designation: "Consultant Nephrologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Jyotsna D Zope.png"
+  },
+  {
+    name: "Dr. Kirti Mutreja",
+    qualification: "BHMS, MD (Hom)",
+    designation: "Integrated Medicine Consultant",
+    image: "/images/Clinical Research Course/faculty/Dr. Kirti Mutreja.png"
+  },
+  {
+    name: "Dr. Sandeep Patil",
+    qualification: "MD, DNB, DM (Cardiology)",
+    designation: "HOD – Cardiology",
+    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png"
+  },
+  {
+    name: "Dr. Sandeep Garg",
+    qualification: "MD, DNB",
+    designation: "Paediatric Cardiologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png"
+  },
+  {
+    name: "Dr. Yogesh Patidar",
+    qualification: "MD, DM (Neurology)",
+    designation: "Consultant Neurologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png"
+  },
+  {
+    name: "Dr. Kamalapriya Thiyagarajan",
+    qualification: "MD, DGO",
+    designation: "Consultant – Obstetrics & Gynaecology",
+    image: "/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png"
+  },
+  {
+    name: "Dr. Saurabh Sadekar",
+    qualification: "MD, DNB (Neurology)",
+    designation: "Consultant Neurologist",
+    image: "/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png"
+  },
+  {
+    name: "Dr. Dhaval Dalal",
+    qualification: "MBBS, MD",
+    designation: "HOD – Integrated Medicine",
+    image: "/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png"
+  },
+  {
+    name: "Dr. Tejasvee Kadam",
+    qualification: "BDS",
+    designation: "Lead – Clinical Research",
+    image: "/images/Clinical Research Course/faculty/Dr._Tejasvee_Kadam-removebg-preview.png",
+    contact: "+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com"
+  }
+];
+
+const FacultyContent = () => (
+  <div className="w-full py-20 text-[#565656]">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-28 gap-x-32 w-full max-w-[1536px] mx-auto px-6 md:px-16">
+      {facultyData.map((faculty, index) => (
+        <div key={index} className="relative group w-full max-w-[680px] h-[340px] mx-auto xl:mx-0">
+          {/* Card Background Shadow Box */}
+          <div className="absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500" />
+          
+          {/* Main Card */}
+          <div className="flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible">
+            
+            {/* Faculty Image - Popping Out */}
+            <div className="w-full sm:w-[260px] h-[400px] sm:absolute sm:-left-20 sm:bottom-0 sm:top-[-60px] flex-shrink-0 flex items-end justify-center pointer-events-none">
+              <img 
+                src={faculty.image} 
+                alt={faculty.name} 
+                className="h-full w-auto object-contain drop-shadow-[20px_0_25px_rgba(0,0,0,0.15)] group-hover:scale-[1.05] transition-transform duration-700 origin-bottom"
+              />
+            </div>
+            
+            {/* Details Section - Perfectly Centered & Offset */}
+            <div className="flex-1 p-8 sm:pl-[280px] text-left flex flex-col justify-center">
+              <div className="mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
+                  {faculty.name}
+                </h3>
+                <p className="text-[#1A5276] font-bold text-[13px] uppercase tracking-wider mb-2 leading-snug">
+                  {faculty.designation}
+                </p>
+              </div>
+              
+              <div className="space-y-4 border-t border-orange-200/50 pt-5 mt-2">
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[#f58634] font-bold text-[10px] uppercase tracking-widest">Academic Qualification</span>
+                  <span className="text-gray-700 text-[13px] font-medium leading-relaxed line-clamp-2">{faculty.qualification}</span>
+                </div>
+                
+                {faculty.contact && (
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-[#f58634] font-bold text-[10px] uppercase tracking-widest">Connect Directly</span>
+                    <p className="text-gray-600 text-[12px] break-words leading-relaxed font-medium line-clamp-1">
+                      {faculty.contact}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const customTabs = tabs.map(t => {
   if (t.id === "overview") return { ...t, content: <OverviewContent /> };
   if (t.id === "gallery") return { ...t, label: "Recent Placements", content: <RecentPlacementsContent /> };
@@ -534,6 +706,7 @@ const customTabs = tabs.map(t => {
   if (t.id === "what-we-offer") return { ...t, label: "Admission Process", content: <AdmissionProcessContent /> };
   if (t.id === "education-career") return { ...t, label: "Career Opportunities", content: <CareerOpportunitiesContent /> };
   if (t.id === "joining-instructions") return { ...t, label: "Industry Videos", content: <IndustryVideosContent /> };
+  if (t.id === "faqs") return { ...t, label: "Faculty", content: <FacultyContent /> };
   return t;
 });
 
@@ -547,7 +720,7 @@ export default function PGCRPage() {
           Clinical Research Course
         </h1>
         <a
-          href="/Brochure/Brochure.pdf"
+          href="/Brochure/PGCR Complete Brochure.pdf"
           download
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >

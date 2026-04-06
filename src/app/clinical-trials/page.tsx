@@ -278,7 +278,8 @@ export default function ClinicalTrialsPage() {
           Clinical Trials
         </h1>
         <a
-          href="#"
+          href="/Brochure/PGCR Complete Brochure.pdf"
+          download
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >
           Download Brochure

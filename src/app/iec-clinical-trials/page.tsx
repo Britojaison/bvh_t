@@ -1,19 +1,14 @@
-import ShareButton from "@/components/ShareButton";
-import HeroImage from "@/components/HeroImage";
-import TabNavigation from "@/components/TabNavigation";
-import { iecClinicalTrialsTabs } from "@/data/iec-clinical-trials";
-
 export default function IECClinicalTrialsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <ShareButton />
 
       <header className="text-center pt-8 pb-2">
-        <h1 className="text-2xl md:text-4xl font-bold text-primary-blue mb-3">
+        <h1 className="text-2xl md:text-4xl font-bold text-[#2664a8] mb-3">
           Institutional Ethics Committee<br />for Clinical Trials
         </h1>
         <a
-          href="#"
+          href="/Brochure/PGCR Complete Brochure.pdf"
+          download
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >
           Download Brochure
@@ -26,12 +21,47 @@ export default function IECClinicalTrialsPage() {
         </a>
       </header>
 
-      <HeroImage
-        src="/images/iec-clinical-trials-hero.jpg"
-        alt="Institutional Ethics Committee for Clinical Trials"
-      />
+      <div className="w-full relative h-[400px] overflow-hidden mt-6">
+        <img 
+          src="/images/banner.jpeg" 
+          alt="Institutional Banner" 
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-      <TabNavigation tabs={iecClinicalTrialsTabs} />
+      {/* Action Links Styled precisely as Navigation Tabs */}
+      <div className="flex flex-wrap justify-center md:justify-start gap-12 mt-8 mb-12 px-4 shadow-none">
+        <a
+          href="/documents/Approved IEC Member List.pdf"
+          download="Approved IEC Member List.pdf"
+          className="pb-2 text-xl md:text-2xl font-bold border-b-3 border-transparent transition-all whitespace-nowrap cursor-pointer text-[#f58634]/60 hover:text-[#f58634] hover:border-[#f58634]"
+          style={{ 
+            fontFamily: 'var(--font-libre-baskerville), Georgia, serif',
+          }}
+        >
+          Members List
+        </a>
+        <a
+          href="/documents/Bhaktivedanta HEC SOP.pdf"
+          download="Bhaktivedanta HEC SOP.pdf"
+          className="pb-2 text-xl md:text-2xl font-bold border-b-3 border-transparent transition-all whitespace-nowrap cursor-pointer text-[#f58634]/60 hover:text-[#f58634] hover:border-[#f58634]"
+          style={{ 
+            fontFamily: 'var(--font-libre-baskerville), Georgia, serif',
+          }}
+        >
+          EC SOP
+        </a>
+        <a
+          href="/documents/EC_Registration Certificate.pdf"
+          download="EC_Registration Certificate.pdf"
+          className="pb-2 text-xl md:text-2xl font-bold border-b-3 border-transparent transition-all whitespace-nowrap cursor-pointer text-[#f58634]/60 hover:text-[#f58634] hover:border-[#f58634]"
+          style={{ 
+            fontFamily: 'var(--font-libre-baskerville), Georgia, serif',
+          }}
+        >
+          EC Registration Certificate
+        </a>
+      </div>
     </main>
   );
 }
