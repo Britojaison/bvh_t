@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import ShareButton from "@/components/ShareButton";
 import { accreditations, introText, youtubeLink } from "@/data/accreditation";
 
 export default function GovernmentAccreditationPage() {
@@ -10,15 +9,29 @@ export default function GovernmentAccreditationPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <ShareButton />
 
       <header className="text-center pt-8 pb-4">
         <h1 className="text-2xl md:text-4xl font-bold text-primary-blue mb-4">
           Government Accreditation
         </h1>
-        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+        <p className="max-w-4xl mx-auto text-gray-600 text-sm md:text-base leading-relaxed px-4">
           {introText}
         </p>
+        <div className="mt-4">
+          <a
+            href="/Brochure/PGCR Complete Brochure.pdf"
+            download
+            className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
+          >
+            Download Brochure
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="12" y1="18" x2="12" y2="12" />
+              <polyline points="9 15 12 18 15 15" />
+            </svg>
+          </a>
+        </div>
       </header>
 
       {/* Accreditation logos as tabs */}
@@ -75,19 +88,32 @@ export default function GovernmentAccreditationPage() {
           </div>
         </div>
 
-        {/* YouTube link */}
-        <div className="text-center mt-8 pb-12">
-          <a
-            href={youtubeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors font-semibold"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-            Watch Government Accreditations Video
-          </a>
+        {/* YouTube Video Preview */}
+        <div className="mt-12 mb-8">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="relative pb-[56.25%] h-0 rounded-2xl overflow-hidden shadow-lg border-2 border-transparent hover:border-[#f58634] transition-all">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/GGelO2dkDDQ"
+                title="Government Accreditations Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="text-center mt-6 pb-12">
+              <a
+                href={youtubeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors font-semibold"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                Watch on YouTube
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
