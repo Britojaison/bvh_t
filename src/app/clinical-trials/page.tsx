@@ -1,9 +1,25 @@
 
 import HeroImage from "@/components/HeroImage";
 import TabNavigation from "@/components/TabNavigation";
+import InfraCarousel from "@/components/InfraCarousel";
 import { clinicalTrialsTabs } from "@/data/clinical-trials";
 import { pharmaTrials } from "@/data/pharma-trials";
 import { hospitalTrials } from "@/data/hospital-trials";
+
+const infraSlides = [
+  { src: "/images/Advanced Cardiac Care Unit (1).jpg", label: "Advanced Cardiac Care Unit" },
+  { src: "/images/Advanced Intensive Care Unit.jpg", label: "Advanced Intensive Care Unit" },
+  { src: "/images/Advanced Neonatal Intensive Care Unit.jpg", label: "Advanced Neonatal Intensive Care Unit" },
+  { src: "/images/Advanced Radiation Therapy Unit.jpg", label: "Advanced Radiation Therapy Unit" },
+  { src: "/images/Advanced Robotic Surgery Suite.jpg", label: "Advanced Robotic Surgery Suite" },
+  { src: "/images/Comprehensive Dialysis Unit.jpg", label: "Comprehensive Dialysis Unit" },
+  { src: "/images/High Dependency Care Unit.jpg", label: "High Dependency Care Unit" },
+  { src: "/images/High-Precision CT Scan Facility.jpg", label: "High-Precision CT Scan Facility" },
+  { src: "/images/High-Resolution MRI Imaging.jpg", label: "High-Resolution MRI Imaging" },
+  { src: "/images/Modular Operation Theatres.jpg", label: "Modular Operation Theatres" },
+  { src: "/images/State-of the-art-Cathlabs.jpg", label: "State-of-the-Art Cathlabs" },
+  { src: "/images/State-of-the-Art Cathlabs.jpg", label: "Surgical Intensive Care Unit" },
+];
 
 const FeasibilityContent = () => (
   <div className="w-full py-8 text-[#565656] space-y-12">
@@ -98,6 +114,12 @@ const FeasibilityContent = () => (
         </li>
 
       </ul>
+    </div>
+
+    {/* Infrastructure Carousel */}
+    <div>
+      <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Hospital Infrastructure</h3>
+      <InfraCarousel slides={infraSlides} />
     </div>
 
     {/* Activities Timeline */}
