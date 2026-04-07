@@ -1,4 +1,4 @@
-import type { TabContent } from "@/data/pgcr";
+  import type { TabContent } from "@/data/pgcr";
 
 export const clinicalTrialsTabs: TabContent[] = [
   {
@@ -21,20 +21,19 @@ export const clinicalTrialsTabs: TabContent[] = [
   },
   {
     id: "our-team",
-    label: "Trial Site Features Video",
+    label: "Trial Site Features",
     content:
       "Our clinical trials team comprises experienced Principal Investigators across multiple specialties, trained Sub-Investigators, certified Clinical Research Coordinators (CRCs), a dedicated Pharmacovigilance team, Quality Assurance personnel, and regulatory affairs specialists. All team members undergo regular GCP training and are well-versed in ICH-GCP guidelines, CDSCO regulations, and global regulatory requirements. Our team has collectively managed over 100 clinical trials across various phases and therapeutic areas.",
-  },
-  {
-    id: "achievements",
-    label: "Trial Site Features Video",
-    content:
-      "Bhaktivedanta Hospital has successfully completed numerous clinical trials with zero critical audit findings. We have been recognized for exceptional patient recruitment rates, high data quality, and strong regulatory compliance. Our site has received commendations from multiple sponsors and CROs for timely enrollment, low protocol deviation rates, and excellent patient retention. We are empaneled with several leading pharmaceutical companies and CROs as a preferred trial site.",
   },
   {
     id: "contact",
     label: "Clinical Trial SOPs",
     content:
       "For clinical trial inquiries, feasibility assessments, or partnership opportunities, please reach out to our Clinical Research Department. We welcome proposals from pharmaceutical companies, biotech firms, CROs, and academic researchers. Our team is available to discuss site capabilities, therapeutic expertise, patient demographics, and regulatory readiness. Contact us to schedule a site visit or initiate a feasibility discussion for your upcoming clinical trial.",
+  },
+  {
+    id: "patient-testimonials",
+    label: "Patient Testimonials",
+    content: "Patient testimonials from clinical trials at Bhaktivedanta Hospital.",
   },
 ];

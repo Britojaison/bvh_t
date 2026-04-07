@@ -283,10 +283,88 @@ const HospitalInitiatedTrialsContent = () => (
   </div>
 );
 
+const ClinicalTrialSOPsContent = () => (
+  <div className="max-w-4xl mx-auto px-4 py-8">
+    <p className="text-[#565656] text-base leading-7 mb-8">
+      For clinical trial inquiries, feasibility assessments, or partnership opportunities, please reach out to our Clinical Research Department. We welcome proposals from pharmaceutical companies, biotech firms, CROs, and academic researchers. Our team is available to discuss site capabilities, therapeutic expertise, patient demographics, and regulatory readiness. Contact us to schedule a site visit or initiate a feasibility discussion for your upcoming clinical trial.
+    </p>
+    <a
+      href="/documents/Final MRD SOP Version 06 dated 14th July, 2025.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-[#f58634] hover:text-[#f58634]/80 transition-colors text-lg font-semibold"
+      style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}
+    >
+      Final MRD SOP Version 06 dated 14th July, 2025
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+      </svg>
+    </a>
+  </div>
+);
+
+const TrialSiteFeaturesContent = () => {
+  const videoIds = [
+    "isR8yiYG1XA",
+    "vSuvcDar4bc",
+    "yQ1-j5d3i3U",
+    "JVsh6pAJIQY",
+  ];
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {videoIds.map((videoId, index) => (
+          <div key={index} className="aspect-video rounded-xl overflow-hidden shadow-md">
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?modestbranding=1&rel=0`}
+              title={`Trial Site Feature ${index + 1}`}
+              allowFullScreen
+            ></iframe>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const PatientTestimonialsContent = () => {
+  const videoIds = [
+    "D1JGHkqiwK4",
+    "0JNy8kGcNxM",
+    "2113UcYTnN8",
+  ];
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <h4 className="text-2xl font-bold mb-6 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">
+        Patient Testimonials
+      </h4>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {videoIds.map((videoId, index) => (
+          <div key={index} className="aspect-video rounded-xl overflow-hidden shadow-md">
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?modestbranding=1&rel=0`}
+              title="Patient Testimonial"
+              allowFullScreen
+            ></iframe>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const customTabs = clinicalTrialsTabs.map(t => {
   if (t.id === "feasibility") return { ...t, content: <FeasibilityContent /> };
   if (t.id === "therapeutic-areas") return { ...t, content: <PharmaSponsoredTrialsContent /> };
   if (t.id === "infrastructure") return { ...t, content: <HospitalInitiatedTrialsContent /> };
+  if (t.id === "contact") return { ...t, content: <ClinicalTrialSOPsContent /> };
+  if (t.id === "our-team") return { ...t, content: <TrialSiteFeaturesContent /> };
+  if (t.id === "patient-testimonials") return { ...t, content: <PatientTestimonialsContent /> };
   return t;
 });
 
@@ -300,8 +378,9 @@ export default function ClinicalTrialsPage() {
           Clinical Trials
         </h1>
         <a
-          href="/Brochure/PGCR Complete Brochure.pdf"
-          download
+          href="/documents/PGCR Complete Brochure.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >
           Download Brochure

@@ -32,12 +32,13 @@ export default function PublicationsPage() {
 
       <header className="text-center pt-8 pb-6">
         <h1 className="text-2xl md:text-4xl font-bold text-primary-blue mb-3">
-          Original Article Publication in year {selectedYear}
+          Publications
         </h1>
         <div className="mt-2">
           <a
-            href="/Brochure/PGCR Complete Brochure.pdf"
-            download
+            href="/documents/PGCR Complete Brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
           >
             Download Brochure

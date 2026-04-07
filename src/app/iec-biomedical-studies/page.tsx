@@ -9,8 +9,9 @@ export default function IECBiomedicalStudiesPage() {
           Institutional Ethics Committee<br />for Biomedical Studies
         </h1>
         <a
-          href="/Brochure/PGCR Complete Brochure.pdf"
-          download
+          href="/documents/PGCR Complete Brochure.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >
           Download Brochure
@@ -35,7 +36,8 @@ export default function IECBiomedicalStudiesPage() {
       <div className="flex flex-wrap justify-center md:justify-start gap-12 mt-8 mb-12 px-4 shadow-none">
         <a
           href="/documents/Approved IEC Member List.pdf"
-          download="Approved IEC Member List.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="pb-2 text-xl md:text-2xl font-bold border-b-3 border-transparent transition-all whitespace-nowrap cursor-pointer text-[#f58634]/60 hover:text-[#f58634] hover:border-[#f58634]"
           style={{ 
             fontFamily: 'var(--font-libre-baskerville), Georgia, serif'
@@ -45,7 +47,8 @@ export default function IECBiomedicalStudiesPage() {
         </a>
         <a
           href="/documents/Bhaktivedanta HEC SOP.pdf"
-          download="Bhaktivedanta HEC SOP.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="pb-2 text-xl md:text-2xl font-bold border-b-3 border-transparent transition-all whitespace-nowrap cursor-pointer text-[#f58634]/60 hover:text-[#f58634] hover:border-[#f58634]"
           style={{ 
             fontFamily: 'var(--font-libre-baskerville), Georgia, serif'

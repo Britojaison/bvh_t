@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#D4F0FF]/50 text-[#565656] mt-16">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
           {/* Column 1 — Logo & Address */}
           <div>
@@ -19,7 +19,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2 — Statutory Compliances */}
+          {/* Column 2 — Statutory Compliances (commented out)
           <div>
             <h4 className="text-[#2664A8] text-lg font-bold mb-5 border-b border-[#2664A8]/30 pb-2">
               Statutory Compliances
@@ -66,8 +66,9 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          */}
 
-          {/* Column 3 — Quick Links */}
+          {/* Column 2 — Quick Links */}
           <div>
             <h4 className="text-[#2664A8] text-lg font-bold mb-5 border-b border-[#2664A8]/30 pb-2">
               Quick Links

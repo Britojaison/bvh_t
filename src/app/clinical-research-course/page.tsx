@@ -523,6 +523,60 @@ const IndustryVideosContent = () => (
           <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/-7sx8DJzxug" title="Industry Video 3" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/BsdVNO50Owk" title="Dr. Sankhe Convocation Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/pU2SCYqnojw" title="Dr. Raut Video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/NQFhprSgCiw" title="Ms. Shirley Nalla" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/6YLx6E_ATR4" title="Mr. Sooraj Santosh" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Nz0ENjsZZgo" title="Ms. Manasvi Dodiya" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/RN5VX_mDfDc" title="Ms. Mayuri Thorat" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/AGbYEbck_TE" title="Mr. Sai Pevekar" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/r2PAe8QM7gE" title="Mrs. Jinal Panchal" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <div className="relative pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
+          <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Q1sqxbxn1bE" title="Ms. Aditi Tiwari" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </div>
     </div>
   </div>
 );
@@ -669,7 +723,7 @@ const FacultyContent = () => (
             <div className="flex-1 p-8 sm:pl-[280px] text-left flex flex-col justify-center">
               <div className="mb-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
-                  {faculty.name}
+                  {faculty.name.replace(/^(Dr\.\s*\S+)/, (match) => match.replace(/\s/g, '\u00A0'))}
                 </h3>
                 <p className="text-[#1A5276] font-bold text-[13px] uppercase tracking-wider mb-2 leading-snug">
                   {faculty.designation}
@@ -705,7 +759,7 @@ const customTabs = tabs.map(t => {
   if (t.id === "courses") return { ...t, label: "Student Testimonials", content: <CoursesContent /> };
   if (t.id === "what-we-offer") return { ...t, label: "Admission Process", content: <AdmissionProcessContent /> };
   if (t.id === "education-career") return { ...t, label: "Career Opportunities", content: <CareerOpportunitiesContent /> };
-  if (t.id === "joining-instructions") return { ...t, label: "Industry Videos", content: <IndustryVideosContent /> };
+  if (t.id === "joining-instructions") return { ...t, label: "Convocation & Industry Videos", content: <IndustryVideosContent /> };
   if (t.id === "faqs") return { ...t, label: "Faculty", content: <FacultyContent /> };
   return t;
 });
@@ -720,8 +774,9 @@ export default function PGCRPage() {
           Clinical Research Course
         </h1>
         <a
-          href="/Brochure/PGCR Complete Brochure.pdf"
-          download
+          href="/documents/PGCR Complete Brochure.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
         >
           Download Brochure
