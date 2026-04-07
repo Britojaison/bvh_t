@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { TabContent } from "@/data/pgcr";
 
 interface TabNavigationProps {
@@ -10,6 +10,19 @@ interface TabNavigationProps {
 
 export default function TabNavigation({ tabs, hideTopBorder }: TabNavigationProps) {
   const [activeTab, setActiveTab] = useState(0);
+
+  useEffect(() => {
+    const setTabFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        const index = tabs.findIndex((t) => t.id === hash);
+        if (index !== -1) setActiveTab(index);
+      }
+    };
+    setTabFromHash();
+    window.addEventListener("hashchange", setTabFromHash);
+    return () => window.removeEventListener("hashchange", setTabFromHash);
+  }, [tabs]);
 
   return (
     <div className="mt-6">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#D4F0FF]/50 text-[#565656] mt-16">
@@ -87,6 +89,16 @@ export default function Footer() {
               <li>
                 <a href="https://bhaktivedantahospital.com/pdf/sitemap.pdf" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
                   Site Map
+                </a>
+              </li>
+              <li>
+                <Link href="/clinical-research-course#what-we-offer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
+                  Application
+                </Link>
+              </li>
+              <li>
+                <a href="/documents/PGCR Complete Brochure.pdf" target="_blank" rel="noopener noreferrer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
+                  Brochure
                 </a>
               </li>
             </ul>

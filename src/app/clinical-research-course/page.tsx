@@ -281,8 +281,8 @@ const ApplicationFormContent = () => (
         
         <input type="date" name="dob" placeholder="dd/mm/yyyy" className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8] text-gray-700 w-full" />
         <div className="relative">
-          <select name="gender" required className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8] text-gray-700 w-full appearance-none">
-            <option value="" disabled selected>Gender *</option>
+          <select name="gender" required defaultValue="" className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8] text-gray-700 w-full appearance-none">
+            <option value="" disabled>Gender *</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
