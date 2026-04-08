@@ -21,6 +21,13 @@ const infraSlides = [
   { src: "/images/State-of-the-Art Cathlabs.jpg", label: "Surgical Intensive Care Unit" },
 ];
 
+const mrdInfraSlides = [
+  { src: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=2070&auto=format&fit=crop", label: "Advanced Research Lab" },
+  { src: "https://images.unsplash.com/photo-1532187863486-abf71ad1b28e?q=80&w=2070&auto=format&fit=crop", label: "Clinical Testing Facility" },
+  { src: "https://images.unsplash.com/photo-1579154234431-da7170627f6e?q=80&w=2070&auto=format&fit=crop", label: "Biomedical Research Unit" },
+  { src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2070&auto=format&fit=crop", label: "Sample Processing Area" },
+];
+
 const FeasibilityContent = () => (
   <div className="w-full py-8 text-[#565656] space-y-12">
     
@@ -74,6 +81,13 @@ const FeasibilityContent = () => (
 
     {/* Infrastructure & Facilities */}
     <div className="w-full">
+      <div className="mb-10 overflow-hidden rounded-2xl shadow-lg border border-gray-100 max-w-xl mx-auto">
+        <img 
+          src="/images/logo/Clinical Trial Department - Project Quotation.png" 
+          alt="Clinical Trial Department" 
+          className="w-full h-auto object-cover"
+        />
+      </div>
       <h3 className="text-2xl font-bold text-[#2664A8] mb-6" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Research Infrastructure & Facilities</h3>
       <ul className="flex flex-col space-y-6">
         
@@ -81,8 +95,15 @@ const FeasibilityContent = () => (
           <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Investigational Product (IP) Room</h4>
           <ul className="list-disc list-inside ml-8 text-base space-y-1.5 text-gray-700">
             <li>Biometric access control</li>
-            <li>Temperature-controlled storage: –80°C, –20°C, 2–8°C</li>
+            <li>Temperature-controlled storage: –80°C, –20°C, 2–8°C, 15-25°C</li>
           </ul>
+          <div className="mt-8 mb-6 overflow-hidden rounded-xl shadow-md border border-gray-100 max-w-sm">
+            <img 
+              src="/images/logo/Feasibility Images from Project Quotation.png" 
+              alt="IP Room Storage Facility" 
+              className="w-full h-auto"
+            />
+          </div>
         </li>
         
         <li>
@@ -96,6 +117,13 @@ const FeasibilityContent = () => (
         <li>
           <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Document Storage & Archival</h4>
           <p className="text-base text-gray-700 leading-relaxed ml-8">Secure archival of trial documents for a minimum of 5 years.</p>
+          <div className="mt-6 mb-4 overflow-hidden rounded-xl shadow-md border border-gray-100 max-w-xs ml-8">
+            <img 
+              src="/images/logo/Feasibility Images (1).png" 
+              alt="Secure Document Archival" 
+              className="w-full h-auto"
+            />
+          </div>
         </li>
 
         <li>
@@ -120,6 +148,13 @@ const FeasibilityContent = () => (
     <div>
       <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Hospital Infrastructure</h3>
       <InfraCarousel slides={infraSlides} />
+    </div>
+
+    {/* Medical Research Department Infrastructure */}
+    <div className="pt-8 border-t border-gray-100">
+      <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Hospital Infrastructure - Medical Research Department</h3>
+      <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto italic">Images will be shared soon. Currently showing research facility highlights.</p>
+      <InfraCarousel slides={mrdInfraSlides} />
     </div>
 
     {/* Activities Timeline */}
@@ -166,7 +201,7 @@ const FeasibilityContent = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
         <div className="flex flex-col">
           <div className="relative pb-[56.25%] h-0 mb-4 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
-            <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Smtn91vzbiI" title="Institute virtual tour and infrastructure" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/WWsHKxOVETU" title="Institute virtual tour and infrastructure" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <h4 className="text-lg font-bold text-gray-800 text-center px-2">Institute virtual tour and infrastructure</h4>
         </div>

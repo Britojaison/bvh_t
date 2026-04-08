@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/clinical-research-course#what-we-offer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
-                  Application
+                  Apply Now
                 </Link>
               </li>
               <li>
