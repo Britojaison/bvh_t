@@ -602,7 +602,7 @@ const facultyData = [
     qualification: "MBBS, MD (Pediatrics)",
     designation: "Director & Sr. Consultant – Pediatrics & Neonatology",
     image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg",
-    customScale: 1.15,
+    customScale: 1.0,
     translateY: 0
   },
   {
