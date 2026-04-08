@@ -21,12 +21,6 @@ const infraSlides = [
   { src: "/images/State-of-the-Art Cathlabs.jpg", label: "Surgical Intensive Care Unit" },
 ];
 
-const mrdInfraSlides = [
-  { src: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=2070&auto=format&fit=crop", label: "Advanced Research Lab" },
-  { src: "https://images.unsplash.com/photo-1532187863486-abf71ad1b28e?q=80&w=2070&auto=format&fit=crop", label: "Clinical Testing Facility" },
-  { src: "https://images.unsplash.com/photo-1579154234431-da7170627f6e?q=80&w=2070&auto=format&fit=crop", label: "Biomedical Research Unit" },
-  { src: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2070&auto=format&fit=crop", label: "Sample Processing Area" },
-];
 
 const FeasibilityContent = () => (
   <div className="w-full py-8 text-[#565656] space-y-12">
@@ -150,12 +144,6 @@ const FeasibilityContent = () => (
       <InfraCarousel slides={infraSlides} />
     </div>
 
-    {/* Medical Research Department Infrastructure */}
-    <div className="pt-8 border-t border-gray-100">
-      <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Hospital Infrastructure - Medical Research Department</h3>
-      <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto italic">Images will be shared soon. Currently showing research facility highlights.</p>
-      <InfraCarousel slides={mrdInfraSlides} />
-    </div>
 
     {/* Activities Timeline */}
     <div>
