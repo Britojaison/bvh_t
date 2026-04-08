@@ -92,7 +92,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/clinical-research-course#what-we-offer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
+                <Link href="https://research.bhaktivedantahospital.com/clinical-research-course#what-we-offer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
                   Apply Now
                 </Link>
               </li>
