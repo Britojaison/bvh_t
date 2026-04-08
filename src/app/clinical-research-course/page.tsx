@@ -77,23 +77,7 @@ const OverviewContent = () => (
 );
 
 const placementVideos = [
-  "fDobPkZWufU",
-  "77ayq8Dmx6E",
-  "Rx8Fq2-tTc4",
-  "kGB_ZXMR9hQ",
-  "rVtvLaS1tkg",
-  "CqjXkAS3ugg",
-  "DNLCsOynAIk",
-  "TzAVOpuDLx0",
-  "WlidXnO4ghs",
-  "IB5WQ-kBe3o",
-  "3weDoURJ4jo",
-  "R6pEWJSjMXE",
-  "uj5KeHVDpVs",
-  "6hKVa4wZ_8w",
-  "siNfluYvrTY",
-  "y7LTvu4YE5Q",
-  "sL6A87FkXoQ",
+  "-7sx8DJzxug",
   "-5nY6hU8SFk",
   "uZMEsqtLIYw",
   "uSLjtdjxeoI",
@@ -113,8 +97,27 @@ const placementVideos = [
   "mt8xDILxWb8",
   "E_7E0HYzSyo",
   "L37e8BXfHAo",
-  "IUpKEGOz-e0",
-  "-7sx8DJzxug"
+  "IUpKEGOz-e0"
+];
+
+const testimonialVideos = [
+  "fDobPkZWufU",
+  "77ayq8Dmx6E",
+  "Rx8Fq2-tTc4",
+  "kGB_ZXMR9hQ",
+  "rVtvLaS1tkg",
+  "CqjXkAS3ugg",
+  "DNLCsOynAIk",
+  "TzAVOpuDLx0",
+  "WlidXnO4ghs",
+  "IB5WQ-kBe3o",
+  "3weDoURJ4jo",
+  "R6pEWJSjMXE",
+  "uj5KeHVDpVs",
+  "6hKVa4wZ_8w",
+  "siNfluYvrTY",
+  "y7LTvu4YE5Q",
+  "sL6A87FkXoQ"
 ];
 
 const CoursesContent = () => (
@@ -122,6 +125,19 @@ const CoursesContent = () => (
     <p className="text-base leading-relaxed font-medium">
       Hear directly from our students about their learning experience and career transformation through the PGCR program.
     </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      {testimonialVideos.map((videoId, index) => (
+        <div key={index} className="relative aspect-video overflow-hidden rounded-lg shadow-sm border border-transparent hover:border-[#f58634] transition-colors">
+          <iframe
+            className="w-full h-full"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title={`Student Testimonial ${index + 1}`}
+            allowFullScreen
+          ></iframe>
+        </div>
+      ))}
+    </div>
   </div>
 );
 
@@ -554,25 +570,32 @@ const facultyData = [
     name: "Dr. Ajay Sankhe",
     qualification: "MBBS, MD (Pediatrics)",
     designation: "Director & Sr. Consultant – Pediatrics & Neonatology",
-    image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg"
+    image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg",
+    customScale: 1.15,
+    translateY: 0
   },
   {
     name: "Dr. Vijaykumar Gawali",
     qualification: "Clinical Research & Education",
     designation: "NABH Assessor – Clinical Trial Program",
-    image: "/images/logo/Project Quotation Background from Dr. Vijay.png"
+    image: "/images/logo/Project Quotation Background from Dr. Vijay.png",
+    customScale: 1.4,
+    translateY: 65
   },
   {
     name: "Dr. Komal Dalal",
     qualification: "MBBS, DGO, PGDPC",
     designation: "Clinical Research Advisor",
-    image: "/images/Clinical Research Course/faculty/Dr. Komal Dalal.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Komal Dalal.png",
+    translateY: 20
   },
   {
     name: "Dr. Nanasaheb Memane",
     qualification: "BAMS, MS (Ayurveda)",
     designation: "HOD – Ayurveda",
-    image: "/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane (1).png",
+    customScale: 0.95,
+    translateY: 45
   },
   {
     name: "Dr. Sivaprasad Gourabathini",
@@ -626,44 +649,52 @@ const facultyData = [
     name: "Dr. Sandeep Patil",
     qualification: "MD, DNB, DM (Cardiology)",
     designation: "HOD – Cardiology",
-    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png",
+    translateY: 15
   },
   {
     name: "Dr. Sandeep Garg",
     qualification: "MD, DNB",
     designation: "Paediatric Cardiologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png",
+    translateY: 20
   },
   {
     name: "Dr. Yogesh Patidar",
     qualification: "MD, DM (Neurology)",
     designation: "Consultant Neurologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png",
+    translateY: 20
   },
   {
     name: "Dr. Kamalapriya Thiyagarajan",
     qualification: "MD, DGO",
     designation: "Consultant – Obstetrics & Gynaecology",
-    image: "/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png",
+    translateY: 20
   },
   {
     name: "Dr. Saurabh Sadekar",
     qualification: "MD, DNB (Neurology)",
     designation: "Consultant Neurologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png",
+    translateY: 20
   },
   {
     name: "Dr. Dhaval Dalal",
     qualification: "MBBS, MD",
     designation: "HOD – Integrated Medicine",
-    image: "/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png",
+    translateY: 20
   },
   {
     name: "Dr. Tejasvee Kadam",
     qualification: "BDS",
     designation: "Lead – Clinical Research",
-    image: "/images/Clinical Research Course/faculty/Dr._Tejasvee_Kadam-removebg-preview.png",
-    contact: "+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com"
+    image: "/images/Clinical Research Course/faculty/Dr. Tejasvee Kadam.png",
+    contact: "+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com",
+    customScale: 1.1,
+    translateY: 10
   }
 ];
 
@@ -679,16 +710,17 @@ const FacultyContent = () => (
           <div className="flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible">
 
             {/* Faculty Image - Popping Out */}
-            <div className="w-full sm:w-[260px] h-[400px] sm:absolute sm:-left-20 sm:bottom-0 sm:top-[-60px] flex-shrink-0 flex items-end justify-center pointer-events-none">
+            <div className="w-full sm:w-[300px] h-[450px] sm:absolute sm:-left-32 sm:bottom-0 sm:top-[-110px] flex-shrink-0 flex items-end justify-center pointer-events-none overflow-hidden">
               <img
                 src={faculty.image}
                 alt={faculty.name}
-                className="h-full w-auto object-contain drop-shadow-[20px_0_25px_rgba(0,0,0,0.15)] group-hover:scale-[1.05] transition-transform duration-700 origin-bottom"
+                className="h-full w-auto object-contain group-hover:scale-[1.08] transition-transform duration-700 origin-bottom"
+                style={{ transform: `scale(${faculty.customScale || 1}) translateY(${faculty.translateY || 0}px)` }}
               />
             </div>
 
             {/* Details Section - Perfectly Centered & Offset */}
-            <div className="flex-1 p-8 sm:pl-[280px] text-left flex flex-col justify-center">
+            <div className="flex-1 p-8 sm:pl-[340px] text-left flex flex-col justify-center">
               <div className="mb-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
                   {faculty.name.replace(/^(Dr\.\s*\S+)/, (match) => match.replace(/\s/g, '\u00A0'))}
