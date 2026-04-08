@@ -204,15 +204,15 @@ const RecentPlacementsContent = () => (
 const AdmissionProcessContent = () => (
   <div className="flex flex-col items-center w-full py-4 text-[#565656]">
 
-    <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16 pt-4">
+    <div className="flex flex-col items-center justify-center w-full pt-4">
       {/* Flowchart Section */}
-      <div className="flex flex-col items-center w-full max-w-[340px]">
+      <div className="flex flex-col items-center w-full max-w-lg">
         {/* Step 1 */}
-        <div className="flex flex-col items-center relative z-10 w-full">
+        <div className="flex flex-col items-center relative z-10 w-full text-center">
           <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
             1
           </div>
-          <div className="bg-[#145B7A] text-white px-6 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-base font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
+          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
             Fill the application form and<br />Complete Application fees
           </div>
         </div>
@@ -225,11 +225,11 @@ const AdmissionProcessContent = () => (
         </div>
 
         {/* Step 2 */}
-        <div className="flex flex-col items-center relative z-10 w-full">
+        <div className="flex flex-col items-center relative z-10 w-full text-center">
           <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
             2
           </div>
-          <div className="bg-[#145B7A] text-white px-6 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-base font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
+          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
             Eligibility screening through<br />Aptitude test and Personal<br />interview
           </div>
         </div>
@@ -242,19 +242,14 @@ const AdmissionProcessContent = () => (
         </div>
 
         {/* Step 3 */}
-        <div className="flex flex-col items-center relative z-10 w-full">
+        <div className="flex flex-col items-center relative z-10 w-full text-center">
           <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
             3
           </div>
-          <div className="bg-[#145B7A] text-white px-6 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-base font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
+          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
             Confirmation of enrolment via<br />email within 7 working days
           </div>
         </div>
-      </div>
-
-      {/* Image Section */}
-      <div className="flex justify-center w-full max-w-[450px]">
-        <img src="/images/steps-to-admission.png" alt="Steps to Admission" className="w-full object-contain" />
       </div>
     </div>
 
@@ -406,28 +401,23 @@ const ApplicationFormContent = () => (
       </div>
 
       {/* Bank Details for Payment */}
-      <div className="bg-white p-6 rounded-xl border border-[#2664A8]/20 shadow-sm">
-        <h3 className="text-[#2664A8] text-xl font-bold mb-4 border-b border-gray-100 pb-2">Bank Details for Payment</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
-          <div>
-            <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Account Name</p>
-            <p className="font-medium text-base">Shri Chaitanya Health and Care Trust</p>
+      <div className="bg-white p-8 rounded-xl border-2 border-[#2664A8]/20 shadow-sm text-center">
+        <h3 className="text-[#2664A8] text-2xl font-bold mb-8 mx-auto w-fit border-b-2 border-[#f58634] pb-2">Bank Details for Payment</h3>
+        <div className="flex flex-col gap-5 text-gray-700 max-w-2xl mx-auto">
+          <div className="flex flex-col items-center">
+            <p className="text-lg"><span className="text-[#2664A8] font-bold">Account Name:</span> <span className="text-[#f58634] font-bold">Shri Chaitanya Health and Care Trust</span></p>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Bank Name</p>
-            <p className="font-medium text-base">Axis Bank Ltd.</p>
+          <div className="flex flex-col items-center">
+            <p className="text-lg"><span className="text-[#2664A8] font-bold">Bank Name:</span> <span className="text-[#f58634] font-bold">Axis Bank Ltd.</span></p>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Branch</p>
-            <p className="font-medium text-base">Mira Road, Mumbai</p>
+          <div className="flex flex-col items-center">
+            <p className="text-lg"><span className="text-[#2664A8] font-bold">Branch:</span> <span className="text-[#f58634] font-bold">Mira Road, Mumbai</span></p>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">Account Number</p>
-            <p className="font-medium text-base">916010017610073</p>
+          <div className="flex flex-col items-center">
+            <p className="text-lg"><span className="text-[#2664A8] font-bold">Account Number:</span> <span className="text-[#f58634] font-bold">916010017610073</span></p>
           </div>
-          <div>
-            <p className="text-xs uppercase tracking-wider text-gray-400 font-bold mb-1">IFSC Code</p>
-            <p className="font-medium text-base">UTIB0000573</p>
+          <div className="flex flex-col items-center">
+            <p className="text-lg"><span className="text-[#2664A8] font-bold">IFSC Code:</span> <span className="text-[#f58634] font-bold">UTIB0000573</span></p>
           </div>
         </div>
       </div>
