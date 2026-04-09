@@ -9,11 +9,13 @@ export default function Footer() {
 
           {/* Column 1 — Logo & Address */}
           <div>
-            <img
-              src="https://www.bhaktivedantahospital.com/public/images/logo-footer.png"
-              alt="Bhaktivedanta Hospital"
-              className="w-[220px] mb-5"
-            />
+            <a href="https://www.bhaktivedantahospital.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://www.bhaktivedantahospital.com/public/images/logo-footer.png"
+                alt="Bhaktivedanta Hospital"
+                className="w-[220px] mb-5 cursor-pointer"
+              />
+            </a>
             <p className="text-[15px] leading-7 text-[#565656]">
               Shrishti Complex, Bhaktivedanta<br />
               Swami Marg, Mira Road (East),<br />
@@ -97,7 +99,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="/documents/PGCR Complete Brochure.pdf" target="_blank" rel="noopener noreferrer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
+                <a href="/documents/PGDCR_Brochure_2026.pdf" target="_blank" rel="noopener noreferrer" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
                   Brochure
                 </a>
               </li>

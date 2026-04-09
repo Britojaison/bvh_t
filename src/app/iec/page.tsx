@@ -12,7 +12,7 @@ export default function InstitutionalEthicsCommitteePage() {
           Committed to upholding the highest ethical standards in clinical research and biomedical studies.
         </p>
         <a
-          href="/documents/PGCR Complete Brochure.pdf"
+          href="/documents/PGDCR_Brochure_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-[#f58634] hover:text-[#f58634]/80 transition-colors text-sm md:text-base font-semibold"

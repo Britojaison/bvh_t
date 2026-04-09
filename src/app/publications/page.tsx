@@ -36,7 +36,7 @@ export default function PublicationsPage() {
         </h1>
         <div className="mt-2">
           <a
-            href="/documents/PGCR Complete Brochure.pdf"
+            href="/documents/PGDCR_Brochure_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"

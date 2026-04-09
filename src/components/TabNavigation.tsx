@@ -33,8 +33,13 @@ export default function TabNavigation({ tabs, hideTopBorder }: TabNavigationProp
             {tabs.map((tab, index) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(index)}
-                className={`flex-shrink-0 px-5 py-4 whitespace-nowrap transition-all cursor-pointer border-b-3 border-transparent ${
+                id={tab.id}
+                onClick={() => {
+                  setActiveTab(index);
+                  // Sync hash when clicked manually
+                  window.history.pushState(null, '', `#${tab.id}`);
+                }}
+                className={`flex-shrink-0 px-5 py-4 whitespace-nowrap transition-all cursor-pointer border-b-3 border-transparent scroll-mt-40 ${
                   index === activeTab
                     ? "border-[#f58634] text-2xl font-bold"
                     : "text-xl font-semibold hover:border-[#f58634]"

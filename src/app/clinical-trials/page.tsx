@@ -83,59 +83,67 @@ const FeasibilityContent = () => (
         />
       </div>
       <h3 className="text-2xl font-bold text-[#2664A8] mb-6" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Research Infrastructure & Facilities</h3>
-      <ul className="flex flex-col space-y-6">
-        
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Investigational Product (IP) Room</h4>
-          <ul className="list-disc list-inside ml-8 text-base space-y-1.5 text-gray-700">
-            <li>Biometric access control</li>
-            <li>Temperature-controlled storage: –80°C, –20°C, 2–8°C, 15-25°C</li>
+      
+      <div className="flex flex-col md:flex-row gap-8 items-start">
+        {/* Left Column: Text Items */}
+        <div className="flex-1">
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Investigational Product (IP) Room</h4>
+              <ul className="list-disc list-inside ml-6 text-base space-y-1 text-gray-700">
+                <li>Biometric access control</li>
+                <li>Temperature-controlled storage: –80°C, –20°C, 2–8°C, 15-25°C</li>
+              </ul>
+            </li>
+            
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Patient Examination Rooms</h4>
+              <ul className="list-disc list-inside ml-6 text-base space-y-1 text-gray-700">
+                <li>Fully equipped as per protocol requirements</li>
+                <li>Centrifuge facility for blood component separation</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Document Storage & Archival</h4>
+              <p className="text-base text-gray-700 leading-relaxed ml-6">Secure archival of trial documents for a minimum of 5 years.</p>
+            </li>
+
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Quality Assurance Department</h4>
+              <p className="text-base text-gray-700 leading-relaxed ml-6">Three-member team ensuring compliance with national and international regulatory standards.</p>
+            </li>
+
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Secure Data Centre</h4>
+              <p className="text-base text-gray-700 leading-relaxed ml-6">Continuous IT monitoring to ensure data confidentiality.</p>
+            </li>
+
+            <li>
+              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Monitoring & Conference Rooms</h4>
+              <p className="text-base text-gray-700 leading-relaxed ml-6">Infrastructure for physical and virtual audits, meetings, and training programs.</p>
+            </li>
           </ul>
-          <div className="mt-8 mb-6 overflow-hidden rounded-xl shadow-md border border-gray-100 max-w-sm">
+        </div>
+
+        {/* Right Column: Large Images */}
+        <div className="w-full md:w-[380px] flex flex-col gap-6 shrink-0">
+          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100 w-full h-[280px]">
             <img 
               src="/images/logo/Feasibility Images from Project Quotation.png" 
               alt="IP Room Storage Facility" 
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
             />
           </div>
-        </li>
-        
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Patient Examination Rooms</h4>
-          <ul className="list-disc list-inside ml-8 text-base space-y-1.5 text-gray-700">
-            <li>Fully equipped as per protocol requirements</li>
-            <li>Centrifuge facility for blood component separation</li>
-          </ul>
-        </li>
-
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Document Storage & Archival</h4>
-          <p className="text-base text-gray-700 leading-relaxed ml-8">Secure archival of trial documents for a minimum of 5 years.</p>
-          <div className="mt-6 mb-4 overflow-hidden rounded-xl shadow-md border border-gray-100 max-w-xs ml-8">
+          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100 w-full h-[280px]">
             <img 
               src="/images/logo/Feasibility Images (1).png" 
               alt="Secure Document Archival" 
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
             />
           </div>
-        </li>
-
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Quality Assurance Department</h4>
-          <p className="text-base text-gray-700 leading-relaxed ml-8">Three-member team ensuring compliance with national and international regulatory standards.</p>
-        </li>
-
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Secure Data Centre</h4>
-          <p className="text-base text-gray-700 leading-relaxed ml-8">Continuous IT monitoring to ensure data confidentiality.</p>
-        </li>
-
-        <li>
-          <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-2"><span className="text-[#f58634] text-xl">•</span> Monitoring & Conference Rooms</h4>
-          <p className="text-base text-gray-700 leading-relaxed ml-8">Infrastructure for physical and virtual audits, meetings, and training programs.</p>
-        </li>
-
-      </ul>
+        </div>
+      </div>
     </div>
 
     {/* Infrastructure Carousel */}
@@ -401,7 +409,7 @@ export default function ClinicalTrialsPage() {
           Clinical Trials
         </h1>
         <a
-          href="/documents/PGCR Complete Brochure.pdf"
+          href="/documents/PGDCR_Brochure_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"

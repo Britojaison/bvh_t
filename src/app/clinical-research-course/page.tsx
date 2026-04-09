@@ -2,6 +2,7 @@
 import HeroCarousel from "@/components/HeroCarousel";
 import TabNavigation from "@/components/TabNavigation";
 import { tabs } from "@/data/pgcr";
+import Link from "next/link";
 
 const alumniImages = Array.from({ length: 57 }, (_, i) => `/images/Clinical Research Course/aluminni/${i + 1}.png`);
 
@@ -602,85 +603,103 @@ const facultyData = [
     qualification: "MBBS, MD (Pediatrics)",
     designation: "Director & Sr. Consultant – Pediatrics & Neonatology",
     image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg",
-    customScale: 1.0,
-    translateY: 0
+    customScale: 1.1,
+    translateY: 10
   },
   {
     name: "Dr. Vijaykumar Gawali",
     qualification: "Clinical Research & Education",
     designation: "NABH Assessor – Clinical Trial Program",
     image: "/images/logo/Project Quotation Background from Dr. Vijay.png",
-    customScale: 1.4,
-    translateY: 65
+    customScale: 1.45,
+    translateY: 45
   },
   {
     name: "Dr. Komal Dalal",
     qualification: "MBBS, DGO, PGDPC",
     designation: "Clinical Research Advisor",
     image: "/images/Clinical Research Course/faculty/Dr. Komal Dalal.png",
-    translateY: 20
+    customScale: 1.15,
+    translateY: 10
   },
   {
     name: "Dr. Nanasaheb Memane",
     qualification: "BAMS, MS (Ayurveda)",
     designation: "HOD – Ayurveda",
     image: "/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane (1).png",
-    customScale: 0.95,
-    translateY: 45
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Sivaprasad Gourabathini",
     qualification: "MBBS, MS, MCh (Urology)",
     designation: "Consultant Urologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Siva Prasad Gourabathini.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Siva Prasad Gourabathini.png",
+    customScale: 1.05,
+    translateY: 10
   },
   {
     name: "Dr. Girish Rathod",
     qualification: "MBBS, MS (Orthopaedics)",
     designation: "HOD – Orthopaedics",
-    image: "/images/Clinical Research Course/faculty/Dr. Girish Rathod.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Girish Rathod.png",
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Nirmal Raut",
     qualification: "MD, ECMO, PDCR",
     designation: "Consultant Medical Oncology",
-    image: "/images/Clinical Research Course/faculty/Dr. Nirmal Raut.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Nirmal Raut.png",
+    customScale: 1.05,
+    translateY: 15
   },
   {
     name: "Dr. Ajay Godse",
     qualification: "MD, FAASM",
     designation: "Consultant Pulmonologist & Sleep Specialist",
-    image: "/images/Clinical Research Course/faculty/Dr. Ajay Godse.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Ajay Godse.png",
+    customScale: 1.0,
+    translateY: 15
   },
   {
     name: "Dr. Ameya Joshi",
     qualification: "MBBS, MD, DNB (Endocrinology)",
     designation: "Consultant Endocrinologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Ameya Joshi.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Ameya Joshi.png",
+    customScale: 1.05,
+    translateY: 10
   },
   {
     name: "Dr. Shubham Jain",
     qualification: "DM, MD, MBBS",
     designation: "Consultant Gastroenterologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Shubham Jain.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Shubham Jain.png",
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Jyotsna Zope",
     qualification: "MD, DNB (Nephrology)",
     designation: "Consultant Nephrologist",
-    image: "/images/Clinical Research Course/faculty/Dr. Jyotsna D Zope.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Jyotsna D Zope.png",
+    customScale: 1.05,
+    translateY: 15
   },
   {
     name: "Dr. Kirti Mutreja",
     qualification: "BHMS, MD (Hom)",
     designation: "Integrated Medicine Consultant",
-    image: "/images/Clinical Research Course/faculty/Dr. Kirti Mutreja.png"
+    image: "/images/Clinical Research Course/faculty/Dr. Kirti Mutreja.png",
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Sandeep Patil",
     qualification: "MD, DNB, DM (Cardiology)",
     designation: "HOD – Cardiology",
     image: "/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png",
+    customScale: 1.05,
     translateY: 15
   },
   {
@@ -688,20 +707,23 @@ const facultyData = [
     qualification: "MD, DNB",
     designation: "Paediatric Cardiologist",
     image: "/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png",
-    translateY: 20
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Yogesh Patidar",
     qualification: "MD, DM (Neurology)",
     designation: "Consultant Neurologist",
     image: "/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png",
-    translateY: 20
+    customScale: 1.1,
+    translateY: 15
   },
   {
     name: "Dr. Kamalapriya Thiyagarajan",
     qualification: "MD, DGO",
     designation: "Consultant – Obstetrics & Gynaecology",
     image: "/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png",
+    customScale: 1.1,
     translateY: 20
   },
   {
@@ -709,6 +731,7 @@ const facultyData = [
     qualification: "MD, DNB (Neurology)",
     designation: "Consultant Neurologist",
     image: "/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png",
+    customScale: 0.9,
     translateY: 20
   },
   {
@@ -716,7 +739,8 @@ const facultyData = [
     qualification: "MBBS, MD",
     designation: "HOD – Integrated Medicine",
     image: "/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png",
-    translateY: 20
+    customScale: 1.1,
+    translateY: 10
   },
   {
     name: "Dr. Tejasvee Kadam",
@@ -724,62 +748,275 @@ const facultyData = [
     designation: "Lead – Clinical Research",
     image: "/images/Clinical Research Course/faculty/Dr. Tejasvee Kadam.png",
     contact: "+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com",
-    customScale: 1.1,
-    translateY: 10
+    customScale: 1.2,
+    translateY: 5
   }
 ];
 
-const FacultyContent = () => (
-  <div className="w-full py-20 text-[#565656]">
-    <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-28 gap-x-32 w-full max-w-[1536px] mx-auto px-6 md:px-16">
-      {facultyData.map((faculty, index) => (
-        <div key={index} className="relative group w-full max-w-[680px] h-[340px] mx-auto xl:mx-0">
-          {/* Card Background Shadow Box */}
-          <div className="absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500" />
+const FacultyCard = ({
+  name,
+  qualification,
+  designation,
+  image,
+  contact,
+  customScale = 1,
+  translateY = 0,
+  cardMaxWidth = "580px",
+  cardHeight = "280px",
+  imgWidth = "260px",
+  imgHeight = "380px",
+  imgLeft = "-left-20",
+  textPl = "pl-[280px]",
+}: any) => (
+  <div className="relative group w-full mx-auto xl:mx-0" style={{ maxWidth: cardMaxWidth, height: cardHeight }}>
+    {/* Card Background Shadow Box */}
+    <div className="absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500" />
 
-          {/* Main Card */}
-          <div className="flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible">
+    {/* Main Card */}
+    <div className="flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible">
 
-            {/* Faculty Image - Popping Out */}
-            <div className="w-full sm:w-[300px] h-[450px] sm:absolute sm:-left-32 sm:bottom-0 sm:top-[-110px] flex-shrink-0 flex items-end justify-center pointer-events-none overflow-hidden">
-              <img
-                src={faculty.image}
-                alt={faculty.name}
-                className="h-full w-auto object-contain group-hover:scale-[1.08] transition-transform duration-700 origin-bottom"
-                style={{ transform: `scale(${faculty.customScale || 1}) translateY(${faculty.translateY || 0}px)` }}
-              />
-            </div>
+      {/* Faculty Image - Popping Out */}
+      <div
+        className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-hidden ${imgLeft}`}
+        style={{ width: "100%", maxWidth: imgWidth, height: imgHeight }}
+      >
+        <img
+          src={image}
+          alt={name}
+          className="h-full w-auto object-contain group-hover:scale-[1.08] transition-transform duration-700 origin-bottom"
+          style={{ transform: `scale(${customScale}) translateY(${translateY}px)` }}
+        />
+      </div>
 
-            {/* Details Section - Perfectly Centered & Offset */}
-            <div className="flex-1 p-8 sm:pl-[340px] text-left flex flex-col justify-center">
-              <div className="mb-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
-                  {faculty.name.replace(/^(Dr\.\s*\S+)/, (match) => match.replace(/\s/g, '\u00A0'))}
-                </h3>
-                <p className="text-[#1A5276] font-bold text-[13px] uppercase tracking-wider mb-2 leading-snug">
-                  {faculty.designation}
+      {/* Details Section */}
+      <div className={`flex-1 pt-8 pb-6 pr-6 text-left flex flex-col justify-between h-full sm:${textPl}`}>
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
+            {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
+          </h3>
+          <p className="text-[#1A5276] font-bold text-[12px] uppercase tracking-wider mb-2 leading-snug">
+            {designation}
+          </p>
+        </div>
+
+        <div className="space-y-4 border-t border-orange-200/50 pt-5 mt-auto">
+          <div className="flex flex-col gap-0.5 min-h-[50px]">
+            <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Academic Qualification</span>
+            <span className="text-gray-700 text-[12px] font-medium leading-relaxed line-clamp-2">{qualification}</span>
+          </div>
+
+          <div className="min-h-[45px] flex flex-col justify-end">
+            {contact ? (
+              <div className="flex flex-col gap-0.5">
+                <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Connect Directly</span>
+                <p className="text-gray-600 text-[11px] break-words leading-relaxed font-medium line-clamp-1">
+                  {contact}
                 </p>
               </div>
-
-              <div className="space-y-4 border-t border-orange-200/50 pt-5 mt-2">
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-[#f58634] font-bold text-[10px] uppercase tracking-widest">Academic Qualification</span>
-                  <span className="text-gray-700 text-[13px] font-medium leading-relaxed line-clamp-2">{faculty.qualification}</span>
-                </div>
-
-                {faculty.contact && (
-                  <div className="flex flex-col gap-0.5">
-                    <span className="text-[#f58634] font-bold text-[10px] uppercase tracking-widest">Connect Directly</span>
-                    <p className="text-gray-600 text-[12px] break-words leading-relaxed font-medium line-clamp-1">
-                      {faculty.contact}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
+            ) : (
+              <div className="h-full" />
+            )}
           </div>
         </div>
-      ))}
+      </div>
+    </div>
+  </div>
+);
+
+const FacultyContent = () => (
+  <div className="w-full py-20 text-[#565656]">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-32 gap-x-32 w-full max-w-[1536px] mx-auto px-6 md:px-16">
+      {/* 1. Dr. Ajay Sankhe */}
+      <FacultyCard
+        name="Dr. Ajay Sankhe"
+        qualification="MBBS, MD (Pediatrics)"
+        designation="Director & Sr. Consultant – Pediatrics & Neonatology"
+        image="/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg"
+        customScale={1.1}
+        translateY={10}
+      />
+
+      {/* 2. Dr. Vijaykumar Gawali */}
+      <FacultyCard
+        name="Dr. Vijaykumar Gawali"
+        qualification="Clinical Research & Education"
+        designation="NABH Assessor – Clinical Trial Program"
+        image="/images/logo/Project Quotation Background from Dr. Vijay.png"
+        customScale={1.45}
+        translateY={45}
+        cardMaxWidth="600px" // Individual override example
+      />
+
+      {/* 3. Dr. Komal Dalal */}
+      <FacultyCard
+        name="Dr. Komal Dalal"
+        qualification="MBBS, DGO, PGDPC"
+        designation="Clinical Research Advisor"
+        image="/images/Clinical Research Course/faculty/Dr. Komal Dalal.png"
+        customScale={1.15}
+        translateY={10}
+      />
+
+      {/* 4. Dr. Nanasaheb Memane */}
+      <FacultyCard
+        name="Dr. Nanasaheb Memane"
+        qualification="BAMS, MS (Ayurveda)"
+        designation="HOD – Ayurveda"
+        image="/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane (1).png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 5. Dr. Sivaprasad Gourabathini */}
+      <FacultyCard
+        name="Dr. Sivaprasad Gourabathini"
+        qualification="MBBS, MS, MCh (Urology)"
+        designation="Consultant Urologist"
+        image="/images/Clinical Research Course/faculty/Dr. Siva Prasad Gourabathini.png"
+        customScale={1.05}
+        translateY={10}
+      />
+
+      {/* 6. Dr. Girish Rathod */}
+      <FacultyCard
+        name="Dr. Girish Rathod"
+        qualification="MBBS, MS (Orthopaedics)"
+        designation="HOD – Orthopaedics"
+        image="/images/Clinical Research Course/faculty/Dr. Girish Rathod.png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 7. Dr. Nirmal Raut */}
+      <FacultyCard
+        name="Dr. Nirmal Raut"
+        qualification="MD, ECMO, PDCR"
+        designation="Consultant Medical Oncology"
+        image="/images/Clinical Research Course/faculty/Dr. Nirmal Raut.png"
+        customScale={1.05}
+        translateY={15}
+      />
+
+      {/* 8. Dr. Ajay Godse */}
+      <FacultyCard
+        name="Dr. Ajay Godse"
+        qualification="MD, FAASM"
+        designation="Consultant Pulmonologist & Sleep Specialist"
+        image="/images/Clinical Research Course/faculty/Dr. Ajay Godse.png"
+        customScale={1.0}
+        translateY={15}
+      />
+
+      {/* 9. Dr. Ameya Joshi */}
+      <FacultyCard
+        name="Dr. Ameya Joshi"
+        qualification="MBBS, MD, DNB (Endocrinology)"
+        designation="Consultant Endocridologist"
+        image="/images/Clinical Research Course/faculty/Dr. Ameya Joshi.png"
+        customScale={1.05}
+        translateY={10}
+      />
+
+      {/* 10. Dr. Shubham Jain */}
+      <FacultyCard
+        name="Dr. Shubham Jain"
+        qualification="DM, MD, MBBS"
+        designation="Consultant Gastroenterologist"
+        image="/images/Clinical Research Course/faculty/Dr. Shubham Jain.png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 11. Dr. Jyotsna Zope */}
+      <FacultyCard
+        name="Dr. Jyotsna Zope"
+        qualification="MD, DNB (Nephrology)"
+        designation="Consultant Nephrologist"
+        image="/images/Clinical Research Course/faculty/Dr. Jyotsna D Zope.png"
+        customScale={1.05}
+        translateY={15}
+      />
+
+      {/* 12. Dr. Kirti Mutreja */}
+      <FacultyCard
+        name="Dr. Kirti Mutreja"
+        qualification="BHMS, MD (Hom)"
+        designation="Integrated Medicine Consultant"
+        image="/images/Clinical Research Course/faculty/Dr. Kirti Mutreja.png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 13. Dr. Sandeep Patil */}
+      <FacultyCard
+        name="Dr. Sandeep Patil"
+        qualification="MD, DNB, DM (Cardiology)"
+        designation="HOD – Cardiology"
+        image="/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png"
+        customScale={1.05}
+        translateY={15}
+      />
+
+      {/* 14. Dr. Sandeep Garg */}
+      <FacultyCard
+        name="Dr. Sandeep Garg"
+        qualification="MD, DNB"
+        designation="Paediatric Cardiologist"
+        image="/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 15. Dr. Yogesh Patidar */}
+      <FacultyCard
+        name="Dr. Yogesh Patidar"
+        qualification="MD, DM (Neurology)"
+        designation="Consultant Neurologist"
+        image="/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png"
+        customScale={1.1}
+        translateY={15}
+      />
+
+      {/* 16. Dr. Kamalapriya Thiyagarajan */}
+      <FacultyCard
+        name="Dr. Kamalapriya Thiyagarajan"
+        qualification="MD, DGO"
+        designation="Consultant – Obstetrics & Gynaecology"
+        image="/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png"
+        customScale={1.1}
+        translateY={20}
+      />
+
+      {/* 17. Dr. Saurabh Sadekar */}
+      <FacultyCard
+        name="Dr. Saurabh Sadekar"
+        qualification="MD, DNB (Neurology)"
+        designation="Consultant Neurologist"
+        image="/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png"
+        customScale={0.9}
+        translateY={20}
+      />
+
+      {/* 18. Dr. Dhaval Dalal */}
+      <FacultyCard
+        name="Dr. Dhaval Dalal"
+        qualification="MBBS, MD"
+        designation="HOD – Integrated Medicine"
+        image="/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png"
+        customScale={1.1}
+        translateY={10}
+      />
+
+      {/* 19. Dr. Tejasvee Kadam */}
+      <FacultyCard
+        name="Dr. Tejasvee Kadam"
+        qualification="BDS"
+        designation="Lead – Clinical Research"
+        image="/images/Clinical Research Course/faculty/Dr. Tejasvee Kadam.png"
+        contact="+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com"
+        customScale={1.15}
+        translateY={5}
+      />
     </div>
   </div>
 );
@@ -804,25 +1041,38 @@ export default function PGCRPage() {
         <h1 className="text-2xl md:text-4xl font-bold text-[#2664A8] mb-3">
           Clinical Research Course
         </h1>
-        <a
-          href="/documents/PGCR Complete Brochure.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base"
-        >
-          Download Brochure
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="12" y1="18" x2="12" y2="12" />
-            <polyline points="9 15 12 18 15 15" />
-          </svg>
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mt-2">
+          <a
+            href="#what-we-offer"
+            className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base font-medium"
+          >
+            Apply Now
+          </a>
+
+          <div className="hidden sm:block w-px h-4 bg-gray-200"></div>
+
+          <a
+            href="/documents/PGDCR_Brochure_2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-accent-orange hover:text-accent-orange-light transition-colors text-sm md:text-base font-medium"
+          >
+            Download Brochure
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="12" y1="18" x2="12" y2="12" />
+              <polyline points="9 15 12 18 15 15" />
+            </svg>
+          </a>
+        </div>
       </header>
 
       <HeroCarousel images={alumniImages} />
 
-      <TabNavigation tabs={customTabs} hideTopBorder={true} />
+      <div id="admission-section" className="scroll-mt-20">
+        <TabNavigation tabs={customTabs} hideTopBorder={true} />
+      </div>
     </main>
   );
 }

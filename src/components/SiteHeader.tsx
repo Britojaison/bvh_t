@@ -8,11 +8,13 @@ export default function SiteHeader() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
         {/* Left: BVH Logo */}
         <div className="flex-shrink-0">
-          <img
-            src="/images/logo/bvh_logo.png"
-            alt="Bhaktivedanta Hospital & Research Institute"
-            className="h-14 md:h-16 w-auto object-contain"
-          />
+          <a href="https://www.bhaktivedantahospital.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/images/logo/bvh_logo.png"
+              alt="Bhaktivedanta Hospital & Research Institute"
+              className="h-14 md:h-16 w-auto object-contain cursor-pointer"
+            />
+          </a>
         </div>
 
         {/* Center: Emergency info with NABH logo */}
