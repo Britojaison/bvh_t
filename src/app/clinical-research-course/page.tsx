@@ -765,8 +765,8 @@ const FacultyCard = ({
   cardHeight = "280px",
   imgWidth = "260px",
   imgHeight = "380px",
-  imgLeft = "-left-20",
-  textPl = "pl-[280px]",
+  imgLeft = "-left-4",
+  textPl = "sm:pl-[320px]",
 }: any) => (
   <div className="relative group w-full mx-auto xl:mx-0" style={{ maxWidth: cardMaxWidth, height: cardHeight }}>
     {/* Card Background Shadow Box */}
@@ -777,8 +777,8 @@ const FacultyCard = ({
 
       {/* Faculty Image - Popping Out */}
       <div
-        className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-hidden ${imgLeft}`}
-        style={{ width: "100%", maxWidth: imgWidth, height: imgHeight }}
+        className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-visible ${imgLeft}`}
+        style={{ width: "100%", maxWidth: imgWidth, height: imgHeight, clipPath: "inset(-100% -100% 0 -100%)" }}
       >
         <img
           src={image}
@@ -789,7 +789,7 @@ const FacultyCard = ({
       </div>
 
       {/* Details Section */}
-      <div className={`flex-1 pt-8 pb-6 pr-6 text-left flex flex-col justify-between h-full sm:${textPl}`}>
+      <div className={`flex-1 pt-8 pb-6 px-6 text-left flex flex-col justify-between h-full ${textPl}`}>
         <div>
           <h3 className="text-xl md:text-2xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
             {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
