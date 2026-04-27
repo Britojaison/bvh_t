@@ -68,6 +68,220 @@ const FeasibilityContent = () => (
           />
         </div>
       </div>
+
+      {/* Study Document Storage Facility - 3 Column Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mt-8">
+        <div className="flex flex-col h-full">
+          <img 
+            src="/images/bvh/hi/Picture6.png" 
+            alt="Secure Study Document Storage Facility" 
+            className="w-full h-auto object-cover flex-grow"
+          />
+          <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+            Secure Study Document Storage Facility
+          </div>
+        </div>
+        <div className="flex flex-col h-full justify-center">
+          <img 
+            src="/images/bvh/hi/Picture7.png" 
+            alt="Study Document Storage Facility Details" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
+        <div className="flex flex-col h-full">
+          <img 
+            src="/images/bvh/hi/Picture8.png" 
+            alt="Study Cupboards - Authorized access" 
+            className="w-full h-auto object-cover flex-grow"
+          />
+          <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+            Study Cupboards - Authorized access
+          </div>
+        </div>
+      </div>
+
+      {/* Authorized Department Access & Centrifuge - 2 Column Layout */}
+      <div className="space-y-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture9.jpg" 
+              alt="Authorized Department Access" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Authorized Department Access
+            </div>
+          </div>
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture10.png" 
+              alt="Authorized Department Access Details" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture11.jpg" 
+              alt="Centrifuge and Blood Sample Processing Unit" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Centrifuge and Blood Sample Processing Unit
+            </div>
+          </div>
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture12.png" 
+              alt="Centrifuge & Blood Processing Unit Details" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Feasibility Team & Patient Room - Staggered Layout */}
+      <div className="space-y-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture13.jpg" 
+              alt="Feasibility Team" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+          </div>
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture14.png" 
+              alt="Feasibility and Start-up Team Details" 
+              className="w-full h-auto object-contain"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Dedicated Feasibility & Start-Up Team
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture16.png" 
+              alt="Patient Room Details" 
+              className="w-full h-auto object-contain"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Patient Room
+            </div>
+          </div>
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture15.jpg" 
+              alt="Patient Examination Room" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* International & Domestic Office Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mt-8">
+        <div className="flex flex-col">
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture17.jpg" 
+              alt="International Clinical Trial Department" 
+              className="w-full h-auto object-cover"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              International Clinical Trial Department
+            </div>
+          </div>
+          <div className="mt-6 flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture18.png" 
+              alt="Clinical Research Coordinators Details" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col justify-end">
+          <div className="flex flex-col">
+            <img 
+              src="/images/bvh/hi/Picture19.jpg" 
+              alt="Domestic Office" 
+              className="w-full h-auto object-cover"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Domestic Office
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Investigational Product (IP) Storage Facility - Stacked Layout */}
+      <div className="mt-8 border-t pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <img src="/images/bvh/hi/Picture20.jpg" alt="IP Storage 1" className="w-full h-auto object-cover rounded-sm" />
+          <img src="/images/bvh/hi/Picture21.jpg" alt="IP Storage 2" className="w-full h-auto object-cover rounded-sm" />
+          <img src="/images/bvh/hi/Picture22.jpg" alt="IP Storage 3" className="w-full h-auto object-cover rounded-sm" />
+        </div>
+        <div className="mt-4 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-3 px-4 text-base md:text-lg">
+          Investigational Product (IP) Storage Facility
+        </div>
+        <div className="mt-6 flex justify-center">
+          <img 
+            src="/images/bvh/hi/Picture23.png" 
+            alt="Investigational Product Storage Details" 
+            className="w-full max-w-4xl h-auto object-contain"
+          />
+        </div>
+      </div>
+
+      {/* Ethics Committee & Data Centre - Staggered Layout */}
+      <div className="space-y-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-6 items-stretch">
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture24.jpg" 
+              alt="Ethics Committee Office" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Ethics Committee Office
+            </div>
+          </div>
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture25.png" 
+              alt="Ethics Committee Office Details" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-6 items-stretch">
+          <div className="flex flex-col h-full justify-center">
+            <img 
+              src="/images/bvh/hi/Picture27.png" 
+              alt="Data Centre Details" 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+          <div className="flex flex-col h-full">
+            <img 
+              src="/images/bvh/hi/Picture26.jpg" 
+              alt="Access-Controlled Data Centre Unit" 
+              className="w-full h-auto object-cover flex-grow"
+            />
+            <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+              Access-Controlled Data Centre Unit
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 

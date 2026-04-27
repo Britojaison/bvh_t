@@ -20,7 +20,17 @@ const alumniImages = Array.from({ length: 57 }, (_, i) => ({
   src: `/images/Clinical Research Course/aluminni/${i + 1}.png`
 }));
 
-const carouselImages = [...convocationImages, ...alumniImages];
+const newGraduatesImages = [
+  { src: "/images/bvh/grad/1.png" },
+  { src: "/images/bvh/grad/17.png" },
+  { src: "/images/bvh/grad/21.png" },
+  { src: "/images/bvh/grad/24.png" },
+  { src: "/images/bvh/grad/27.png" },
+  { src: "/images/bvh/grad/29.png" },
+  { src: "/images/bvh/grad/39.png" },
+];
+
+const carouselImages = [...convocationImages, ...newGraduatesImages, ...alumniImages];
 
 const OverviewContent = () => (
   <div className="flex flex-col gap-8 text-[#565656]">
@@ -212,9 +222,9 @@ const RecentPlacementsContent = () => (
     <div className="py-[15px] border-t border-gray-100">
       <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Our Placed Alumni</h4>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-[5px]">
-        {alumniImages.map((src, index) => (
+        {alumniImages.map((imgObj, index) => (
           <div key={index} className="relative overflow-hidden flex items-center justify-center transition-transform hover:z-10 hover:scale-[1.03]">
-            <img src={src} alt={`Recent Placement ${index + 1}`} className="w-full h-auto object-contain" />
+            <img src={imgObj.src} alt={`Recent Placement ${index + 1}`} className="w-full h-auto object-contain" />
           </div>
         ))}
       </div>
