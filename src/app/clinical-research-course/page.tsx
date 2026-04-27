@@ -1109,13 +1109,7 @@ export default function PGCRPage() {
 
       <div className="max-w-4xl mx-auto px-4 mt-6">
         <HeroCarousel images={carouselImages} />
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 py-6 px-8 bg-[#FDF2E9] rounded-2xl shadow-sm border border-orange-100/50">
-          <img src="/images/accreditation/accreditation-img-1-1.png" alt="NABH" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
-          <img src="/images/accreditation/accreditation-img-2-3.jpg" alt="SIRO" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
-          <img src="/images/accreditation/accreditation-img-2-1.jpg" alt="CDSCO" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
-          <img src="/images/accreditation/accreditation-img-2-2.jpg" alt="DHR" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
-          <img src="/images/logo/bvh_logo.png" alt="BVH" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
-        </div>
+
       </div>
 
       <div id="admission-section" className="scroll-mt-20">
