@@ -8,9 +8,8 @@ import { hospitalTrials } from "@/data/hospital-trials";
 const FeasibilityContent = () => (
   <div className="w-full py-8 text-[#565656] space-y-12">
     
-    {/* Intro Blocks */}
+    {/* 1. About Clinical Research Dept */}
     <div className="flex flex-col gap-10">
-      {/* About Clinical Research Dept */}
       <div className="w-full">
         <h3 className="text-2xl font-bold text-[#2664A8] mb-4" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>About Clinical Research Department</h3>
         <p className="leading-relaxed mb-6">
@@ -23,7 +22,7 @@ const FeasibilityContent = () => (
       </div>
     </div>
 
-    {/* Hospital and Infrastructure facilities */}
+    {/* 2. Hospital and Infrastructure facilities */}
     <div className="w-full max-w-6xl mx-auto pt-6 pb-4">
       <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: '#000' }}>
         Hospital and Infrastructure facilities
@@ -285,7 +284,7 @@ const FeasibilityContent = () => (
     </div>
 
 
-    {/* Single Point of Contact Banner */}
+    {/* 3. Feasibility Excellence */}
     <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
       <img 
         src="/images/bvh/Feasibility - Single point of Contact.jpg" 
@@ -294,7 +293,7 @@ const FeasibilityContent = () => (
       />
     </div>
 
-    {/* Feasibility Startup Timeline */}
+    {/* 4. Study Start-Up Timeline */}
     <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
       <img 
         src="/images/bvh/Feasibility Startup Timeline.jpg" 
@@ -303,7 +302,7 @@ const FeasibilityContent = () => (
       />
     </div>
 
-    {/* Our Research Excellence */}
+    {/* 5. Our Research Excellence */}
     <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
       <img 
         src="/images/bvh/Our research excellence.jpg" 
@@ -315,7 +314,7 @@ const FeasibilityContent = () => (
 
 
 
-    {/* Videos */}
+    {/* 6. Virtual Tour & Insights */}
     <div className="pt-10 border-t border-gray-200">
       <h3 className="text-2xl font-bold text-[#2664A8] mb-8 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Virtual Tour & Insights</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
@@ -335,7 +334,6 @@ const FeasibilityContent = () => (
         </div>
       </div>
     </div>
-
   </div>
 );
 
