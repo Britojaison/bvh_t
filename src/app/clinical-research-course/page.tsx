@@ -1,18 +1,35 @@
+"use client";
 
+import { useState } from "react";
 import HeroCarousel from "@/components/HeroCarousel";
 import TabNavigation from "@/components/TabNavigation";
 import { tabs } from "@/data/pgcr";
 import Link from "next/link";
+import RotatingBanner from "@/components/RotatingBanner";
 
-const alumniImages = Array.from({ length: 57 }, (_, i) => `/images/Clinical Research Course/aluminni/${i + 1}.png`);
+const convocationImages = [
+  { src: "/images/bvh/Convocation of batch - 2020.JPG", caption: "2020" },
+  { src: "/images/bvh/Convocation of batch - 2021 (2).JPG", caption: "2021" },
+  { src: "/images/bvh/Convocation of batch - 2022 (2).JPG", caption: "2022" },
+  { src: "/images/bvh/Convocation of batch - 2023 (2).jpg", caption: "2023" },
+  { src: "/images/bvh/Convocation of batch - 2024.jpg", caption: "2024" },
+  { src: "/images/bvh/Convocation of batch - 2025.jpg", caption: "2025" },
+];
+
+const alumniImages = Array.from({ length: 57 }, (_, i) => ({
+  src: `/images/Clinical Research Course/aluminni/${i + 1}.png`
+}));
+
+const carouselImages = [...convocationImages, ...alumniImages];
 
 const OverviewContent = () => (
   <div className="flex flex-col gap-8 text-[#565656]">
     {/* Videos Section - Horizontally Scrollable */}
     <div className="flex overflow-x-auto gap-4 pb-4" style={{ scrollbarWidth: "thin" }}>
+      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational Course" allowFullScreen></iframe>
+      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/isR8yiYG1XA" title="Medical Research Department" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/D52rEuUBVTE" title="1 Min Enrolment Video" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/IvtK9KAqQtE" title="Student Experience Video" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU?start=26" title="Clinical Research Course Overview" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/TEnwpX3W-NE" title="Clinical Research Course India" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/Ah9l5Emfyyw" title="Phases of Clinical Trial" allowFullScreen></iframe>
     </div>
@@ -27,51 +44,36 @@ const OverviewContent = () => (
       <p className="text-base leading-relaxed font-medium">
         The curriculum comprises 11 structured academic modules along with one year of intensive hands-on training, designed to equip students with practical skills and regulatory knowledge essential for a successful career in clinical research.
       </p>
-
       <div className="mt-8">
-        <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">WHY CHOOSE US?</h4>
-        <ul className="list-disc pl-6 space-y-3 text-base font-medium">
-          <li><strong>Expert Teaching:</strong> Learn directly from doctors with 20+ years of research experience and seasoned industry professionals.</li>
-          <li><strong>Course Materials:</strong> Access high-quality materials, regular assessments, and personalized academic support.</li>
-          <li><strong>Interactive Education Platform:</strong> Participate in live sessions and collaborate seamlessly with peers and mentors.</li>
-          <li><strong>Industry Interview Preparations:</strong> Get resume building support, industry insights, and mock interview practice.</li>
-          <li><strong>Hands-on Project Assignments:</strong> Work on real-world clinical trials to gain practical exposure.</li>
-          <li><strong>Placement Assistance:</strong> Dedicated Support to help you secure job Opportunities.</li>
-        </ul>
+        <img 
+          src="/images/bvh/dm.png" 
+          alt="Director's Message" 
+          className="w-full max-w-7xl rounded-xl shadow-sm border border-gray-100 mx-auto"
+        />
       </div>
 
       <div className="mt-8">
-        <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">PRACTICAL TRAINING:</h4>
-        <ul className="list-disc pl-6 space-y-3 text-base font-medium">
-          <li><strong>Internship:</strong> Each student is assigned to a clinical trial as an intern from the beginning of the program.</li>
-          <li><strong>Hands-on Training:</strong> Students gain exposure to live clinical research operations, enabling them to connect classroom learning with real-world practice.</li>
-        </ul>
+        <img 
+          src="/images/bvh/wcu.png" 
+          alt="Why Choose Us" 
+          className="w-full max-w-7xl rounded-xl shadow-sm border border-gray-100 mx-auto"
+        />
       </div>
 
       <div className="mt-8">
-        <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Course Modules</h4>
-        <ul className="list-none space-y-2 text-base font-medium">
-          <li><span className="font-bold mr-2 text-[#f58634]">Module I:</span> Basics of Clinical Research & Stakeholders in Clinical Research</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module II:</span> Basic Pharmacology in Clinical Research & Drug Development</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module III:</span> Ethics in Clinical Research & Ethical Guidelines</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module IV:</span> Regulations in Clinical Research</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module V:</span> Clinical Research Methodology</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module VI:</span> Clinical Trial Monitoring, Audits & Inspections</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module VII:</span> Clinical Data Management</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module VIII:</span> Drug Safety & Pharmacovigilance</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module IX:</span> Medical Writing</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module X:</span> Medical Device Clinical Trials</li>
-          <li><span className="font-bold mr-2 text-[#f58634]">Module XI:</span> Virtual Clinical Trials & Emerging Technologies</li>
-        </ul>
+        <img 
+          src="/images/bvh/cm.png" 
+          alt="Practical Training and Course Modules" 
+          className="w-full max-w-7xl rounded-xl shadow-sm border border-gray-100 mx-auto"
+        />
       </div>
 
-      <div className="pt-6 pb-2 flex justify-center lg:justify-start">
-        <iframe
-          className="w-full max-w-3xl aspect-video rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors"
-          src="https://www.youtube.com/embed/isR8yiYG1XA"
-          title="YouTube video"
-          allowFullScreen
-        ></iframe>
+      <div className="mt-8">
+        <img 
+          src="/images/bvh/wsua.png" 
+          alt="What Sets Us Apart" 
+          className="w-full max-w-7xl rounded-xl shadow-sm border border-gray-100 mx-auto"
+        />
       </div>
     </div>
   </div>
@@ -157,32 +159,50 @@ const CoursesContent = () => (
 
 const RecentPlacementsContent = () => (
   <div className="flex flex-col gap-8 text-[#565656]">
+    <div className="w-full">
+      <img 
+        src="/images/bvh/Your career starts here - Recent Placements.png" 
+        alt="Your Career Starts Here" 
+        className="w-full rounded-2xl shadow-sm border border-gray-100"
+      />
+    </div>
     <p className="text-base leading-relaxed font-medium">
       Our PGCR students are successfully placed in reputed hospitals, CROs, and
       research organizations, building strong careers in the clinical research industry.
     </p>
 
-    <div className="py-2 flex justify-center lg:justify-start">
-      <iframe
-        className="w-full max-w-3xl aspect-video rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors"
-        src="https://www.youtube.com/embed/XZJza4GXT2I?start=132"
-        title="Recent Placements Video"
-        allowFullScreen
-      ></iframe>
-    </div>
-
-    {/* Video Gallery move from testimonials */}
+    {/* Video Gallery */}
     <div>
-      {/* <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Employee Testimonials</h4> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
-        {placementVideos.map((videoId, index) => (
-          <div key={index} className="relative aspect-video overflow-hidden rounded-lg shadow-sm border border-transparent hover:border-[#f58634] transition-colors">
+      <h4 className="text-2xl font-bold mb-6 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Employee Testimonials</h4>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Main Testimonial Video */}
+        <div className="flex flex-col gap-2">
+          <div className="relative aspect-video overflow-hidden rounded-xl shadow-md border-2 border-transparent hover:border-[#f58634] transition-all group">
             <iframe
               className="w-full h-full"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title={`Employee Testimonial ${index + 1}`}
+              src="https://www.youtube.com/embed/XZJza4GXT2I?start=132"
+              title="Recent Placements Overview"
               allowFullScreen
             ></iframe>
+          </div>
+          <p className="text-sm font-semibold text-gray-700 line-clamp-2 min-h-[40px] leading-snug px-1">
+            Recent Placements Overview
+          </p>
+        </div>
+
+        {industryVideos.map((video, index) => (
+          <div key={index} className="flex flex-col gap-2">
+            <div className="relative aspect-video overflow-hidden rounded-xl shadow-md border-2 border-transparent hover:border-[#f58634] transition-all group">
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${video.id}`}
+                title={video.title}
+                allowFullScreen
+              ></iframe>
+            </div>
+            <p className="text-sm font-semibold text-gray-700 line-clamp-2 min-h-[40px] leading-snug px-1">
+              {video.title}
+            </p>
           </div>
         ))}
       </div>
@@ -204,63 +224,32 @@ const RecentPlacementsContent = () => (
 
 const AdmissionProcessContent = () => (
   <div className="flex flex-col items-center w-full py-4 text-[#565656]">
-
-    <div className="flex flex-col items-center justify-center w-full pt-4">
-      {/* Flowchart Section */}
-      <div className="flex flex-col items-center w-full max-w-lg">
-        {/* Step 1 */}
-        <div className="flex flex-col items-center relative z-10 w-full text-center">
-          <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
-            1
-          </div>
-          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
-            Fill the application form and<br />Complete Application fees
-          </div>
-        </div>
-
-        {/* Arrow 1 */}
-        <div className="flex justify-center -mt-2 -mb-2 z-0">
-          <svg width="32" height="46" viewBox="0 0 45 65" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm">
-            <path d="M14 0V38H0L22.5 65L45 38H31V0H14Z" fill="#ECAAE2" stroke="#0f172a" strokeWidth="3" strokeLinejoin="round" />
-          </svg>
-        </div>
-
-        {/* Step 2 */}
-        <div className="flex flex-col items-center relative z-10 w-full text-center">
-          <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
-            2
-          </div>
-          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
-            Eligibility screening through<br />Aptitude test and Personal<br />interview
-          </div>
-        </div>
-
-        {/* Arrow 2 */}
-        <div className="flex justify-center -mt-2 -mb-2 z-0">
-          <svg width="32" height="46" viewBox="0 0 45 65" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm">
-            <path d="M14 0V38H0L22.5 65L45 38H31V0H14Z" fill="#ECAAE2" stroke="#0f172a" strokeWidth="3" strokeLinejoin="round" />
-          </svg>
-        </div>
-
-        {/* Step 3 */}
-        <div className="flex flex-col items-center relative z-10 w-full text-center">
-          <div className="w-11 h-11 rounded-full border-[2.5px] border-slate-900 bg-[#FFB800] flex items-center justify-center text-white font-bold text-xl -mb-5 z-20 relative shadow-sm">
-            3
-          </div>
-          <div className="bg-[#145B7A] text-white px-8 pb-6 pt-9 rounded-2xl w-full text-center text-[15px] sm:text-lg font-medium shadow-[0_4px_10px_rgba(0,0,0,0.25)] border-[2.5px] border-slate-900 leading-snug">
-            Confirmation of enrolment via<br />email within 7 working days
-          </div>
-        </div>
-      </div>
+    <div className="w-full max-w-7xl mb-8">
+      <img 
+        src="/images/bvh/ec.png" 
+        alt="Eligibility Criteria" 
+        className="w-full rounded-2xl shadow-sm border border-gray-100"
+      />
     </div>
 
-    {/* Integrated Application Form */}
-    <div className="w-full mt-10">
-      <ApplicationFormContent />
+    <div className="w-full max-w-7xl mb-8">
+      <img 
+        src="/images/bvh/ap.png" 
+        alt="Admission Process" 
+        className="w-full rounded-2xl shadow-sm border border-gray-100"
+      />
+    </div>
+
+    <div className="w-full max-w-7xl mb-8">
+      <img 
+        src="/images/bvh/Fee inclusions.jpg" 
+        alt="Fee Inclusions" 
+        className="w-full rounded-2xl shadow-sm border border-gray-100"
+      />
     </div>
 
     {/* Informational Videos */}
-    <div className="w-full mt-16 pt-10 border-t border-gray-200">
+    <div className="w-full mt-4 pt-6 border-t border-gray-200">
       <h3 className="text-3xl font-bold text-[#2664A8] mb-8 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
         Learn More
       </h3>
@@ -286,6 +275,10 @@ const AdmissionProcessContent = () => (
           <h4 className="text-lg font-bold text-gray-800 text-center">Eligibility Explained</h4>
         </div>
       </div>
+    </div>
+
+    <div className="w-full mt-10">
+      <ApplicationFormContent />
     </div>
   </div>
 );
@@ -449,14 +442,13 @@ const CareerOpportunitiesContent = () => (
 
     {/* Career Options Overview Graphic */}
     <div className="w-full flex flex-col justify-center items-center -mt-4 mb-4">
-      <h3 className="text-3xl font-bold text-[#2664A8] mb-8 font-serif">Pathways to Success</h3>
-      <img src="/images/logo/Career Options for CRC High Resolution.png" alt="Career options for CRC" className="w-full max-w-5xl rounded-xl shadow-sm border border-gray-100" />
+      <img src="/images/bvh/Career Opportunities Banner.jpg" alt="Career Opportunities" className="w-full max-w-7xl rounded-xl shadow-sm border border-gray-100" />
     </div>
 
     {/* CRC */}
     <div className="flex flex-col md:flex-row gap-8 items-start bg-[#f8fbfe] p-8 rounded-2xl border border-blue-100 shadow-sm">
       <div className="w-full md:w-1/3 flex-shrink-0">
-        <img src="/images/Clinical%20Research%20Course/career_opp/CRC.png" alt="Clinical Research Coordinator" className="w-full rounded-xl shadow-md border border-gray-200" />
+        <img src="/images/bvh/CRC Role.png" alt="Clinical Research Coordinator" className="w-full rounded-xl shadow-md border border-gray-200" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
@@ -477,7 +469,7 @@ const CareerOpportunitiesContent = () => (
     {/* CRA */}
     <div className="flex flex-col md:flex-row-reverse gap-8 items-start bg-[#f8fbfe] p-8 rounded-2xl border border-blue-100 shadow-sm">
       <div className="w-full md:w-1/3 flex-shrink-0">
-        <img src="/images/Clinical%20Research%20Course/career_opp/Clinical%20Research%20Associate%20(CRA).png" alt="Clinical Research Associate (CRA)" className="w-full rounded-xl shadow-md border border-gray-200" />
+        <img src="/images/bvh/CRA Role.png" alt="Clinical Research Associate (CRA)" className="w-full rounded-xl shadow-md border border-gray-200" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <h3 className="text-3xl font-bold text-[#2664A8] mb-2" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Research Associate (CRA) Explained</h3>
@@ -507,7 +499,7 @@ const CareerOpportunitiesContent = () => (
     {/* Medical Writer */}
     <div className="flex flex-col md:flex-row gap-8 items-start bg-[#f8fbfe] p-8 rounded-2xl border border-blue-100 shadow-sm">
       <div className="w-full md:w-1/3 flex-shrink-0">
-        <img src="/images/Clinical%20Research%20Course/career_opp/Medical%20writer%20Entry%20Level.png" alt="Medical Writer" className="w-full rounded-xl shadow-md border border-gray-200" />
+        <img src="/images/bvh/Medical Writer Role.png" alt="Medical Writer" className="w-full rounded-xl shadow-md border border-gray-200" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
@@ -531,7 +523,7 @@ const CareerOpportunitiesContent = () => (
     {/* Regulatory Affairs Executive */}
     <div className="flex flex-col md:flex-row-reverse gap-8 items-start bg-[#f8fbfe] p-8 rounded-2xl border border-blue-100 shadow-sm text-left">
       <div className="w-full md:w-1/3 flex-shrink-0">
-        <img src="/images/logo/regulatory.png" alt="Regulatory Affairs Executive Role" className="w-full rounded-xl shadow-md border border-gray-200" />
+        <img src="/images/bvh/Regulatory Affair Role.png" alt="Regulatory Affairs Executive Role" className="w-full rounded-xl shadow-md border border-gray-200" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
@@ -608,8 +600,9 @@ const facultyData = [
   },
   {
     name: "Dr. Vijaykumar Gawali",
-    qualification: "Clinical Research & Education",
-    designation: "NABH Assessor – Clinical Trial Program",
+    qualification: "MBBS, D-Stat, PCPV, PGCR",
+    designation: "Head – Clinical Research & Academics, Medical Superintendent – Centres of Excellence",
+    contact: "NABH Assessor – Ethics Committee (EC) & Clinical Trials Accreditation",
     image: "/images/logo/Project Quotation Background from Dr. Vijay.png",
     customScale: 1.45,
     translateY: 45
@@ -767,61 +760,94 @@ const FacultyCard = ({
   imgHeight = "380px",
   imgLeft = "-left-4",
   textPl = "sm:pl-[320px]",
-}: any) => (
-  <div className="relative group w-full mx-auto xl:mx-0" style={{ maxWidth: cardMaxWidth, height: cardHeight }}>
-    {/* Card Background Shadow Box */}
-    <div className="absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500" />
+}: any) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  // Truncate long designation if not expanded
+  const shouldTruncateDesignation = designation.length > 60;
+  const displayDesignation = (!isExpanded && shouldTruncateDesignation) 
+    ? `${designation.substring(0, 57)}...` 
+    : designation;
 
-    {/* Main Card */}
-    <div className="flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible">
+  return (
+    <div 
+      className={`relative group w-full mx-auto xl:mx-0 transition-all duration-500 ${isExpanded ? 'z-50' : ''}`} 
+      style={{ maxWidth: cardMaxWidth, height: isExpanded ? 'auto' : cardHeight, minHeight: cardHeight }}
+    >
+      {/* Card Background Shadow Box */}
+      <div className={`absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 transition-all duration-500 ${isExpanded ? 'scale-105 opacity-0' : 'group-hover:translate-x-6 group-hover:translate-y-6'}`} />
 
-      {/* Faculty Image - Popping Out */}
-      <div
-        className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-visible ${imgLeft}`}
-        style={{ width: "100%", maxWidth: imgWidth, height: imgHeight, clipPath: "inset(-100% -100% 0 -100%)" }}
-      >
-        <img
-          src={image}
-          alt={name}
-          className="h-full w-auto object-contain group-hover:scale-[1.08] transition-transform duration-700 origin-bottom"
-          style={{ transform: `scale(${customScale}) translateY(${translateY}px)` }}
-        />
-      </div>
+      {/* Main Card */}
+      <div className={`flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible transition-all duration-500 ${isExpanded ? 'shadow-2xl border-orange-300 ring-4 ring-orange-100' : ''}`}>
 
-      {/* Details Section */}
-      <div className={`flex-1 pt-8 pb-6 px-6 text-left flex flex-col justify-between h-full ${textPl}`}>
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
-            {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
-          </h3>
-          <p className="text-[#1A5276] font-bold text-[12px] uppercase tracking-wider mb-2 leading-snug">
-            {designation}
-          </p>
+        {/* Faculty Image - Popping Out */}
+        <div
+          className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-visible transition-all duration-500 ${imgLeft} ${isExpanded ? 'opacity-20 sm:opacity-100 sm:scale-110 sm:-translate-x-4' : ''}`}
+          style={{ width: "100%", maxWidth: imgWidth, height: imgHeight, clipPath: "inset(-100% -100% 0 -100%)" }}
+        >
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-auto object-contain transition-transform duration-700 origin-bottom"
+            style={{ transform: `scale(${customScale}) translateY(${translateY}px)` }}
+          />
         </div>
 
-        <div className="space-y-4 border-t border-orange-200/50 pt-5 mt-auto">
-          <div className="flex flex-col gap-0.5 min-h-[50px]">
-            <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Academic Qualification</span>
-            <span className="text-gray-700 text-[12px] font-medium leading-relaxed line-clamp-2">{qualification}</span>
+        {/* Details Section */}
+        <div className={`flex-1 pt-8 pb-6 px-6 text-left flex flex-col justify-between h-full transition-all duration-500 ${textPl} ${isExpanded ? 'sm:pl-8 sm:ml-[260px]' : ''}`}>
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
+              {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
+            </h3>
+            <p className="text-[#1A5276] font-bold text-[12px] uppercase tracking-wider mb-2 leading-snug">
+              {displayDesignation}
+              {shouldTruncateDesignation && !isExpanded && (
+                <button 
+                  onClick={() => setIsExpanded(true)}
+                  className="ml-1 text-[#f58634] text-[10px] underline cursor-pointer hover:text-orange-600"
+                >
+                  Show More
+                </button>
+              )}
+            </p>
           </div>
 
-          <div className="min-h-[45px] flex flex-col justify-end">
-            {contact ? (
-              <div className="flex flex-col gap-0.5">
-                <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Connect Directly</span>
-                <p className="text-gray-600 text-[11px] break-words leading-relaxed font-medium line-clamp-1">
-                  {contact}
-                </p>
-              </div>
-            ) : (
-              <div className="h-full" />
+          <div className={`space-y-2 border-t border-orange-200/50 pt-4 mt-auto transition-all duration-500`}>
+            <div className="flex flex-col gap-0.5">
+              <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Academic Qualification</span>
+              <span className={`text-gray-700 text-[12px] font-medium leading-relaxed ${isExpanded ? '' : 'line-clamp-2'}`}>{qualification}</span>
+            </div>
+
+            <div>
+              {contact ? (
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Connect Directly / Prof. Profile</span>
+                  <p className={`text-gray-600 text-[11px] break-words leading-relaxed font-medium ${isExpanded ? '' : 'line-clamp-1'}`}>
+                    {contact}
+                  </p>
+                </div>
+              ) : (
+                <div className="h-4" />
+              )}
+            </div>
+            
+            {isExpanded && (
+              <button 
+                onClick={() => setIsExpanded(false)}
+                className="mt-4 text-[#f58634] text-[11px] font-bold uppercase tracking-widest hover:text-orange-600 cursor-pointer flex items-center gap-1"
+              >
+                Show Less
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+              </button>
             )}
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const FacultyContent = () => (
   <div className="w-full py-20 text-[#565656]">
@@ -839,12 +865,13 @@ const FacultyContent = () => (
       {/* 2. Dr. Vijaykumar Gawali */}
       <FacultyCard
         name="Dr. Vijaykumar Gawali"
-        qualification="Clinical Research & Education"
-        designation="NABH Assessor – Clinical Trial Program"
+        qualification="MBBS, D-Stat, PCPV, PGCR"
+        designation="Head – Clinical Research & Academics, Medical Superintendent – Centres of Excellence"
+        contact="NABH Assessor – Ethics Committee (EC) & Clinical Trials Accreditation"
         image="/images/logo/Project Quotation Background from Dr. Vijay.png"
         customScale={1.45}
         translateY={45}
-        cardMaxWidth="600px" // Individual override example
+        cardMaxWidth="600px" 
       />
 
       {/* 3. Dr. Komal Dalal */}
@@ -1068,7 +1095,18 @@ export default function PGCRPage() {
         </div>
       </header>
 
-      <HeroCarousel images={alumniImages} />
+      <RotatingBanner />
+
+      <div className="max-w-4xl mx-auto px-4 mt-6">
+        <HeroCarousel images={carouselImages} />
+        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 py-6 px-8 bg-[#FDF2E9] rounded-2xl shadow-sm border border-orange-100/50">
+          <img src="/images/accreditation/accreditation-img-1-1.png" alt="NABH" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
+          <img src="/images/accreditation/accreditation-img-2-3.jpg" alt="SIRO" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
+          <img src="/images/accreditation/accreditation-img-2-1.jpg" alt="CDSCO" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
+          <img src="/images/accreditation/accreditation-img-2-2.jpg" alt="DHR" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
+          <img src="/images/logo/bvh_logo.png" alt="BVH" className="h-12 md:h-16 w-auto object-contain transition-transform hover:scale-110" />
+        </div>
+      </div>
 
       <div id="admission-section" className="scroll-mt-20">
         <TabNavigation tabs={customTabs} hideTopBorder={true} />

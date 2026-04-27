@@ -178,16 +178,16 @@ export const hospitalTrials = [
   {
     "sr": "24",
     "studyNo": "2015",
-    "title": "Study to assess effect of counseling with Holistic approach in the treatment of depression among the patients related to interpersonal relationship issues visited to psychiatric O.P.D at BhaktiVedanta Hospital and Research Institute .Papiya Sanyal",
-    "pi": "",
+    "title": "Study to assess effect of counseling with Holistic approach in the treatment of depression among the patients related to interpersonal relationship issues visited to psychiatric O.P.D at BhaktiVedanta Hospital and Research Institute",
+    "pi": "Papiya Sanyal",
     "status": "Completed",
     "publication": "No"
   },
   {
     "sr": "25",
     "studyNo": "2015",
-    "title": "Study to assess effect of counseling combined with spirituality among psychiatric patients who have had bad experiences in their lives leading to loss of faith in the Supreme visited to psychiatric O.P.D. at BhaktiVedanta Hospital and Research Institute.Aleya Sanyal",
-    "pi": "",
+    "title": "Study to assess effect of counseling combined with spirituality among psychiatric patients who have had bad experiences in their lives leading to loss of faith in the Supreme visited to psychiatric O.P.D. at BhaktiVedanta Hospital and Research Institute",
+    "pi": "Aleya Sanyal",
     "status": "Completed",
     "publication": "Yes"
   },
@@ -1882,8 +1882,8 @@ export const hospitalTrials = [
   {
     "sr": "253",
     "studyNo": "2024",
-    "title": "Hepatitis B vaccination drive in a private hospital setup: An experience.-Retrospective studyMs.Anushka Bhivandkar,",
-    "pi": "",
+    "title": "Hepatitis B vaccination drive in a private hospital setup: An experience.-Retrospective studyMs",
+    "pi": "Anushka Bhivandkar,",
     "status": "Ongoing",
     "publication": "No"
   },

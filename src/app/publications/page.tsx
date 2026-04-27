@@ -3,6 +3,19 @@
 import { useState, useMemo } from "react";
 
 import { publicationsData } from "@/data/publications";
+import BannerCarousel from "@/components/BannerCarousel";
+
+const publicationBannerImages = [
+  { src: "/images/bvh/pub79.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub80.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub81.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub82.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub83.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub84.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub85.jpg", caption: "Recent Publication" },
+  { src: "/images/bvh/pub86.jpg", caption: "Recent Publication" },
+];
+
 
 const years = publicationsData.map((d) => d.year).sort((a, b) => b - a);
 
@@ -51,6 +64,10 @@ export default function PublicationsPage() {
           </a>
         </div>
       </header>
+      
+      <div className="mb-10">
+        <BannerCarousel images={publicationBannerImages} />
+      </div>
 
       <div className="mb-6 flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">

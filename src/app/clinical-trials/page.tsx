@@ -1,25 +1,8 @@
-
-import HeroImage from "@/components/HeroImage";
 import TabNavigation from "@/components/TabNavigation";
-import InfraCarousel from "@/components/InfraCarousel";
+import BannerCarousel from "@/components/BannerCarousel";
 import { clinicalTrialsTabs } from "@/data/clinical-trials";
 import { pharmaTrials } from "@/data/pharma-trials";
 import { hospitalTrials } from "@/data/hospital-trials";
-
-const infraSlides = [
-  { src: "/images/Advanced Cardiac Care Unit (1).jpg", label: "Advanced Cardiac Care Unit" },
-  { src: "/images/Advanced Intensive Care Unit.jpg", label: "Advanced Intensive Care Unit" },
-  { src: "/images/Advanced Neonatal Intensive Care Unit.jpg", label: "Advanced Neonatal Intensive Care Unit" },
-  { src: "/images/Advanced Radiation Therapy Unit.jpg", label: "Advanced Radiation Therapy Unit" },
-  { src: "/images/Advanced Robotic Surgery Suite.jpg", label: "Advanced Robotic Surgery Suite" },
-  { src: "/images/Comprehensive Dialysis Unit.jpg", label: "Comprehensive Dialysis Unit" },
-  { src: "/images/High Dependency Care Unit.jpg", label: "High Dependency Care Unit" },
-  { src: "/images/High-Precision CT Scan Facility.jpg", label: "High-Precision CT Scan Facility" },
-  { src: "/images/High-Resolution MRI Imaging.jpg", label: "High-Resolution MRI Imaging" },
-  { src: "/images/Modular Operation Theatres.jpg", label: "Modular Operation Theatres" },
-  { src: "/images/State-of the-art-Cathlabs.jpg", label: "State-of-the-Art Cathlabs" },
-  { src: "/images/State-of-the-Art Cathlabs.jpg", label: "Surgical Intensive Care Unit" },
-];
 
 
 const FeasibilityContent = () => (
@@ -27,39 +10,6 @@ const FeasibilityContent = () => (
     
     {/* Intro Blocks */}
     <div className="flex flex-col gap-10">
-      {/* Institutional Credentials */}
-      <div className="w-full">
-        <h3 className="text-2xl font-bold text-[#2664A8] mb-4" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Institutional Credentials</h3>
-        <ul className="space-y-3 leading-relaxed">
-          <li className="flex items-start">
-            <span className="text-[#f58634] mr-2 text-xl leading-none">•</span>
-            <span>300-bedded NABH-accredited tertiary care hospital</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-[#f58634] mr-2 text-xl leading-none">•</span>
-            <div>
-              <strong>Hospital Infrastructure:</strong> 24 hour services:
-              <ul className="list-disc list-inside ml-4 mt-2 mb-2 text-sm space-y-1 text-gray-700">
-                <li>Cardiac Ambulance</li>
-                <li>Pharmacy</li>
-                <li>Blood Bank</li>
-                <li>Trauma and Emergency centre</li>
-                <li>Radiology</li>
-                <li>Pathology</li>
-              </ul>
-            </div>
-          </li>
-          <li className="flex items-start">
-            <span className="text-[#f58634] mr-2 text-xl leading-none">•</span>
-            <span>All Diagnostic Services along with Robotic surgery.</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-[#f58634] mr-2 text-xl leading-none">•</span>
-            <span>Additional centre for: Acupuncture, Ayurveda, Homeopathy, Yoga</span>
-          </li>
-        </ul>
-      </div>
-
       {/* About Clinical Research Dept */}
       <div className="w-full">
         <h3 className="text-2xl font-bold text-[#2664A8] mb-4" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>About Clinical Research Department</h3>
@@ -73,123 +23,83 @@ const FeasibilityContent = () => (
       </div>
     </div>
 
-    {/* Infrastructure & Facilities */}
-    <div className="w-full">
-      <div className="mb-10 overflow-hidden rounded-2xl shadow-lg border border-gray-100 max-w-xl mx-auto">
-        <img 
-          src="/images/logo/Clinical Trial Department - Project Quotation.png" 
-          alt="Clinical Trial Department" 
-          className="w-full h-auto object-cover"
-        />
-      </div>
-      <h3 className="text-2xl font-bold text-[#2664A8] mb-6" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Research Infrastructure & Facilities</h3>
-      
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        {/* Left Column: Text Items */}
-        <div className="flex-1">
-          <ul className="flex flex-col space-y-4">
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Investigational Product (IP) Room</h4>
-              <ul className="list-disc list-inside ml-6 text-base space-y-1 text-gray-700">
-                <li>Biometric access control</li>
-                <li>Temperature-controlled storage: –80°C, –20°C, 2–8°C, 15-25°C</li>
-              </ul>
-            </li>
-            
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Patient Examination Rooms</h4>
-              <ul className="list-disc list-inside ml-6 text-base space-y-1 text-gray-700">
-                <li>Fully equipped as per protocol requirements</li>
-                <li>Centrifuge facility for blood component separation</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Document Storage & Archival</h4>
-              <p className="text-base text-gray-700 leading-relaxed ml-6">Secure archival of trial documents for a minimum of 5 years.</p>
-            </li>
-
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Quality Assurance Department</h4>
-              <p className="text-base text-gray-700 leading-relaxed ml-6">Three-member team ensuring compliance with national and international regulatory standards.</p>
-            </li>
-
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Secure Data Centre</h4>
-              <p className="text-base text-gray-700 leading-relaxed ml-6">Continuous IT monitoring to ensure data confidentiality.</p>
-            </li>
-
-            <li>
-              <h4 className="font-bold text-[#2664A8] text-lg flex items-center gap-2 mb-1"><span className="text-[#f58634] text-xl">•</span> Monitoring & Conference Rooms</h4>
-              <p className="text-base text-gray-700 leading-relaxed ml-6">Infrastructure for physical and virtual audits, meetings, and training programs.</p>
-            </li>
-          </ul>
+    {/* Hospital and Infrastructure facilities */}
+    <div className="w-full max-w-6xl mx-auto pt-6 pb-4">
+      <h3 className="text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: '#000' }}>
+        Hospital and Infrastructure facilities
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className="flex flex-col h-full">
+          <img 
+            src="/images/bvh/hi/Picture2.jpg" 
+            alt="Biomedical & Health Research Department" 
+            className="w-full h-auto object-cover flex-grow"
+          />
+          <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+            Protocol Development & Scientific Publications Unit
+          </div>
         </div>
+        <div className="flex flex-col h-full justify-center">
+          <img 
+            src="/images/bvh/hi/Picture3.png" 
+            alt="Infrastructure Facilities Details" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
 
-        {/* Right Column: Large Images */}
-        <div className="w-full md:w-[380px] flex flex-col gap-6 shrink-0">
-          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100 w-full h-[280px]">
-            <img 
-              src="/images/logo/Feasibility Images from Project Quotation.png" 
-              alt="IP Room Storage Facility" 
-              className="w-full h-full object-cover"
-            />
+      {/* Monitoring Room row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mt-8">
+        <div className="flex flex-col h-full">
+          <img 
+            src="/images/bvh/hi/Picture4.jpg" 
+            alt="Monitoring Room" 
+            className="w-full h-auto object-cover flex-grow"
+          />
+          <div className="mt-2 border border-[#d32f2f] bg-[#ffebee] text-[#c62828] text-center font-medium py-2 px-4 text-sm md:text-base">
+            Monitoring Room
           </div>
-          <div className="overflow-hidden rounded-xl shadow-lg border border-gray-100 w-full h-[280px]">
-            <img 
-              src="/images/logo/Feasibility Images (1).png" 
-              alt="Secure Document Archival" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+        </div>
+        <div className="flex flex-col h-full justify-center">
+          <img 
+            src="/images/bvh/hi/Picture5.png" 
+            alt="Monitoring Room Details" 
+            className="w-full h-auto object-contain"
+          />
         </div>
       </div>
     </div>
 
-    {/* Infrastructure Carousel */}
-    <div>
-      <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Hospital Infrastructure</h3>
-      <InfraCarousel slides={infraSlides} />
+
+    {/* Single Point of Contact Banner */}
+    <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
+      <img 
+        src="/images/bvh/Feasibility - Single point of Contact.jpg" 
+        alt="Feasibility - Single Point of Contact" 
+        className="w-full h-auto object-cover"
+      />
+    </div>
+
+    {/* Feasibility Startup Timeline */}
+    <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
+      <img 
+        src="/images/bvh/Feasibility Startup Timeline.jpg" 
+        alt="Feasibility Startup Timeline" 
+        className="w-full h-auto object-cover"
+      />
+    </div>
+
+    {/* Our Research Excellence */}
+    <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100">
+      <img 
+        src="/images/bvh/Our research excellence.jpg" 
+        alt="Our Research Excellence" 
+        className="w-full h-auto object-cover"
+      />
     </div>
 
 
-    {/* Activities Timeline */}
-    <div>
-      <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Timeline for Activities</h3>
-      <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-200">
-        <table className="w-full text-left bg-white">
-          <thead className="bg-[#2664A8] text-white">
-            <tr>
-              <th className="px-6 py-4 font-semibold w-16 text-center">Sr. No</th>
-              <th className="px-6 py-4 font-semibold">Activities</th>
-              <th className="px-6 py-4 font-semibold w-48 text-center border-l border-[#2664A8]">Timeline</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-100">
-            <tr className="hover:bg-[#f8fbfe] transition-colors">
-              <td className="px-6 py-4 text-center font-medium bg-gray-50 border-r border-gray-100">1</td>
-              <td className="px-6 py-4 text-gray-800 font-medium">Budget Negotiation</td>
-              <td className="px-6 py-4 text-center font-bold text-[#f58634] border-l border-gray-100 bg-gray-50">48 Hrs</td>
-            </tr>
-            <tr className="hover:bg-[#f8fbfe] transition-colors">
-              <td className="px-6 py-4 text-center font-medium bg-gray-50 border-r border-gray-100">2</td>
-              <td className="px-6 py-4 text-gray-800 font-medium">Clinical Trial Agreement - Legal Review</td>
-              <td className="px-6 py-4 text-center font-bold text-[#f58634] border-l border-gray-100 bg-gray-50">48 Hrs</td>
-            </tr>
-            <tr className="hover:bg-[#f8fbfe] transition-colors">
-              <td className="px-6 py-4 text-center font-medium bg-gray-50 border-r border-gray-100">3</td>
-              <td className="px-6 py-4 text-gray-800 font-medium">Bhaktivedanta Hospital Ethics Committee Meeting</td>
-              <td className="px-6 py-4 text-center font-bold text-[#f58634] border-l border-gray-100 bg-gray-50">Twice a month</td>
-            </tr>
-            <tr className="hover:bg-[#f8fbfe] transition-colors">
-              <td className="px-6 py-4 text-center font-medium bg-gray-50 border-r border-gray-100">4</td>
-              <td className="px-6 py-4 text-gray-800 font-medium">EC Initial Submission and CTA discussion can be carried out simultaneously</td>
-              <td className="px-6 py-4 text-center font-bold text-[#f58634] border-l border-gray-100 bg-gray-50">48 Hrs</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+
 
     {/* Videos */}
     <div className="pt-10 border-t border-gray-200">
@@ -202,12 +112,6 @@ const FeasibilityContent = () => (
           <h4 className="text-lg font-bold text-gray-800 text-center px-2">Institute virtual tour and infrastructure</h4>
         </div>
         
-        <div className="flex flex-col">
-          <div className="relative pb-[56.25%] h-0 mb-4 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
-            <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational course" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-          <h4 className="text-lg font-bold text-gray-800 text-center px-2">Investigational Course</h4>
-        </div>
         
         <div className="flex flex-col">
           <div className="relative pb-[56.25%] h-0 mb-4 rounded-xl overflow-hidden shadow-md bg-gray-100 border border-gray-200">
@@ -223,6 +127,14 @@ const FeasibilityContent = () => (
 
 const PharmaSponsoredTrialsContent = () => (
   <div className="w-full py-8 text-[#565656]">
+    <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100 mb-10">
+      <img 
+        src="/images/bvh/Pharma Sponsored Trials.png" 
+        alt="Pharma Sponsored Trials" 
+        className="w-full h-auto object-cover"
+      />
+    </div>
+
     <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Trials Registry</h3>
     
     <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-200 max-h-[600px] overflow-y-auto" style={{ scrollbarWidth: 'thin' }}>
@@ -266,6 +178,14 @@ const PharmaSponsoredTrialsContent = () => (
 
 const HospitalInitiatedTrialsContent = () => (
   <div className="w-full py-8 text-[#565656]">
+    <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-xl border border-gray-100 mb-10">
+      <img 
+        src="/images/bvh/Hospital Initiated Innovative Studies.png" 
+        alt="Hospital Initiated Innovative Studies" 
+        className="w-full h-auto object-cover"
+      />
+    </div>
+
     <h3 className="text-2xl font-bold text-[#2664A8] mb-6 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Biomedical Studies Registry</h3>
     
     <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-200 max-h-[600px] overflow-y-auto" style={{ scrollbarWidth: 'thin' }}>
@@ -389,6 +309,21 @@ const PatientTestimonialsContent = () => {
   );
 };
 
+
+
+const clinicalTrialsBannerImages = [
+  { src: "/images/bvh/Authorized department access.jpg", caption: "Authorized Access Control" },
+  { src: "/images/bvh/feasibility and startup team.jpg", caption: "Feasibility and Start-up Team" },
+  { src: "/images/bvh/IP storage facility.jpg", caption: "Investigational Product Storage" },
+  { src: "/images/bvh/study document storage facility.jpg", caption: "Study Document Storage Facility" },
+  { src: "/images/bvh/patient room.jpg", caption: "Patient Examination Room" },
+  { src: "/images/bvh/centrifuge and blood processing unit.jpg", caption: "Centrifuge & Blood Processing Unit" },
+  { src: "/images/High-Resolution MRI Imaging.jpg", caption: "High Resolution MRI Imaging" },
+  { src: "/images/High-Precision CT Scan Facility.jpg", caption: "High Precision CT Scan Facility" },
+  { src: "/images/Comprehensive Dialysis Unit.jpg", caption: "Comprehensive Dialysis Care Unit" },
+  { src: "/images/Advanced Radiation Therapy Unit.jpg", caption: "Advanced Radiation Therapy Unit" },
+];
+
 const customTabs = clinicalTrialsTabs.map(t => {
   if (t.id === "feasibility") return { ...t, content: <FeasibilityContent /> };
   if (t.id === "therapeutic-areas") return { ...t, content: <PharmaSponsoredTrialsContent /> };
@@ -402,8 +337,6 @@ const customTabs = clinicalTrialsTabs.map(t => {
 export default function ClinicalTrialsPage() {
   return (
     <main className="min-h-screen bg-white">
-
-
       <header className="text-center pt-8 pb-2">
         <h1 className="text-2xl md:text-4xl font-bold text-[#2664A8] mb-3">
           Clinical Trials
@@ -424,10 +357,7 @@ export default function ClinicalTrialsPage() {
         </a>
       </header>
 
-      <HeroImage
-        src="/images/clinical-trials-banner.png"
-        alt="Clinical Trials at Bhaktivedanta Hospital"
-      />
+      <BannerCarousel images={clinicalTrialsBannerImages} />
 
       <TabNavigation tabs={customTabs} hideTopBorder />
     </main>

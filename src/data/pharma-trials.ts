@@ -10,7 +10,7 @@ export const pharmaTrials = [
   {
     "sr": "2",
     "studyNo": "HEC/4/2014",
-    "title": "- “A Multi center, randomized, open label clinicaL trial of efficacy of  Heart Failure Reversal Treatment (HFRT) regimen as an add-on   therapy to conventional treatment versus conventional treatment   alone for chronic heart failure.”",
+    "title": "- \u201cA Multi center, randomized, open label clinicaL trial of efficacy of  Heart Failure Reversal Treatment (HFRT) regimen as an add-on   therapy to conventional treatment versus conventional treatment   alone for chronic heart failure.\u201d",
     "pi": "Dr Abhijit Aklujkar",
     "status": "Completed",
     "department": "Cardiology"
@@ -18,7 +18,7 @@ export const pharmaTrials = [
   {
     "sr": "3",
     "studyNo": "HEC/5/2014",
-    "title": "A Randomized, Double blind, Placebo controlled Trial to Evaluate the Efficacy and Safety of NuHair® Hair Regrowth Products for Supporting Hair Growth in Men with Androgenic Alopecia",
+    "title": "A Randomized, Double blind, Placebo controlled Trial to Evaluate the Efficacy and Safety of NuHair\u00ae Hair Regrowth Products for Supporting Hair Growth in Men with Androgenic Alopecia",
     "pi": "Dr Ashok Shetty",
     "status": "Completed",
     "department": "Dermatology"
@@ -34,7 +34,7 @@ export const pharmaTrials = [
   {
     "sr": "7",
     "studyNo": "HEC/01/2015",
-    "title": "A Randomized, Double-Blind, Placebo-Controlled, Parallel Design, Multiple-Site Studyu to Evaluate the Clinical Equivalence of Ciprofloxacin 0.3%/ Dexamethasone 0.1 % Sterle Otic Suspension (PAR) Compared to CIPRODEX® (ciprofloxacin 0.3%/Dexamethasone 0.1%) Sterile Otic Suspension (Alcon) in the Treatment of Adults with Acute bacterial Otitis Externa",
+    "title": "A Randomized, Double-Blind, Placebo-Controlled, Parallel Design, Multiple-Site Studyu to Evaluate the Clinical Equivalence of Ciprofloxacin 0.3%/ Dexamethasone 0.1 % Sterle Otic Suspension (PAR) Compared to CIPRODEX\u00ae (ciprofloxacin 0.3%/Dexamethasone 0.1%) Sterile Otic Suspension (Alcon) in the Treatment of Adults with Acute bacterial Otitis Externa",
     "pi": "Dr.Rajesh Alimchandani",
     "status": "Withdrawn by PI",
     "department": "ENT"
@@ -50,7 +50,7 @@ export const pharmaTrials = [
   {
     "sr": "10",
     "studyNo": "HEC/05/2015",
-    "title": "MYL-Her3001- A multicenter, double-blind, randomized, parallel- group, phase III study of the efficacy and safety of Hercules plus taxane versus Herceptin® plus taxane as first line therapy in patients with HER2-positive metastatic breast cancer",
+    "title": "MYL-Her3001- A multicenter, double-blind, randomized, parallel- group, phase III study of the efficacy and safety of Hercules plus taxane versus Herceptin\u00ae plus taxane as first line therapy in patients with HER2-positive metastatic breast cancer",
     "pi": "Dr Nirmal Raut",
     "status": "Withdrawn by PI",
     "department": "Oncology"
@@ -82,7 +82,7 @@ export const pharmaTrials = [
   {
     "sr": "14",
     "studyNo": "HEC/12/2015",
-    "title": "B1481038  “Phase 3 Multi-Center, Double-Blind, Randomized, Placebo-Controlled, Parallel Group Evaluation Of The Efficacy, Safety, And Tolerability Of Bococizumab (Pf-04950615), In Reducing The Occurrence Of Major Cardiovascular Events In High Risk Subjects”",
+    "title": "B1481038  \u201cPhase 3 Multi-Center, Double-Blind, Randomized, Placebo-Controlled, Parallel Group Evaluation Of The Efficacy, Safety, And Tolerability Of Bococizumab (Pf-04950615), In Reducing The Occurrence Of Major Cardiovascular Events In High Risk Subjects\u201d",
     "pi": "Dr Abhijit Aklujkar",
     "status": "Withdrawn by PI",
     "department": "Cardiology"
@@ -106,7 +106,7 @@ export const pharmaTrials = [
   {
     "sr": "17",
     "studyNo": "HEC/15/2015",
-    "title": "A Double Blind, Randomized, Active Controlled, Parallel Design, Comparative PK, Efficacy, Safety and Immunogenicity Study of Bmab-100 and Avastin®, both in Combination with XELOX Chemotherapy in Patients with Metastatic Colorectal Cancer",
+    "title": "A Double Blind, Randomized, Active Controlled, Parallel Design, Comparative PK, Efficacy, Safety and Immunogenicity Study of Bmab-100 and Avastin\u00ae, both in Combination with XELOX Chemotherapy in Patients with Metastatic Colorectal Cancer",
     "pi": "Dr. Vishnu Agarwal",
     "status": "Completed",
     "department": "Oncology"
@@ -114,7 +114,7 @@ export const pharmaTrials = [
   {
     "sr": "18",
     "studyNo": "HEC/16/2015",
-    "title": "“A multinational, prospective, non-interventional 24-week study to assess effectiveness and safety of initial combination therapy with vildagliptin/metformin in drug-naïve type 2 diabetes mellitus patients in a real life setting.”",
+    "title": "\u201cA multinational, prospective, non-interventional 24-week study to assess effectiveness and safety of initial combination therapy with vildagliptin/metformin in drug-na\u00efve type 2 diabetes mellitus patients in a real life setting.\u201d",
     "pi": "Dr Ameya Joshi",
     "status": "Completed",
     "department": "Endocrinology"
@@ -138,7 +138,7 @@ export const pharmaTrials = [
   {
     "sr": "22",
     "studyNo": "HEC/22/2015",
-    "title": "A randomized double-blind, multicenter, phase 3 study to compare the efficacy and safety of BMO-2 (adalimumab) and Humira® (adalimumab) in patients with active rheumatoid arthritis.",
+    "title": "A randomized double-blind, multicenter, phase 3 study to compare the efficacy and safety of BMO-2 (adalimumab) and Humira\u00ae (adalimumab) in patients with active rheumatoid arthritis.",
     "pi": "Dr Pramodini Shankaran",
     "status": "Completed",
     "department": "Rhuematology/Orthopaedics"
@@ -178,7 +178,7 @@ export const pharmaTrials = [
   {
     "sr": "30",
     "studyNo": "HEC/01/2017",
-    "title": "CQVM149B2303: A multicenter, randomized, 12 week, double- blind study to assess the efficacy and safety of QMF149 (150/80 microgram) compared with MF Twisthaler®(200 microgram)in adult and adolescent patients with asthma.",
+    "title": "CQVM149B2303: A multicenter, randomized, 12 week, double- blind study to assess the efficacy and safety of QMF149 (150/80 microgram) compared with MF Twisthaler\u00ae(200 microgram)in adult and adolescent patients with asthma.",
     "pi": "Dr Ajay Godse",
     "status": "Completed",
     "department": "Pulmonary Medicine"
@@ -186,7 +186,7 @@ export const pharmaTrials = [
   {
     "sr": "31",
     "studyNo": "HEC/06/2017",
-    "title": "MYL-1601N-3002: A Randomized, Double blind, Three-arm, Parallel, Placebo controlled, Clinical Study to Evaluate the Bioequivalence using Clinical Endpoint of Diclofenac Sodium Gel, 1% (Mylan Inc.) to Voltaren® Gel (Diclofenac Sodium Topical Gel) 1% (Novartis Consumer Health, Inc.) in Patients with Osteoarthritis (OA) of the Knee.",
+    "title": "MYL-1601N-3002: A Randomized, Double blind, Three-arm, Parallel, Placebo controlled, Clinical Study to Evaluate the Bioequivalence using Clinical Endpoint of Diclofenac Sodium Gel, 1% (Mylan Inc.) to Voltaren\u00ae Gel (Diclofenac Sodium Topical Gel) 1% (Novartis Consumer Health, Inc.) in Patients with Osteoarthritis (OA) of the Knee.",
     "pi": "Dr Pramodini Shankaran",
     "status": "Completed",
     "department": "Rhuematology/Orthopaedics"
@@ -234,7 +234,7 @@ export const pharmaTrials = [
   {
     "sr": "39",
     "studyNo": "HEC/03/2018",
-    "title": "A prospective, 16 week, phase IV study to evaluate safety, tolerability and effectiveness in patients with severe dementia of the Alzheimer’s type exposed to rivastigmine (Exelon) 15 cm2 transdermal patch",
+    "title": "A prospective, 16 week, phase IV study to evaluate safety, tolerability and effectiveness in patients with severe dementia of the Alzheimer\u2019s type exposed to rivastigmine (Exelon) 15 cm2 transdermal patch",
     "pi": "Dr. Manoj Hunnur",
     "status": "Completed",
     "department": "Nuerology"
@@ -242,7 +242,7 @@ export const pharmaTrials = [
   {
     "sr": "40",
     "studyNo": "HEC/04/2018",
-    "title": "LRP/PegGCSF/2016/004: An open-label, randomized, comparative, parallel group study to assess the Immunogenicity of Lupin’s Peg-filgrastim versus Neulasta® as an Adjunct to Chemotherapy in Patients with Breast Cancer.",
+    "title": "LRP/PegGCSF/2016/004: An open-label, randomized, comparative, parallel group study to assess the Immunogenicity of Lupin\u2019s Peg-filgrastim versus Neulasta\u00ae as an Adjunct to Chemotherapy in Patients with Breast Cancer.",
     "pi": "Dr Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -274,7 +274,7 @@ export const pharmaTrials = [
   {
     "sr": "45",
     "studyNo": "HEC/11/2018",
-    "title": "Randomized, Assessor-Blind, Multicentre, Parallel Group, Two Arms, Clinical Study to Assess the Efficacy, Pharmacokinetics, Pharmacodynamics, Immunogenicity and Safety of Rituximab (Test Product, Zydus) in comparison with Rituximab (Reference Product, Roche/Genentech) in Patients with Diffuse Large B Cell Lymphoma (DLBCL) ”. (Trial No. RITU.17.001).",
+    "title": "Randomized, Assessor-Blind, Multicentre, Parallel Group, Two Arms, Clinical Study to Assess the Efficacy, Pharmacokinetics, Pharmacodynamics, Immunogenicity and Safety of Rituximab (Test Product, Zydus) in comparison with Rituximab (Reference Product, Roche/Genentech) in Patients with Diffuse Large B Cell Lymphoma (DLBCL) \u201d. (Trial No. RITU.17.001).",
     "pi": "Dr Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -282,7 +282,7 @@ export const pharmaTrials = [
   {
     "sr": "46",
     "studyNo": "HEC/12/2018",
-    "title": "A Prospective, Randomized, Multicenter , Comparative, Open- label, Parallel study to evaluate the Efficacy, Safety and Pharmacokinetics of Test-TrastuzumabEmtansine (ZRC- 3256;Cadila Healthcare Ltd) and Reference- TrastuzumabEmtansine(Kadcyla®, Roche Products (India) Pvt. Ltd.) in HER2- Positive Metastatic Breast Cancer Patients ”. (Trial No. TDM1.17.001) .",
+    "title": "A Prospective, Randomized, Multicenter , Comparative, Open- label, Parallel study to evaluate the Efficacy, Safety and Pharmacokinetics of Test-TrastuzumabEmtansine (ZRC- 3256;Cadila Healthcare Ltd) and Reference- TrastuzumabEmtansine(Kadcyla\u00ae, Roche Products (India) Pvt. Ltd.) in HER2- Positive Metastatic Breast Cancer Patients \u201d. (Trial No. TDM1.17.001) .",
     "pi": "Dr Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -322,7 +322,7 @@ export const pharmaTrials = [
   {
     "sr": "52",
     "studyNo": "HEC/03/2019",
-    "title": "EFC15082 / GEMELLI M  A 26-week, Randomized, Open- label, Parallel-group Comparison of SAR341402 Mix 70/30 to NovoMix®30 in Adult Patients with Diabetes Mellitus using Pre- mix Insulin Analogs",
+    "title": "EFC15082 / GEMELLI M  A 26-week, Randomized, Open- label, Parallel-group Comparison of SAR341402 Mix 70/30 to NovoMix\u00ae30 in Adult Patients with Diabetes Mellitus using Pre- mix Insulin Analogs",
     "pi": "Dr. Ameya Joshi",
     "status": "Completed",
     "department": "Endocrinology"
@@ -330,7 +330,7 @@ export const pharmaTrials = [
   {
     "sr": "53",
     "studyNo": "HEC/05/2019",
-    "title": "A Randomized, Double-blind, Parallel Group, Equivalence, Multicentre Phase III Trial to Compare the Efficacy, Safety, Pharmacokinetics and Immunogenicity of HD204 to Avastin® in patients with Metastatic or Recurrent Non-squamous Non-small Cell Lung Cancer",
+    "title": "A Randomized, Double-blind, Parallel Group, Equivalence, Multicentre Phase III Trial to Compare the Efficacy, Safety, Pharmacokinetics and Immunogenicity of HD204 to Avastin\u00ae in patients with Metastatic or Recurrent Non-squamous Non-small Cell Lung Cancer",
     "pi": "Dr Nirmal Raut",
     "status": "Ongoing",
     "department": "Oncology"
@@ -346,7 +346,7 @@ export const pharmaTrials = [
   {
     "sr": "55",
     "studyNo": "HEC/23/2019",
-    "title": "A randomized, open label, multicenter phase II study evaluating the efficacy and safety of capmatinib(INC 280)plus pembrplizumab versus pembrolizumab alone as first line treatment for locally advanced or metastatic non-small cell lung cancer with PD-L1 ≥50%",
+    "title": "A randomized, open label, multicenter phase II study evaluating the efficacy and safety of capmatinib(INC 280)plus pembrplizumab versus pembrolizumab alone as first line treatment for locally advanced or metastatic non-small cell lung cancer with PD-L1 \u226550%",
     "pi": "Dr.Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -370,7 +370,7 @@ export const pharmaTrials = [
   {
     "sr": "58",
     "studyNo": "HEC/01/2020",
-    "title": "A Real-world, prospective, Observational study to Evaluate the safety and effectiveness of Rivaroxaban (Xarelto®)for prevention of stroke and systemic Embolism in Indian patients with Non- valvular Atrial Fibrillation(NVAF)",
+    "title": "A Real-world, prospective, Observational study to Evaluate the safety and effectiveness of Rivaroxaban (Xarelto\u00ae)for prevention of stroke and systemic Embolism in Indian patients with Non- valvular Atrial Fibrillation(NVAF)",
     "pi": "Dr.Harminder Singh",
     "status": "Completed",
     "department": "Cardiology"
@@ -434,7 +434,7 @@ export const pharmaTrials = [
   {
     "sr": "67",
     "studyNo": "HEC/01/2021",
-    "title": "Retrospective EMR Database Study in India:Assessment of Overall Insulin Usage Pattern in insulin Naïve Type2 Diabetes Mellitus (T2DM) Patients (REALITY)",
+    "title": "Retrospective EMR Database Study in India:Assessment of Overall Insulin Usage Pattern in insulin Na\u00efve Type2 Diabetes Mellitus (T2DM) Patients (REALITY)",
     "pi": "Dr.Ameya Joshi",
     "status": "Terminated by sponsor",
     "department": "Endocrinology"
@@ -450,7 +450,7 @@ export const pharmaTrials = [
   {
     "sr": "69",
     "studyNo": "HEC/03/2021",
-    "title": "“An Open-label, Multicenter, Randomized Phase 3 Study of First line Encorafenib Plus Cetuximab With or Without Chemotherapy versus Standard of Care Therapy with a Safety Lead-in of Encorafenib and Cetuximab Plus Chemotherapy In Participants with Metastatic BRAF V600E Mutant Colorectal Cancer”",
+    "title": "\u201cAn Open-label, Multicenter, Randomized Phase 3 Study of First line Encorafenib Plus Cetuximab With or Without Chemotherapy versus Standard of Care Therapy with a Safety Lead-in of Encorafenib and Cetuximab Plus Chemotherapy In Participants with Metastatic BRAF V600E Mutant Colorectal Cancer\u201d",
     "pi": "Dr.Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -482,7 +482,7 @@ export const pharmaTrials = [
   {
     "sr": "73",
     "studyNo": "HEC/01/2022",
-    "title": "A Multicentric, Open-label, Randomized, Two Period, Two Treatment, Two Sequence, Crossover, Multiple Dose, Ste-ady state Bioequivalence Study of Sunitinib Malate Capsules 50 mg of Eugia Pharma Specialities Limited (A Joint venture of Aurobindo Pharma Limited & Celon Laboratories Limited), India (Test) with Sutent® (Sunitinib Malate) capsules 50 mg of Pfizer Labs, USA (Reference) in adult patients with advanced renal cell carcinoma already receivi-ng stable dose of Sunitinib Malate Capsules 50 mg under fasting conditions.",
+    "title": "A Multicentric, Open-label, Randomized, Two Period, Two Treatment, Two Sequence, Crossover, Multiple Dose, Ste-ady state Bioequivalence Study of Sunitinib Malate Capsules 50 mg of Eugia Pharma Specialities Limited (A Joint venture of Aurobindo Pharma Limited & Celon Laboratories Limited), India (Test) with Sutent\u00ae (Sunitinib Malate) capsules 50 mg of Pfizer Labs, USA (Reference) in adult patients with advanced renal cell carcinoma already receivi-ng stable dose of Sunitinib Malate Capsules 50 mg under fasting conditions.",
     "pi": "Dr.Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -546,7 +546,7 @@ export const pharmaTrials = [
   {
     "sr": "82",
     "studyNo": "HEC/10/2022A",
-    "title": "phase3,Randomized,Double-Blind,Multicenter Study of ARV- 471 (PF-07850327) plus Palbociclib versus Letrozole plus Palbociclib for the treatment of Participants with Estrogen Receptor – Positive ,HER2-Negative Breast Cancer who have not received any Prior Systematic Anti- Cancer Treatment for advanced disease (VERITAC-3)",
+    "title": "phase3,Randomized,Double-Blind,Multicenter Study of ARV- 471 (PF-07850327) plus Palbociclib versus Letrozole plus Palbociclib for the treatment of Participants with Estrogen Receptor \u2013 Positive ,HER2-Negative Breast Cancer who have not received any Prior Systematic Anti- Cancer Treatment for advanced disease (VERITAC-3)",
     "pi": "Dr.Nirmal Raut",
     "status": "Ongoing",
     "department": "Oncology"
@@ -562,39 +562,39 @@ export const pharmaTrials = [
   {
     "sr": "84",
     "studyNo": "HEC/12/2022",
-    "title": "A Randomized, Double-Blind, Double Dummy, Parallel Group, Multicenter 24 to 52 Week Variable Length Study to Assess the Efficacy and Safety of Budesonide, Glycopyrronium, and Formoterol Fumarate Metered Dose Inhaler (MDI) Relative to Budesonide and Formoterol Fumarate MDI and Symbicort® Pressurized MDI in Adult and Adolescent Participants with Inadequately Controlled Asthma (KALOS)",
-    "pi": "Dr.Ajay Godse Completed Pulmonology",
-    "status": "",
-    "department": ""
+    "title": "A Randomized, Double-Blind, Double Dummy, Parallel Group, Multicenter 24 to 52 Week Variable Length Study to Assess the Efficacy and Safety of Budesonide, Glycopyrronium, and Formoterol Fumarate Metered Dose Inhaler (MDI) Relative to Budesonide and Formoterol Fumarate MDI and Symbicort\u00ae Pressurized MDI in Adult and Adolescent Participants with Inadequately Controlled Asthma (KALOS)",
+    "pi": "Dr.Ajay Godse",
+    "status": "Completed",
+    "department": "Pulmonology"
   },
   {
     "sr": "85",
     "studyNo": "HEC/13/2022",
     "title": "A  Phase III, Multicentre, Randomised , Double -blind, parallel- group, placebo-controlled study to evaluate the efficacy and safety of Tozorakimab (MEDI3506) in patients Hospitalized for viral lung infection Requiring supplemental oxygen (TILIA)",
-    "pi": "Dr.Ajay Godse Ongoing Pulmonology",
-    "status": "",
-    "department": ""
+    "pi": "Dr.Ajay Godse",
+    "status": "Ongoing",
+    "department": "Pulmonology"
   },
   {
     "sr": "86",
     "studyNo": "HEC/01/2023",
     "title": "A Phase 3, 52-Week, Randomized, Double-Blind, Placebo- Controlled, Parallel-Arm Efficacy and Safety Study with Open- Label Extension of BLU-5937 in Adult Participants with Refractory Chronic Cough, Including Unexplained Chronic Cough (CALM-1)",
-    "pi": "Dr.Ajay Godse Ongoing Pulmonology",
-    "status": "",
-    "department": ""
+    "pi": "Dr.Ajay Godse",
+    "status": "Ongoing",
+    "department": "Pulmonology"
   },
   {
     "sr": "87",
     "studyNo": "HEC/02/2023",
     "title": "A Phase III, Multicentre, Randomised, Double-blind, Chronic- dosing, Parallel-group, Placebo- controlled Extension Study to Evaluate the Long-term Efficacy and Safety of Tozorakimab in Participants with Chronic Obstructive Pulmonary Disease (COPD) with a History of Exacerbations (PROSPERO)",
-    "pi": "Dr.Ajay Godse Ongoing Pulmonology",
-    "status": "",
-    "department": ""
+    "pi": "Dr.Ajay Godse",
+    "status": "Ongoing",
+    "department": "Pulmonology"
   },
   {
     "sr": "88",
     "studyNo": "HEC/03/2023",
-    "title": "A randomized, international, multicenter single-blind study to compare the efficacy and safety of PZN-128 powder for solution for subcutaneous injection 250 μg (Pharmasyntez-Nord JSC, Russia) versus сomparator drug in patients with chronic idiopathic (immune) thrombocytopenic purpura",
+    "title": "A randomized, international, multicenter single-blind study to compare the efficacy and safety of PZN-128 powder for solution for subcutaneous injection 250 \u03bcg (Pharmasyntez-Nord JSC, Russia) versus \u0441omparator drug in patients with chronic idiopathic (immune) thrombocytopenic purpura",
     "pi": "Dr.Shilpa Gupta",
     "status": "Completed",
     "department": "Oncology"
@@ -602,7 +602,7 @@ export const pharmaTrials = [
   {
     "sr": "89",
     "studyNo": "HEC/04/2023",
-    "title": "A Randomized, Double-blinded, Parallel, Placebo-controlled, Multicenter,bioequivalence study with clinical endpoint to assess efficacy and safety of Linaclotide 145 mcg capsule (manufactured by Arab Pharmaceutical Manufacturing PSC, Jordan for Hikma Pharmaceuticals (MAH)) to LINZESS® (linaclotide) 145 mcg capsules (Allergan USA, Inc. Madison, NJ 07940) in the treatment of chronic idiopathic constipation.",
+    "title": "A Randomized, Double-blinded, Parallel, Placebo-controlled, Multicenter,bioequivalence study with clinical endpoint to assess efficacy and safety of Linaclotide 145 mcg capsule (manufactured by Arab Pharmaceutical Manufacturing PSC, Jordan for Hikma Pharmaceuticals (MAH)) to LINZESS\u00ae (linaclotide) 145 mcg capsules (Allergan USA, Inc. Madison, NJ 07940) in the treatment of chronic idiopathic constipation.",
     "pi": "Dr.Ravindra Surude",
     "status": "Completed",
     "department": "Gastroenterology"
@@ -619,9 +619,9 @@ export const pharmaTrials = [
     "sr": "93",
     "studyNo": "HEC/08/2023",
     "title": "A Multicenter, Randomized, Double-blind, Chronic-dosing, Parallel-group, Placebo-controlled Phase 3 Study to Evaluate the Efficacy and Safety of Benralizumab 100 mg in Patients with Moderate to Very Severe Chronic Obstructive Pulmonary Disease (COPD) with a History of Frequent COPD Exacerbations and Elevated Peripheral Blood Eosinophils (RESOLUTE)",
-    "pi": "Dr.Ajay Godse Completed Pulmonology",
-    "status": "",
-    "department": ""
+    "pi": "Dr.Ajay Godse",
+    "status": "Completed",
+    "department": "Pulmonology"
   },
   {
     "sr": "94",
@@ -658,7 +658,7 @@ export const pharmaTrials = [
   {
     "sr": "99",
     "studyNo": "HEC/01/2024",
-    "title": "ARandomized, Double-blind, Parallel Group, Equivalence, Multicenter Phase IIITrial toCompare theEfficacy, Safety, and Immunogenicity ofAP063 toHerceptin® insubjects with HER2+ Breast cancer",
+    "title": "ARandomized, Double-blind, Parallel Group, Equivalence, Multicenter Phase IIITrial toCompare theEfficacy, Safety, and Immunogenicity ofAP063 toHerceptin\u00ae insubjects with HER2+ Breast cancer",
     "pi": "Dr.Nirmal Raut",
     "status": "Terminated by sponsor",
     "department": "Oncology"
@@ -666,7 +666,7 @@ export const pharmaTrials = [
   {
     "sr": "100",
     "studyNo": "HEC/02/2024",
-    "title": "Lorlatinib (PF-06463922) Continuation Protocol:  An Open Label Single Arm Continuation Study For Participants With Alk- Positive Or Ros1 – Positive Non – Small Cell Lung Cancer (NSCLC) Continuing From Pfizer Sponsored Lorlatinib Clinical studies",
+    "title": "Lorlatinib (PF-06463922) Continuation Protocol:  An Open Label Single Arm Continuation Study For Participants With Alk- Positive Or Ros1 \u2013 Positive Non \u2013 Small Cell Lung Cancer (NSCLC) Continuing From Pfizer Sponsored Lorlatinib Clinical studies",
     "pi": "Dr.Nirmal Raut",
     "status": "Ongoing",
     "department": "Oncology"
@@ -674,7 +674,7 @@ export const pharmaTrials = [
   {
     "sr": "102",
     "studyNo": "HEC/04/2024",
-    "title": "An Interventional, Open-Label, Randomized, Multicenter,Phase 3 Study of PF-07220060 Plus Fulvestrant Compared to Investigator’s Choice of Therapy in Participants Over 18 Years of Age with Hormone Receptor-Positive, HER2-Negative Advanced/Metastatic Breast Cancer Whose Disease Progressed After Prior CDK4/6 Inhibitor-based Therapy",
+    "title": "An Interventional, Open-Label, Randomized, Multicenter,Phase 3 Study of PF-07220060 Plus Fulvestrant Compared to Investigator\u2019s Choice of Therapy in Participants Over 18 Years of Age with Hormone Receptor-Positive, HER2-Negative Advanced/Metastatic Breast Cancer Whose Disease Progressed After Prior CDK4/6 Inhibitor-based Therapy",
     "pi": "Dr.Nirmal Raut",
     "status": "Completed",
     "department": "Oncology"
@@ -714,7 +714,7 @@ export const pharmaTrials = [
   {
     "sr": "107",
     "studyNo": "HEC/09/2024",
-    "title": "An Open-label, randomized, controlled phase 3 study of Sigvotatug Vedotin in combination with Pembrolizumab compared with Pembrolizumab monotherapy as first line treatment in participants  IN with PD-L1 high (≥50% of tumor cells expressing  PD-L1), locally advanced unresectable , or metastatic non small cell lung cancer (BE6A LUNG-02)",
+    "title": "An Open-label, randomized, controlled phase 3 study of Sigvotatug Vedotin in combination with Pembrolizumab compared with Pembrolizumab monotherapy as first line treatment in participants  IN with PD-L1 high (\u226550% of tumor cells expressing  PD-L1), locally advanced unresectable , or metastatic non small cell lung cancer (BE6A LUNG-02)",
     "pi": "Dr.Nirmal Raut",
     "status": "Ongoing",
     "department": "Oncology"
@@ -746,7 +746,7 @@ export const pharmaTrials = [
   {
     "sr": "111",
     "studyNo": "HEC/04/2025",
-    "title": "A Randomized, Double-Blind, Multicenter, Pharmacokinetic Equivalence Clinical Trial of QL2107 (Keytruda® Biosimilar Candidate) in Comparison with Keytruda® (Pembrolizumab) for Adjuvant Therapy to Demonstrate Pharmacokinetic Similarity in Subjects with Resected Non-Small Cell Lung Cancer.",
+    "title": "A Randomized, Double-Blind, Multicenter, Pharmacokinetic Equivalence Clinical Trial of QL2107 (Keytruda\u00ae Biosimilar Candidate) in Comparison with Keytruda\u00ae (Pembrolizumab) for Adjuvant Therapy to Demonstrate Pharmacokinetic Similarity in Subjects with Resected Non-Small Cell Lung Cancer.",
     "pi": "Dr. Raut",
     "status": "Ongoing",
     "department": "Oncology"
@@ -771,8 +771,8 @@ export const pharmaTrials = [
     "sr": "114",
     "studyNo": "HEC/07/2025",
     "title": "An Interventional Phase 2/3, Randomized, Double-Blind, Third Party Unblinded, Placebo-Controlled, Parallel-Group Study to Investigate Efficacy and Safety of Pf-07275315 in Adult Participants with Moderate-To-Severe Chronic Obstructive Pulmonary Disease (COPD)",
-    "pi": "Dr. Ajay Godse Ongoing Pulmonology",
-    "status": "",
-    "department": ""
+    "pi": "Dr. Ajay Godse",
+    "status": "Ongoing",
+    "department": "Pulmonology"
   }
 ];

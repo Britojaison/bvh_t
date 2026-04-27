@@ -2,8 +2,13 @@
 
 import { useState, useEffect, useCallback } from "react";
 
+interface HeroSlide {
+  src: string;
+  caption?: string;
+}
+
 interface HeroCarouselProps {
-  images: string[];
+  images: HeroSlide[];
 }
 
 export default function HeroCarousel({ images }: HeroCarouselProps) {
@@ -25,15 +30,24 @@ export default function HeroCarousel({ images }: HeroCarouselProps) {
   return (
     <div className="relative mx-auto my-6 overflow-hidden bg-gray-100 max-w-3xl">
       <div className="relative w-full aspect-[1748/1240]">
-        {images.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt={`Slide ${i + 1}`}
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
+        {images.map((item, i) => (
+          <div
+            key={item.src}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
               i === current ? "opacity-100" : "opacity-0"
             }`}
-          />
+          >
+            <img
+              src={item.src}
+              alt={item.caption || `Slide ${i + 1}`}
+              className="w-full h-full object-contain"
+            />
+            {item.caption && (
+              <div className="absolute bottom-10 left-0 right-0 bg-black/50 text-white py-2 px-4 text-center backdrop-blur-sm">
+                <span className="text-lg font-bold">Convocation of Batch - {item.caption}</span>
+              </div>
+            )}
+          </div>
         ))}
       </div>
 

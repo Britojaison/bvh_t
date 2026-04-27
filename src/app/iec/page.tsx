@@ -28,16 +28,13 @@ export default function InstitutionalEthicsCommitteePage() {
       </header>
 
       {/* Shared Banner */}
-      <div className="w-full relative h-[300px] md:h-[450px] overflow-hidden mt-8 mb-16 rounded-2xl shadow-xl max-w-6xl mx-auto">
-        <img 
-          src="/images/banner.jpeg" 
-          alt="Institutional Ethics Committee" 
-          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-          <p className="text-white text-xl md:text-2xl font-medium max-w-3xl border-l-4 border-[#f58634] pl-6">
-            Ensuring patient safety and scientific integrity across all research endeavors at Bhaktivedanta Hospital.
-          </p>
+      <div className="w-full max-w-7xl mx-auto px-4 mt-8 mb-16">
+        <div className="relative aspect-[21/9] md:aspect-[16/6] overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
+          <img 
+            src="/images/bvh/Institutional Ethics Committee Banner.png" 
+            alt="Institutional Ethics Committee Banner" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 

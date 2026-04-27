@@ -1,12 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { accreditations, introText, youtubeLink } from "@/data/accreditation";
+import { introText, youtubeLink } from "@/data/accreditation";
 
 export default function GovernmentAccreditationPage() {
-  const [activeId, setActiveId] = useState(accreditations[0].id);
-  const active = accreditations.find((a) => a.id === activeId)!;
-
   return (
     <main className="min-h-screen bg-white">
 
@@ -35,59 +31,12 @@ export default function GovernmentAccreditationPage() {
         </div>
       </header>
 
-      {/* Accreditation logos as tabs */}
-      <div className="mt-6">
-        <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-8">
-          {accreditations.map((acc) => (
-            <button
-              key={acc.id}
-              onClick={() => setActiveId(acc.id)}
-              className={`flex flex-col items-center gap-2 p-4 rounded-xl transition-all cursor-pointer ${
-                activeId === acc.id
-                  ? "bg-blue-50 ring-2 ring-primary-blue shadow-md"
-                  : "bg-gray-50 hover:bg-blue-50 hover:shadow"
-              }`}
-            >
-              <img
-                src={acc.logo}
-                alt={`${acc.title} logo`}
-                className="w-20 h-20 md:w-24 md:h-24 object-contain"
-              />
-              <span
-                className={`text-sm md:text-base font-bold ${
-                  activeId === acc.id ? "text-primary-blue" : "text-gray-700"
-                }`}
-              >
-                {acc.title}
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Active accreditation detail */}
-        <div className="bg-gradient-to-b from-[#d6e8f5] to-[#e8f0f8] rounded-2xl p-6 md:p-10">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <img
-              src={active.logo}
-              alt={`${active.title} logo`}
-              className="w-28 h-28 md:w-36 md:h-36 object-contain flex-shrink-0"
-            />
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold text-primary-blue mb-3">
-                {active.title === "NABH"
-                  ? "NABH Accreditation for Ethics Committee (Clinical Trials)"
-                  : active.title === "DCGI"
-                  ? "DCGI-Recognized Ethics Committee for International Trials"
-                  : active.title === "DHR"
-                  ? "Department of Health Research (DHR) Registered Ethics Committee"
-                  : "SIRO Recognition and Form 3CF Approval – Ministry of Science & Technology"}
-              </h2>
-              <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                {active.description}
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="mt-6 max-w-5xl mx-auto px-4">
+        <img
+          src="/images/bvh/Picture16.png"
+          alt="Government Accreditations"
+          className="w-full h-auto object-contain rounded-xl"
+        />
 
         {/* YouTube Video Preview */}
         <div className="mt-12 mb-8">
