@@ -3,7 +3,7 @@ import BannerCarousel from "@/components/BannerCarousel";
 import { clinicalTrialsTabs } from "@/data/clinical-trials";
 import { pharmaTrials } from "@/data/pharma-trials";
 import { hospitalTrials } from "@/data/hospital-trials";
-
+import ContactUsSection from "@/components/ContactUsSection";
 
 const FeasibilityContent = () => (
   <div className="w-full py-8 text-[#565656] space-y-12">
@@ -572,6 +572,7 @@ export default function ClinicalTrialsPage() {
       <BannerCarousel images={clinicalTrialsBannerImages} />
 
       <TabNavigation tabs={customTabs} hideTopBorder />
+      <ContactUsSection />
     </main>
   );
 }

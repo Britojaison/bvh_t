@@ -6,6 +6,7 @@ import TabNavigation from "@/components/TabNavigation";
 import { tabs } from "@/data/pgcr";
 import Link from "next/link";
 import RotatingBanner from "@/components/RotatingBanner";
+import ContactUsSection from "@/components/ContactUsSection";
 
 const convocationImages = [
   { src: "/images/bvh/Convocation of batch - 2020.JPG", caption: "2020" },
@@ -140,7 +141,6 @@ const testimonialVideos = [
   "6Er7FBmlHxQ",
   "cWDWdkPd--g",
   "_Z3KBGcnQPE",
-  "08jHzGWYpi8",
   "q0dUrhDw9Y4",
   "DtSyypgUbVE",
   "0AjDK885HXA"
@@ -1115,6 +1115,7 @@ export default function PGCRPage() {
       <div id="admission-section" className="scroll-mt-20">
         <TabNavigation tabs={customTabs} hideTopBorder={true} />
       </div>
+      <ContactUsSection />
     </main>
   );
 }

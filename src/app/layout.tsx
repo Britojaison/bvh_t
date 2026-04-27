@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Libre_Baskerville } from "next/font/google";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
-import ContactUsSection from "@/components/ContactUsSection";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -27,7 +26,6 @@ export default function RootLayout({
         <SiteHeader />
         <div className="max-w-7xl mx-auto px-2 md:px-4 w-full">
           {children}
-          <ContactUsSection />
         </div>
         <Footer />
       </body>
