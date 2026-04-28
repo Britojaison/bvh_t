@@ -6,7 +6,7 @@ export default function ContactUsSection() {
       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-16 py-12 border-t border-gray-100">
         {/* Left Heading */}
         <div className="flex-shrink-0">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1D3E8B] leading-[0.9] tracking-tighter uppercase">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1D3E8B] leading-[0.9] tracking-[0.03em] uppercase" style={{ fontFamily: "var(--font-roboto), sans-serif" }}>
             CONTACT<br />US
           </h2>
         </div>
@@ -16,8 +16,8 @@ export default function ContactUsSection() {
           {/* Dr. Vijaykumar Gawali */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-bold text-gray-900">Dr. Vijaykumar Gawali (MBBS, D-Stat, PCPV, PGCR)</h3>
-              <p className="text-[13px] text-gray-600 mt-2 leading-relaxed">
+              <h3 className="text-[17px] font-bold text-gray-900" style={{ fontFamily: "var(--font-roboto), sans-serif" }}>Dr. Vijaykumar Gawali (MBBS, D-Stat, PCPV, PGCR)</h3>
+              <p className="text-[13px] text-gray-600 mt-2 leading-relaxed font-medium">
                 Head – Clinical Research & Academics | Medical Superintendent – Centres of Excellence at Bhaktivedanta Hospital & Research Institute, Mumbai<br />
                 NABH Assessor – EC & Clinical Trials Accreditation
               </p>
@@ -47,8 +47,8 @@ export default function ContactUsSection() {
           {/* Dr. Tejasvee Kadam */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-bold text-gray-900">Dr. Tejasvee Kadam (BDS)</h3>
-              <p className="text-[13px] text-gray-600 mt-2 leading-relaxed">
+              <h3 className="text-[17px] font-bold text-gray-900" style={{ fontFamily: "var(--font-roboto), sans-serif" }}>Dr. Tejasvee Kadam (BDS)</h3>
+              <p className="text-[13px] text-gray-600 mt-2 leading-relaxed font-medium">
                 Lead – Clinical Research at Bhaktivedanta Hospital & Reserach Institute
               </p>
             </div>

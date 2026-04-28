@@ -67,7 +67,7 @@ export default function BannerCarousel({ images }: BannerCarouselProps) {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-4 right-8 flex gap-2 z-10">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, i) => (
           <button
             key={i}
