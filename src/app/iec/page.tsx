@@ -29,7 +29,7 @@ export default function InstitutionalEthicsCommitteePage() {
 
       {/* Shared Banner */}
       <div className="w-full max-w-7xl mx-auto px-4 mt-8 mb-16">
-        <div className="relative aspect-[21/9] md:aspect-[16/6] overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
+        <div className="relative aspect-[16/9] md:aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
           <img 
             src="/images/bvh/Institutional Ethics Committee Banner.png" 
             alt="Institutional Ethics Committee Banner" 

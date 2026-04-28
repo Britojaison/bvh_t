@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { TabContent } from "@/data/pgcr";
 
 interface TabNavigationProps {
@@ -10,6 +10,34 @@ interface TabNavigationProps {
 
 export default function TabNavigation({ tabs, hideTopBorder }: TabNavigationProps) {
   const [activeTab, setActiveTab] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeftArrow(scrollLeft > 0);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener("resize", checkScroll);
+    return () => window.removeEventListener("resize", checkScroll);
+  }, [tabs]);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 200;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
+
 
   useEffect(() => {
     const setTabFromHash = () => {
@@ -27,9 +55,30 @@ export default function TabNavigation({ tabs, hideTopBorder }: TabNavigationProp
   return (
     <div className="mt-6">
       {/* Tab bar */}
-      <div className={`${hideTopBorder ? '' : 'border-t-2 border-primary-blue'} bg-white`}>
-        <div className="flex items-center justify-center">
-          <div className="flex overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+      <div className={`${hideTopBorder ? '' : 'border-t-2 border-primary-blue'} bg-white relative group`}>
+        <div className="flex items-center justify-center px-8">
+          {/* Left Arrow */}
+          {showLeftArrow && (
+            <button
+              onClick={() => scroll("left")}
+              className="absolute left-0 z-10 p-2 bg-white/80 backdrop-blur-sm shadow-md rounded-full text-[#f58634] hover:bg-white transition-all cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+          )}
+
+          <div 
+            ref={scrollRef}
+            onScroll={checkScroll}
+            className="flex overflow-x-auto no-scrollbar scroll-smooth" 
+            style={{ 
+              msOverflowStyle: 'none',
+              scrollbarWidth: 'none'
+            }}
+          >
             {tabs.map((tab, index) => (
               <button
                 key={tab.id}
@@ -55,6 +104,19 @@ export default function TabNavigation({ tabs, hideTopBorder }: TabNavigationProp
               </button>
             ))}
           </div>
+
+          {/* Right Arrow */}
+          {showRightArrow && (
+            <button
+              onClick={() => scroll("right")}
+              className="absolute right-0 z-10 p-2 bg-white/80 backdrop-blur-sm shadow-md rounded-full text-[#f58634] hover:bg-white transition-all cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
 

@@ -36,7 +36,7 @@ const carouselImages = [...convocationImages, ...newGraduatesImages, ...alumniIm
 const OverviewContent = () => (
   <div className="flex flex-col gap-8 text-[#565656]">
     {/* Videos Section - Horizontally Scrollable */}
-    <div className="flex overflow-x-auto gap-4 pb-4" style={{ scrollbarWidth: "thin" }}>
+    <div className="flex overflow-x-auto gap-4 pb-4">
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational Course" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/isR8yiYG1XA" title="Medical Research Department" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/D52rEuUBVTE" title="1 Min Enrolment Video" allowFullScreen></iframe>
@@ -195,9 +195,6 @@ const RecentPlacementsContent = () => (
               allowFullScreen
             ></iframe>
           </div>
-          <p className="text-sm font-semibold text-gray-700 line-clamp-2 min-h-[40px] leading-snug px-1">
-            Recent Placements Overview
-          </p>
         </div>
 
         {industryVideos.map((video, index) => (
@@ -210,9 +207,6 @@ const RecentPlacementsContent = () => (
                 allowFullScreen
               ></iframe>
             </div>
-            <p className="text-sm font-semibold text-gray-700 line-clamp-2 min-h-[40px] leading-snug px-1">
-              {video.title}
-            </p>
           </div>
         ))}
       </div>
