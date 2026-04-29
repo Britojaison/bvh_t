@@ -19,12 +19,7 @@ export const clinicalTrialsTabs: TabContent[] = [
     content:
       "Our Clinical Trials Unit features dedicated trial rooms, a certified pharmacy for investigational product storage, calibrated laboratory equipment, ECG and imaging facilities, a 24/7 emergency care unit, and a centralized sample processing lab. We maintain NABL-accredited laboratory services and have a fully functional Ethics Committee (IEC) that meets regularly to review and approve trial protocols. Our IT infrastructure supports EDC systems, e-consent, and remote monitoring capabilities.",
   },
-  {
-    id: "our-team",
-    label: "Trial Site Features",
-    content:
-      "Our clinical trials team comprises experienced Principal Investigators across multiple specialties, trained Sub-Investigators, certified Clinical Research Coordinators (CRCs), a dedicated Pharmacovigilance team, Quality Assurance personnel, and regulatory affairs specialists. All team members undergo regular GCP training and are well-versed in ICH-GCP guidelines, CDSCO regulations, and global regulatory requirements. Our team has collectively managed over 100 clinical trials across various phases and therapeutic areas.",
-  },
+
   {
     id: "contact",
     label: "Clinical Trial SOPs",

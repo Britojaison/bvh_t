@@ -475,31 +475,7 @@ const ClinicalTrialSOPsContent = () => (
   </div>
 );
 
-const TrialSiteFeaturesContent = () => {
-  const videoIds = [
-    "isR8yiYG1XA",
-    "vSuvcDar4bc",
-    "yQ1-j5d3i3U",
-    "JVsh6pAJIQY",
-  ];
 
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {videoIds.map((videoId, index) => (
-          <div key={index} className="aspect-video rounded-xl overflow-hidden shadow-md">
-            <iframe
-              className="w-full h-full"
-              src={`https://www.youtube-nocookie.com/embed/${videoId}?modestbranding=1&rel=0`}
-              title={`Trial Site Feature ${index + 1}`}
-              allowFullScreen
-            ></iframe>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const PatientTestimonialsContent = () => {
   const videoIds = [
@@ -549,7 +525,7 @@ const customTabs = clinicalTrialsTabs.map(t => {
   if (t.id === "therapeutic-areas") return { ...t, content: <PharmaSponsoredTrialsContent /> };
   if (t.id === "infrastructure") return { ...t, content: <HospitalInitiatedTrialsContent /> };
   if (t.id === "contact") return { ...t, content: <ClinicalTrialSOPsContent /> };
-  if (t.id === "our-team") return { ...t, content: <TrialSiteFeaturesContent /> };
+
   if (t.id === "patient-testimonials") return { ...t, content: <PatientTestimonialsContent /> };
   return t;
 });
