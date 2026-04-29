@@ -353,12 +353,16 @@ const PharmaSponsoredTrialsContent = () => (
       <table className="w-full text-left bg-white text-sm">
         <thead className="bg-[#2664A8] text-white sticky top-0 z-10 shadow-sm">
           <tr>
-            <th className="px-4 py-3 font-semibold text-center w-12 shrink-0">Sr.</th>
+            <th className="px-4 py-3 font-semibold text-center w-12 shrink-0">Sr</th>
             <th className="px-4 py-3 font-semibold w-32 shrink-0">Study No.</th>
             <th className="px-4 py-3 font-semibold min-w-[300px]">Title Of Study</th>
-            <th className="px-4 py-3 font-semibold w-40 shrink-0">Principal Investigator</th>
+            <th className="px-4 py-3 font-semibold w-40 shrink-0">Principle Investigator</th>
             <th className="px-4 py-3 font-semibold w-32 shrink-0 border-l border-[#2664A8]/40">Status</th>
-            <th className="px-4 py-3 font-semibold w-32 shrink-0">Department</th>
+            <th className="px-4 py-3 font-semibold w-32 shrink-0">Name of Department</th>
+
+            <th className="px-4 py-3 font-semibold min-w-[150px]">Indications</th>
+            <th className="px-4 py-3 font-semibold min-w-[150px]">Sub-Indications</th>
+
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
@@ -380,6 +384,10 @@ const PharmaSponsoredTrialsContent = () => (
                 </span>
               </td>
               <td className="px-4 py-3 text-gray-600">{trial.department}</td>
+
+              <td className="px-4 py-3 text-gray-600 italic">{trial.indications || '-'}</td>
+              <td className="px-4 py-3 text-gray-600">{trial.subIndications || '-'}</td>
+
             </tr>
           ))}
         </tbody>
@@ -404,19 +412,19 @@ const HospitalInitiatedTrialsContent = () => (
       <table className="w-full text-left bg-white text-sm">
         <thead className="bg-[#2664A8] text-white sticky top-0 z-10 shadow-sm">
           <tr>
-            <th className="px-4 py-3 font-semibold text-center w-12">Sr.</th>
-            <th className="px-4 py-3 font-semibold w-20">Year</th>
+            <th className="px-4 py-3 font-semibold text-center w-12 shrink-0">Sr</th>
+            <th className="px-4 py-3 font-semibold w-20 shrink-0">Study No.</th>
             <th className="px-4 py-3 font-semibold min-w-[300px]">Study Title</th>
-            <th className="px-4 py-3 font-semibold w-40">Principal Investigator</th>
-            <th className="px-4 py-3 font-semibold w-32 border-l border-[#2664A8]/40">Status</th>
-            <th className="px-4 py-3 font-semibold w-24 text-center">Publication</th>
+            <th className="px-4 py-3 font-semibold w-40 shrink-0">Principle Investigator</th>
+            <th className="px-4 py-3 font-semibold w-32 shrink-0 border-l border-[#2664A8]/40">Current Status</th>
+            <th className="px-4 py-3 font-semibold w-24 text-center shrink-0">Publication</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
           {(hospitalTrials as any[]).map((trial: any, idx: number) => (
             <tr key={idx} className="hover:bg-[#f8fbfe] transition-colors">
               <td className="px-4 py-3 text-center text-gray-500 font-medium bg-gray-50/50">{trial.sr}</td>
-              <td className="px-4 py-3 text-gray-600 font-medium">{trial.studyNo}</td>
+              <td className="px-4 py-3 text-gray-600 font-medium whitespace-nowrap">{trial.studyNo}</td>
               <td className="px-4 py-3 text-gray-800 leading-relaxed font-medium">{trial.title}</td>
               <td className="px-4 py-3 font-medium text-[#2664A8]">{trial.pi}</td>
               <td className="px-4 py-3 text-center border-l border-gray-100">
