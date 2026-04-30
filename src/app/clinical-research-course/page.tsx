@@ -185,25 +185,13 @@ const RecentPlacementsContent = () => (
     <div>
       <h4 className="text-2xl font-bold mb-6 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Employee Testimonials</h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-        {/* Main Testimonial Video */}
-        <div className="flex flex-col gap-2">
-          <div className="relative aspect-video overflow-hidden rounded-xl shadow-md border-2 border-transparent hover:border-[#f58634] transition-all group">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/XZJza4GXT2I?start=132"
-              title="Recent Placements Overview"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-
-        {industryVideos.map((video, index) => (
+        {placementVideos.map((videoId, index) => (
           <div key={index} className="flex flex-col gap-2">
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-md border-2 border-transparent hover:border-[#f58634] transition-all group">
               <iframe
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={video.title}
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={`Placement Testimonial ${index + 1}`}
                 allowFullScreen
               ></iframe>
             </div>
@@ -227,8 +215,8 @@ const RecentPlacementsContent = () => (
 );
 
 const AdmissionProcessContent = () => (
-  <div className="flex flex-col items-center w-full py-4 text-[#565656]">
-    <div className="w-full max-w-7xl mb-8">
+  <div className="flex flex-col items-center w-full py-2 text-[#565656]">
+    <div className="w-full max-w-7xl mb-4">
       <img 
         src="/images/bvh/ec.png" 
         alt="Eligibility Criteria" 
@@ -236,7 +224,7 @@ const AdmissionProcessContent = () => (
       />
     </div>
 
-    <div className="w-full max-w-7xl mb-8">
+    <div className="w-full max-w-7xl mb-4">
       <img 
         src="/images/bvh/ap.png" 
         alt="Admission Process" 
@@ -244,7 +232,7 @@ const AdmissionProcessContent = () => (
       />
     </div>
 
-    <div className="w-full max-w-7xl mb-8">
+    <div className="w-full max-w-7xl mb-4">
       <img 
         src="/images/bvh/Fee inclusions.jpg" 
         alt="Fee Inclusions" 
@@ -253,8 +241,8 @@ const AdmissionProcessContent = () => (
     </div>
 
     {/* Informational Videos */}
-    <div className="w-full mt-4 pt-6 border-t border-gray-200">
-      <h3 className="text-3xl font-bold text-[#2664A8] mb-8 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
+    <div className="w-full mt-2 pt-4 border-t border-gray-200">
+      <h3 className="text-3xl font-bold text-[#2664A8] mb-4 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
         Learn More
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
@@ -281,7 +269,7 @@ const AdmissionProcessContent = () => (
       </div>
     </div>
 
-    <div className="w-full mt-10">
+    <div className="w-full mt-6">
       <ApplicationFormContent />
     </div>
   </div>
@@ -293,7 +281,7 @@ const ApplicationFormContent = () => (
       <h2 className="text-white text-2xl font-bold" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Application Form</h2>
     </div>
 
-    <form action="https://formsubmit.co/drvijaykumar.g@bhaktivedantahospital.com" method="POST" encType="multipart/form-data" className="p-6 md:p-10 space-y-8 md:space-y-12 text-sm md:text-base text-gray-700">
+    <form action="https://formsubmit.co/drvijaykumar.g@bhaktivedantahospital.com" method="POST" encType="multipart/form-data" className="p-6 md:p-10 space-y-6 md:space-y-8 text-sm md:text-base text-gray-700">
       <input type="hidden" name="_cc" value="drtejasvee.k@bhaktivedantahospital.com" />
       <input type="hidden" name="_subject" value="New PGCR Application Form Submitted" />
 
