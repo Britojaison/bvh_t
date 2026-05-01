@@ -1089,9 +1089,140 @@ export default function PGCRPage() {
 
       <RotatingBanner />
 
-      <div className="max-w-4xl mx-auto px-4 mt-6">
-        <HeroCarousel images={carouselImages} />
+      <div className="max-w-7xl mx-auto px-4 mt-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
+          {/* Left: Hero Carousel */}
+          <div className="w-full">
+            <HeroCarousel images={carouselImages} />
+          </div>
+
+          {/* Right: Quick Enquiry Form */}
+          <div className="w-full bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            {/* Form Header */}
+            <div className="bg-[#2664A8] px-6 py-4">
+              <h2 className="text-white text-xl font-bold" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
+                Quick Enquiry
+              </h2>
+              <p className="text-blue-100 text-sm mt-1">Fill in your details and we'll get back to you</p>
+            </div>
+
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const formData = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+                
+                try {
+                  submitButton.disabled = true;
+                  submitButton.innerText = 'Submitting...';
+
+                  // Now calling our OWN secure internal API route
+                  const response = await fetch('/api/enquiry', {
+                    method: 'POST',
+                    body: formData,
+                  });
+
+                  if (!response.ok) throw new Error('Submission failed');
+
+                  alert('Thank you! Your enquiry has been submitted successfully.');
+                  form.reset();
+                } catch (error) {
+                  console.error('Error!', error);
+                  alert('Something went wrong. Please try again.');
+                } finally {
+                  submitButton.disabled = false;
+                  submitButton.innerText = 'Submit Enquiry';
+                }
+              }}
+              className="p-6 space-y-4"
+            >
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Full Name <span className="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">E-Mail <span className="text-red-500">*</span></label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email address"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                />
+              </div>
+
+              {/* Mobile + Age side by side */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Mobile Number <span className="text-red-500">*</span></label>
+                  <input
+                    type="tel"
+                    name="mobile"
+                    required
+                    placeholder="e.g. 9876543210"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Age <span className="text-red-500">*</span></label>
+                  <input
+                    type="number"
+                    name="age"
+                    required
+                    min="16"
+                    max="60"
+                    placeholder="Your age"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                  />
+                </div>
+              </div>
+
+              {/* Qualification */}
+              <div>
+                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Qualification <span className="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  name="qualification"
+                  required
+                  placeholder="e.g. B.Pharm, MBBS, BDS..."
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                />
+              </div>
+
+              {/* City */}
+              <div>
+                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">City <span className="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  name="city"
+                  required
+                  placeholder="Enter your city"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm outline-none focus:border-[#2664A8] focus:bg-white transition-colors"
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full bg-[#f58634] hover:bg-[#e0762a] text-white font-bold py-3 rounded-lg text-sm transition-all shadow-md hover:shadow-lg active:scale-[0.98] mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+
+        </div>
       </div>
 
       <div id="admission-section" className="scroll-mt-20">
