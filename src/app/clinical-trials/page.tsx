@@ -312,8 +312,8 @@ const FeasibilityContent = () => (
                 </div>
                 <h4 className="font-bold text-[#2664A8]" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif', fontSize: '24px' }}>Ethics Committee Office</h4>
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
-                <img src="/images/bvh/hi/Picture24.jpg" alt="Ethics" className="w-full h-full object-cover" />
+              <div className="aspect-video w-full flex items-center justify-center overflow-hidden">
+                <img src="/images/bvh/hi/Picture24.jpg" alt="Ethics" className="max-w-full max-h-full object-contain rounded-2xl" />
               </div>
               <ul className="space-y-3 list-disc pl-5 text-gray-700" style={{ fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: '16px' }}>
                 <li>Dedicated Ethics Committee (EC) office</li>
@@ -336,8 +336,8 @@ const FeasibilityContent = () => (
                 </div>
                 <h4 className="font-bold text-[#2664A8]" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif', fontSize: '24px' }}>Access-Controlled Data Centre Unit</h4>
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 aspect-video">
-                <img src="/images/bvh/hi/Picture26.jpg" alt="Data Centre" className="w-full h-full object-cover" />
+              <div className="aspect-video w-full flex items-center justify-center overflow-hidden">
+                <img src="/images/bvh/hi/Picture26.jpg" alt="Data Centre" className="max-w-full max-h-full object-contain rounded-2xl" />
               </div>
               <ul className="space-y-3 list-disc pl-5 text-gray-700" style={{ fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif', fontSize: '16px' }}>
                 <li>Access-controlled data centre unit</li>
