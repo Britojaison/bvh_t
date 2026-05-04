@@ -91,7 +91,7 @@ const FeasibilityContent = () => (
         <div className="group bg-white rounded-[2rem] shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
           <div className="p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100">
                   <img src="/images/bvh/hi/Picture6.png" alt="Storage Unit" className="w-full h-full object-cover" />
                 </div>
@@ -242,13 +242,13 @@ const FeasibilityContent = () => (
         <div className="group bg-white rounded-[2rem] shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
           <div className="p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                  <img src="/images/bvh/hi/Picture17.jpg" alt="International Office" className="w-full h-96 object-cover" />
+                  <img src="/images/bvh/hi/Picture17.jpg" alt="International Office" className="w-full h-64 sm:h-96 object-cover" />
                   <div className="py-2 text-center text-xs font-bold text-[#2664A8]">INTERNATIONAL</div>
                 </div>
                 <div className="flex flex-col rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                  <img src="/images/bvh/hi/Picture19.jpg" alt="Domestic Office" className="w-full h-96 object-cover" />
+                  <img src="/images/bvh/hi/Picture19.jpg" alt="Domestic Office" className="w-full h-64 sm:h-96 object-cover" />
                   <div className="py-2 text-center text-xs font-bold text-[#2664A8]">DOMESTIC</div>
                 </div>
               </div>

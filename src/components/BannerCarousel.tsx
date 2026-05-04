@@ -44,9 +44,9 @@ export default function BannerCarousel({ images }: BannerCarouselProps) {
                 className="w-full h-full object-contain"
               />
               {item.caption && (
-                <div className="absolute bottom-12 left-4 right-4 flex justify-center z-20 pointer-events-none">
-                  <div className="bg-white/90 backdrop-blur-md px-6 py-2 md:px-8 md:py-3 rounded-full shadow-2xl border border-white/60 transform transition-all duration-700 animate-in fade-in slide-in-from-bottom-4">
-                    <h3 className="text-[#2664A8] text-sm md:text-xl font-bold tracking-tight text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
+                <div className="absolute bottom-6 md:bottom-12 left-4 right-4 flex justify-center z-20 pointer-events-none">
+                  <div className="bg-white/90 backdrop-blur-md px-3 py-1 md:px-8 md:py-3 rounded-full shadow-2xl border border-white/60 transform transition-all duration-700 animate-in fade-in slide-in-from-bottom-4">
+                    <h3 className="text-[#2664A8] text-[10px] sm:text-xs md:text-xl font-bold tracking-tight text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
                       {item.caption}
                     </h3>
                   </div>
