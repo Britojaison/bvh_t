@@ -28,7 +28,7 @@ export default function HeroCarousel({ images }: HeroCarouselProps) {
   }, [next]);
 
   return (
-    <div className="relative mx-auto my-6 overflow-hidden bg-gray-100 max-w-3xl">
+    <div className="relative mx-auto overflow-hidden bg-gray-100 w-full rounded-2xl shadow-md">
       <div className="relative w-full aspect-[1748/1240]">
         {images.map((item, i) => (
           <div

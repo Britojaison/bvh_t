@@ -34,9 +34,9 @@ const newGraduatesImages = [
 const carouselImages = [...convocationImages, ...newGraduatesImages, ...alumniImages];
 
 const OverviewContent = () => (
-  <div className="flex flex-col gap-8 text-[#565656]">
+  <div className="flex flex-col gap-8 text-[#565656] pt-4">
     {/* Videos Section - Horizontally Scrollable */}
-    <div className="flex overflow-x-auto gap-4 pb-4">
+    <div className="flex overflow-x-auto gap-4 pb-6">
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational Course" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/isR8yiYG1XA" title="Medical Research Department" allowFullScreen></iframe>
       <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/D52rEuUBVTE" title="1 Min Enrolment Video" allowFullScreen></iframe>
@@ -183,7 +183,7 @@ const RecentPlacementsContent = () => (
 
     {/* Video Gallery */}
     <div>
-      <h4 className="text-2xl font-bold mb-6 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Employee Testimonials</h4>
+      <h4 className="text-2xl font-bold mb-6 font-[family-name:var(--font-libre-baskerville)] text-primary-blue">Employee Testimonials</h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {placementVideos.map((videoId, index) => (
           <div key={index} className="flex flex-col gap-2">
@@ -202,8 +202,8 @@ const RecentPlacementsContent = () => (
 
     {/* Image Gallery */}
     <div className="py-[15px] border-t border-gray-100">
-      <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-[#2664A8]">Our Placed Alumni</h4>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-[5px]">
+      <h4 className="text-2xl font-bold mb-4 font-[family-name:var(--font-libre-baskerville)] text-primary-blue">Our Placed Alumni</h4>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
         {alumniImages.map((imgObj, index) => (
           <div key={index} className="relative overflow-hidden flex items-center justify-center transition-transform hover:z-10 hover:scale-[1.03]">
             <img src={imgObj.src} alt={`Recent Placement ${index + 1}`} className="w-full h-auto object-contain" />
@@ -215,7 +215,7 @@ const RecentPlacementsContent = () => (
 );
 
 const AdmissionProcessContent = () => (
-  <div className="flex flex-col items-center w-full py-2 text-[#565656]">
+  <div className="flex flex-col items-center w-full py-6 text-[#565656]">
     <div className="w-full max-w-7xl mb-4">
       <img 
         src="/images/bvh/ec.png" 
@@ -242,7 +242,7 @@ const AdmissionProcessContent = () => (
 
     {/* Informational Videos */}
     <div className="w-full mt-2 pt-4 border-t border-gray-200">
-      <h3 className="text-3xl font-bold text-[#2664A8] mb-4 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
+      <h3 className="text-3xl font-bold text-primary-blue mb-4 text-center" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
         Learn More
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
@@ -277,7 +277,7 @@ const AdmissionProcessContent = () => (
 
 const ApplicationFormContent = () => (
   <div className="bg-[#eef7fd] rounded-2xl overflow-hidden shadow-md w-full">
-    <div className="bg-[#2664A8] py-4 px-6 md:px-8">
+    <div className="bg-primary-blue py-4 px-6 md:px-8">
       <h2 className="text-white text-2xl font-bold" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Application Form</h2>
     </div>
 
@@ -308,7 +308,7 @@ const ApplicationFormContent = () => (
 
       {/* Applicant Contact details */}
       <div>
-        <h3 className="text-[#2664A8] text-xl font-bold mb-5">Applicant's Contact details</h3>
+        <h3 className="text-primary-blue text-xl font-bold mb-5">Applicant's Contact details</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           <input type="tel" name="applicant_telephone" placeholder="Telephone No" className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8]" />
           <input type="tel" name="applicant_mobile" placeholder="Mobile No *" required className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8]" />
@@ -318,7 +318,7 @@ const ApplicationFormContent = () => (
 
       {/* Guardian Contact details */}
       <div>
-        <h3 className="text-[#2664A8] text-xl font-bold mb-5">Guardian's Contact details</h3>
+        <h3 className="text-primary-blue text-xl font-bold mb-5">Guardian's Contact details</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mb-5 md:mb-8">
           <input type="text" name="guardian_name" placeholder="Father's/Legal Guardian's name *" required className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8]" />
           <input type="tel" name="guardian_telephone" placeholder="Telephone No" className="p-3.5 bg-white rounded border border-gray-200 outline-none focus:border-[#2664A8]" />
@@ -333,19 +333,19 @@ const ApplicationFormContent = () => (
       {/* File Uploads */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
         <div>
-          <label className="block text-[#2664A8] text-sm mb-2 font-medium">Photo *</label>
+          <label className="block text-primary-blue text-sm mb-2 font-medium">Photo *</label>
           <input type="file" name="photo" required className="text-sm w-full bg-white border border-gray-200 p-1.5 rounded cursor-pointer file:cursor-pointer file:border-0 file:bg-gray-100 file:border-r file:border-gray-200 file:px-3 file:py-1 file:mr-3 hover:file:bg-gray-200 transition-all" />
         </div>
         <div>
-          <label className="block text-[#2664A8] text-sm mb-2 font-medium">Copy of Signed Curriculum Vitae *</label>
+          <label className="block text-primary-blue text-sm mb-2 font-medium">Copy of Signed Curriculum Vitae *</label>
           <input type="file" name="cv" required className="text-sm w-full bg-white border border-gray-200 p-1.5 rounded cursor-pointer file:cursor-pointer file:border-0 file:bg-gray-100 file:border-r file:border-gray-200 file:px-3 file:py-1 file:mr-3 hover:file:bg-gray-200 transition-all" />
         </div>
         <div>
-          <label className="block text-[#2664A8] text-sm mb-2 font-medium">Identity Proof *</label>
+          <label className="block text-primary-blue text-sm mb-2 font-medium">Identity Proof *</label>
           <input type="file" name="id_proof" required className="text-sm w-full bg-white border border-gray-200 p-1.5 rounded cursor-pointer file:cursor-pointer file:border-0 file:bg-gray-100 file:border-r file:border-gray-200 file:px-3 file:py-1 file:mr-3 hover:file:bg-gray-200 transition-all" />
         </div>
         <div className="md:col-span-3">
-          <label className="block text-[#2664A8] text-sm mb-2 font-medium">Address Proof *</label>
+          <label className="block text-primary-blue text-sm mb-2 font-medium">Address Proof *</label>
           <input type="file" name="address_proof" required className="text-sm w-full md:w-1/3 bg-white border border-gray-200 p-1.5 rounded cursor-pointer file:cursor-pointer file:border-0 file:bg-gray-100 file:border-r file:border-gray-200 file:px-3 file:py-1 file:mr-3 hover:file:bg-gray-200 transition-all" />
         </div>
       </div>
@@ -354,7 +354,7 @@ const ApplicationFormContent = () => (
       <div className="overflow-x-auto pt-4 pb-4 w-full">
         <table className="w-full border-separate border-spacing-y-3 min-w-[1050px]">
           <thead>
-            <tr className="bg-[#2664A8] text-white">
+            <tr className="bg-primary-blue text-white">
               <th className="px-4 py-3 text-left font-medium text-sm whitespace-nowrap w-[12%]">Qualification</th>
               <th className="px-2 py-3 text-left font-medium text-sm whitespace-nowrap w-[18%]">Year of Passing</th>
               <th className="px-2 py-3 text-left font-medium text-sm whitespace-nowrap w-[24%]">Academic Institution where obtained</th>
@@ -388,22 +388,22 @@ const ApplicationFormContent = () => (
 
       {/* Bank Details for Payment */}
       <div className="bg-white p-8 rounded-xl border-2 border-[#2664A8]/20 shadow-sm text-center">
-        <h3 className="text-[#2664A8] text-2xl font-bold mb-8 mx-auto w-fit border-b-2 border-[#f58634] pb-2">Bank Details for Payment</h3>
+        <h3 className="text-primary-blue text-2xl font-bold mb-8 mx-auto w-fit border-b-2 border-[#f58634] pb-2">Bank Details for Payment</h3>
         <div className="flex flex-col gap-5 text-gray-700 max-w-2xl mx-auto">
           <div className="flex flex-col items-center">
-            <p className="text-lg"><span className="text-[#2664A8] font-bold">Account Name:</span> <span className="text-[#f58634] font-bold">Shri Chaitanya Health and Care Trust</span></p>
+            <p className="text-lg"><span className="text-primary-blue font-bold">Account Name:</span> <span className="text-accent-orange font-bold">Shri Chaitanya Health and Care Trust</span></p>
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-lg"><span className="text-[#2664A8] font-bold">Bank Name:</span> <span className="text-[#f58634] font-bold">Axis Bank Ltd.</span></p>
+            <p className="text-lg"><span className="text-primary-blue font-bold">Bank Name:</span> <span className="text-accent-orange font-bold">Axis Bank Ltd.</span></p>
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-lg"><span className="text-[#2664A8] font-bold">Branch:</span> <span className="text-[#f58634] font-bold">Mira Road, Mumbai</span></p>
+            <p className="text-lg"><span className="text-primary-blue font-bold">Branch:</span> <span className="text-accent-orange font-bold">Mira Road, Mumbai</span></p>
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-lg"><span className="text-[#2664A8] font-bold">Account Number:</span> <span className="text-[#f58634] font-bold">916010017610073</span></p>
+            <p className="text-lg"><span className="text-primary-blue font-bold">Account Number:</span> <span className="text-accent-orange font-bold">916010017610073</span></p>
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-lg"><span className="text-[#2664A8] font-bold">IFSC Code:</span> <span className="text-[#f58634] font-bold">UTIB0000573</span></p>
+            <p className="text-lg"><span className="text-primary-blue font-bold">IFSC Code:</span> <span className="text-accent-orange font-bold">UTIB0000573</span></p>
           </div>
         </div>
       </div>
@@ -412,7 +412,7 @@ const ApplicationFormContent = () => (
       <div className="text-center pt-8 pb-4 flex flex-col items-center">
         <label className="flex items-center justify-center gap-3 mb-8 cursor-pointer text-gray-700 group">
           <div className="relative flex items-center justify-center">
-            <input type="checkbox" name="declaration" required className="w-5 h-5 border-2 border-[#2664A8] rounded appearance-none checked:bg-[#2664A8] checked:border-transparent outline-none transition-colors cursor-pointer peer" />
+            <input type="checkbox" name="declaration" required className="w-5 h-5 border-2 border-[#2664A8] rounded appearance-none checked:bg-primary-blue checked:border-transparent outline-none transition-colors cursor-pointer peer" />
             <svg className="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 5L4.5 8.5L13 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -430,7 +430,7 @@ const ApplicationFormContent = () => (
 );
 
 const CareerOpportunitiesContent = () => (
-  <div className="flex flex-col w-full py-8 text-[#565656] space-y-12">
+  <div className="flex flex-col w-full py-6 text-[#565656] space-y-12">
 
     {/* Career Options Overview Graphic */}
     <div className="w-full flex flex-col justify-center items-center -mt-4 mb-4">
@@ -444,7 +444,7 @@ const CareerOpportunitiesContent = () => (
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
-          <h3 className="text-3xl font-bold text-[#2664A8]" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Research Coordinator (CRC) Role</h3>
+          <h3 className="text-3xl font-bold text-primary-blue" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Research Coordinator (CRC) Role</h3>
         </div>
 
         <h4 className="text-lg font-bold text-gray-800">What does a Clinical Research Coordinator (CRC) do?</h4>
@@ -464,7 +464,7 @@ const CareerOpportunitiesContent = () => (
         <img src="/images/bvh/CRA Role.png" alt="Clinical Research Associate (CRA)" className="w-full rounded-xl shadow-md border border-gray-200" />
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
-        <h3 className="text-3xl font-bold text-[#2664A8] mb-2" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Research Associate (CRA) Explained</h3>
+        <h3 className="text-3xl font-bold text-primary-blue mb-2" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Clinical Research Associate (CRA) Explained</h3>
 
         <h4 className="text-lg font-bold text-gray-800">What is a Clinical Research Associate (CRA)?</h4>
         <p className="leading-relaxed">CRAs conduct on-site and remote visits, verify adherence across sites, review CRFs and source documents, ensure sites submit documents to IRB/ethics committees, and bridge sponsors/CROs and site teams.</p>
@@ -495,7 +495,7 @@ const CareerOpportunitiesContent = () => (
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
-          <h3 className="text-3xl font-bold text-[#2664A8]" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Medical Writer Role</h3>
+          <h3 className="text-3xl font-bold text-primary-blue" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Medical Writer Role</h3>
         </div>
 
         <h4 className="text-lg font-bold text-gray-800">What does an Entry-Level Medical Writer do?</h4>
@@ -519,7 +519,7 @@ const CareerOpportunitiesContent = () => (
       </div>
       <div className="w-full md:w-2/3 flex flex-col space-y-4">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-2">
-          <h3 className="text-3xl font-bold text-[#2664A8]" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Regulatory Affairs Executive Role</h3>
+          <h3 className="text-3xl font-bold text-primary-blue" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>Regulatory Affairs Executive Role</h3>
         </div>
 
         <h4 className="text-lg font-bold text-gray-800">What does a Regulatory Affairs Executive do?</h4>
@@ -561,7 +561,7 @@ const industryVideos = [
 ];
 
 const IndustryVideosContent = () => (
-  <div className="w-full py-8 text-[#565656]">
+  <div className="w-full py-6 text-[#565656]">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
       {industryVideos.map((video, index) => (
         <div key={index} className="flex flex-col">
@@ -788,7 +788,7 @@ const FacultyCard = ({
         {/* Details Section */}
         <div className={`flex-1 pt-8 pb-6 px-6 text-left flex flex-col justify-between h-full transition-all duration-500 ${textPl} ${isExpanded ? 'sm:pl-8 sm:ml-[260px]' : ''}`}>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-[#f58634] mb-1 font-serif leading-tight">
+            <h3 className="text-xl md:text-2xl font-bold text-accent-orange mb-1 font-serif leading-tight">
               {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
             </h3>
             <p className="text-[#1A5276] font-bold text-[12px] uppercase tracking-wider mb-2 leading-snug">
@@ -796,7 +796,7 @@ const FacultyCard = ({
               {shouldTruncateDesignation && !isExpanded && (
                 <button 
                   onClick={() => setIsExpanded(true)}
-                  className="ml-1 text-[#f58634] text-[10px] underline cursor-pointer hover:text-orange-600"
+                  className="ml-1 text-accent-orange text-[10px] underline cursor-pointer hover:text-orange-600"
                 >
                   Show More
                 </button>
@@ -806,14 +806,14 @@ const FacultyCard = ({
 
           <div className={`space-y-2 border-t border-orange-200/50 pt-4 mt-auto transition-all duration-500`}>
             <div className="flex flex-col gap-0.5">
-              <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Academic Qualification</span>
+              <span className="text-accent-orange font-bold text-[9px] uppercase tracking-widest">Academic Qualification</span>
               <span className={`text-gray-700 text-[12px] font-medium leading-relaxed ${isExpanded ? '' : 'line-clamp-2'}`}>{qualification}</span>
             </div>
 
             <div>
               {contact ? (
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-[#f58634] font-bold text-[9px] uppercase tracking-widest">Connect Directly / Prof. Profile</span>
+                  <span className="text-accent-orange font-bold text-[9px] uppercase tracking-widest">Connect Directly / Prof. Profile</span>
                   <p className={`text-gray-600 text-[11px] break-words leading-relaxed font-medium ${isExpanded ? '' : 'line-clamp-1'}`}>
                     {contact}
                   </p>
@@ -826,7 +826,7 @@ const FacultyCard = ({
             {isExpanded && (
               <button 
                 onClick={() => setIsExpanded(false)}
-                className="mt-4 text-[#f58634] text-[11px] font-bold uppercase tracking-widest hover:text-orange-600 cursor-pointer flex items-center gap-1"
+                className="mt-4 text-accent-orange text-[11px] font-bold uppercase tracking-widest hover:text-orange-600 cursor-pointer flex items-center gap-1"
               >
                 Show Less
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -842,8 +842,8 @@ const FacultyCard = ({
 };
 
 const FacultyContent = () => (
-  <div className="w-full py-20 text-[#565656]">
-    <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-32 gap-x-32 w-full max-w-[1536px] mx-auto px-6 md:px-16">
+  <div className="w-full py-12 text-[#565656]">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-y-12 gap-x-12 w-full max-w-7xl mx-auto px-6 md:px-16">
       {/* 1. Dr. Ajay Sankhe */}
       <FacultyCard
         name="Dr. Ajay Sankhe"
@@ -1056,8 +1056,8 @@ export default function PGCRPage() {
     <main className="min-h-screen bg-white">
 
 
-      <header className="text-center pt-8 pb-2">
-        <h1 className="text-2xl md:text-4xl font-bold text-[#2664A8] mb-3">
+      <header className="text-center pt-8 pb-6">
+        <h1 className="text-2xl md:text-4xl font-bold text-primary-blue mb-3">
           Clinical Research Course
         </h1>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mt-2">
@@ -1100,7 +1100,7 @@ export default function PGCRPage() {
           {/* Right: Quick Enquiry Form */}
           <div className="w-full bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
             {/* Form Header */}
-            <div className="bg-[#2664A8] px-6 py-4">
+            <div className="bg-primary-blue px-6 py-4">
               <h2 className="text-white text-xl font-bold" style={{ fontFamily: 'var(--font-libre-baskerville), Georgia, serif' }}>
                 Quick Enquiry
               </h2>
@@ -1140,7 +1140,7 @@ export default function PGCRPage() {
             >
               {/* Name */}
               <div>
-                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Full Name <span className="text-red-500">*</span></label>
+                <label className="block text-sm font-semibold text-primary-blue mb-1.5">Full Name <span className="text-red-500">*</span></label>
                 <input
                   type="text"
                   name="name"
@@ -1152,7 +1152,7 @@ export default function PGCRPage() {
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">E-Mail <span className="text-red-500">*</span></label>
+                <label className="block text-sm font-semibold text-primary-blue mb-1.5">E-Mail <span className="text-red-500">*</span></label>
                 <input
                   type="email"
                   name="email"
@@ -1165,7 +1165,7 @@ export default function PGCRPage() {
               {/* Mobile + Age side by side */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Mobile Number <span className="text-red-500">*</span></label>
+                  <label className="block text-sm font-semibold text-primary-blue mb-1.5">Mobile Number <span className="text-red-500">*</span></label>
                   <input
                     type="tel"
                     name="mobile"
@@ -1175,7 +1175,7 @@ export default function PGCRPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Age <span className="text-red-500">*</span></label>
+                  <label className="block text-sm font-semibold text-primary-blue mb-1.5">Age <span className="text-red-500">*</span></label>
                   <input
                     type="number"
                     name="age"
@@ -1190,7 +1190,7 @@ export default function PGCRPage() {
 
               {/* Qualification */}
               <div>
-                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">Qualification <span className="text-red-500">*</span></label>
+                <label className="block text-sm font-semibold text-primary-blue mb-1.5">Qualification <span className="text-red-500">*</span></label>
                 <input
                   type="text"
                   name="qualification"
@@ -1202,7 +1202,7 @@ export default function PGCRPage() {
 
               {/* City */}
               <div>
-                <label className="block text-sm font-semibold text-[#2664A8] mb-1.5">City <span className="text-red-500">*</span></label>
+                <label className="block text-sm font-semibold text-primary-blue mb-1.5">City <span className="text-red-500">*</span></label>
                 <input
                   type="text"
                   name="city"

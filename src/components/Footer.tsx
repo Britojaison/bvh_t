@@ -79,7 +79,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://bhaktivedantahospital.com/faqs" className="text-gray-400 hover:text-white transition-colors text-[15px]">
+                <a href="https://bhaktivedantahospital.com/faqs" className="text-[#565656] hover:text-[#2664A8] transition-colors text-[15px]">
                   FAQs
                 </a>
               </li>
