@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const GTM_ID = "GTM-5LV48KQL";
-const GA_ID = "G-SSMEWKNM3K";
+const GA_ID = "G-9BNCC1F0WQ";
 
 export default function RootLayout({
   children,
