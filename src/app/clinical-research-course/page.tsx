@@ -35,14 +35,22 @@ const carouselImages = [...convocationImages, ...newGraduatesImages, ...alumniIm
 
 const OverviewContent = () => (
   <div className="flex flex-col gap-8 text-[#565656] pt-4">
-    {/* Videos Section - Horizontally Scrollable */}
-    <div className="flex overflow-x-auto gap-4 pb-6">
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational Course" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/isR8yiYG1XA" title="Medical Research Department" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/D52rEuUBVTE" title="1 Min Enrolment Video" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/IvtK9KAqQtE" title="Student Experience Video" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/TEnwpX3W-NE" title="Clinical Research Course India" allowFullScreen></iframe>
-      <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/Ah9l5Emfyyw" title="Phases of Clinical Trial" allowFullScreen></iframe>
+    {/* Featured Overview Video & Gallery */}
+    <div className="space-y-4">
+      <h3 className="text-xl sm:text-2xl font-bold text-primary-blue font-[family-name:var(--font-libre-baskerville)]">
+        Watch: How PGCR prepares you for real clinical research practice
+      </h3>
+
+      {/* Videos Section - Horizontally Scrollable */}
+      <div className="flex overflow-x-auto gap-4 pb-6">
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/XGSGnPCm4wY" title="Watch: How PGCR prepares you for real clinical research practice" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/HE3vn0wAKjU" title="Investigational Course" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/isR8yiYG1XA" title="Medical Research Department" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/D52rEuUBVTE" title="1 Min Enrolment Video" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/IvtK9KAqQtE" title="Student Experience Video" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/TEnwpX3W-NE" title="Clinical Research Course India" allowFullScreen></iframe>
+        <iframe className="w-[320px] h-[180px] sm:w-[480px] sm:h-[270px] flex-shrink-0 rounded-lg shadow-md border-2 border-transparent hover:border-[#f58634] transition-colors" src="https://www.youtube.com/embed/Ah9l5Emfyyw" title="Phases of Clinical Trial" allowFullScreen></iframe>
+      </div>
     </div>
 
     <div className="space-y-6">
