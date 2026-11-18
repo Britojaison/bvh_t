@@ -594,7 +594,7 @@ const facultyData = [
     name: "Dr. Ajay Sankhe",
     qualification: "MBBS, MD (Pediatrics)",
     designation: "Director & Sr. Consultant – Pediatrics & Neonatology",
-    image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg",
+    image: "/images/Clinical Research Course/faculty/Dr. Ajay Sankhe.png",
     customScale: 1.1,
     translateY: 10
   },
@@ -603,7 +603,7 @@ const facultyData = [
     qualification: "MBBS, D-Stat, PCPV, PGCR",
     designation: "Head – Clinical Research & Academics, Medical Superintendent – Centres of Excellence",
     contact: "NABH Assessor – Ethics Committee (EC) & Clinical Trials Accreditation",
-    image: "/images/logo/Project Quotation Background from Dr. Vijay.png",
+    image: "/images/Clinical Research Course/faculty/Dr. Vijaykumar Gawali.png",
     customScale: 1.45,
     translateY: 45
   },
@@ -752,15 +752,13 @@ const FacultyCard = ({
   designation,
   image,
   contact,
-  customScale = 1,
-  translateY = 0,
-  cardMaxWidth = "580px",
-  cardHeight = "280px",
-  imgWidth = "260px",
-  imgHeight = "380px",
-  imgLeft = "-left-4",
-  textPl = "sm:pl-[320px]",
-}: any) => {
+}: {
+  name: string;
+  qualification: string;
+  designation: string;
+  image: string;
+  contact?: string;
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   // Truncate long designation if not expanded
@@ -772,29 +770,27 @@ const FacultyCard = ({
   return (
     <div 
       className={`relative group w-full mx-auto xl:mx-0 transition-all duration-500 ${isExpanded ? 'z-50' : ''}`} 
-      style={{ maxWidth: cardMaxWidth, height: isExpanded ? 'auto' : cardHeight, minHeight: cardHeight }}
+      style={{ maxWidth: "580px" }}
     >
       {/* Card Background Shadow Box */}
       <div className={`absolute inset-0 translate-x-4 translate-y-4 bg-[#FDEBD0]/30 rounded-[32px] -z-10 transition-all duration-500 ${isExpanded ? 'scale-105 opacity-0' : 'group-hover:translate-x-6 group-hover:translate-y-6'}`} />
 
-      {/* Main Card */}
-      <div className={`flex flex-col sm:flex-row h-full bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] relative items-center justify-end overflow-visible transition-all duration-500 ${isExpanded ? 'shadow-2xl border-orange-300 ring-4 ring-orange-100' : ''}`}>
+      {/* Main Card — portrait sits inside the rounded card, left side, full height */}
+      <div
+        className={`relative flex bg-[#FEF8F0] rounded-[32px] border border-[#FDEBD0] overflow-hidden transition-all duration-500 ${isExpanded ? 'shadow-2xl border-orange-300 ring-4 ring-orange-100' : ''}`}
+        style={{ minHeight: "280px", height: isExpanded ? "auto" : "280px" }}
+      >
 
-        {/* Faculty Image - Popping Out */}
-        <div
-          className={`w-full sm:absolute sm:bottom-0 flex-shrink-0 flex items-end justify-center pointer-events-none overflow-visible transition-all duration-500 ${imgLeft} ${isExpanded ? 'opacity-20 sm:opacity-100 sm:scale-110 sm:-translate-x-4' : ''}`}
-          style={{ width: "100%", maxWidth: imgWidth, height: imgHeight, clipPath: "inset(-100% -100% 0 -100%)" }}
-        >
+        <div className="pointer-events-none absolute top-0 left-0 h-[280px] w-[46%] flex items-end justify-center">
           <img
             src={image}
             alt={name}
-            className="h-full w-auto object-contain transition-transform duration-700 origin-bottom"
-            style={{ transform: `scale(${customScale}) translateY(${translateY}px)` }}
+            className="h-full w-auto max-w-full object-contain object-bottom"
           />
         </div>
 
         {/* Details Section */}
-        <div className={`flex-1 pt-8 pb-6 px-6 text-left flex flex-col justify-between h-full transition-all duration-500 ${textPl} ${isExpanded ? 'sm:pl-8 sm:ml-[260px]' : ''}`}>
+        <div className="relative z-10 flex min-h-[280px] flex-1 flex-col justify-between py-6 pr-5 pl-[48%] text-left sm:pr-6">
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-accent-orange mb-1 font-serif leading-tight">
               {name.replace(/^(Dr\.\s*\S+)/, (match: string) => match.replace(/\s/g, '\u00A0'))}
@@ -857,9 +853,7 @@ const FacultyContent = () => (
         name="Dr. Ajay Sankhe"
         qualification="MBBS, MD (Pediatrics)"
         designation="Director & Sr. Consultant – Pediatrics & Neonatology"
-        image="/images/Clinical Research Course/faculty/Dr. Ajay Sankhe .jpg"
-        customScale={1.1}
-        translateY={10}
+        image="/images/Clinical Research Course/faculty/Dr. Ajay Sankhe.png"
       />
 
       {/* 2. Dr. Vijaykumar Gawali */}
@@ -868,10 +862,7 @@ const FacultyContent = () => (
         qualification="MBBS, D-Stat, PCPV, PGCR"
         designation="Head – Clinical Research & Academics, Medical Superintendent – Centres of Excellence"
         contact="NABH Assessor – Ethics Committee (EC) & Clinical Trials Accreditation"
-        image="/images/logo/Project Quotation Background from Dr. Vijay.png"
-        customScale={1.45}
-        translateY={45}
-        cardMaxWidth="600px" 
+        image="/images/Clinical Research Course/faculty/Dr. Vijaykumar Gawali.png"
       />
 
       {/* 3. Dr. Komal Dalal */}
@@ -880,8 +871,6 @@ const FacultyContent = () => (
         qualification="MBBS, DGO, PGDPC"
         designation="Clinical Research Advisor"
         image="/images/Clinical Research Course/faculty/Dr. Komal Dalal.png"
-        customScale={1.15}
-        translateY={10}
       />
 
       {/* 4. Dr. Nanasaheb Memane */}
@@ -890,8 +879,6 @@ const FacultyContent = () => (
         qualification="BAMS, MS (Ayurveda)"
         designation="HOD – Ayurveda"
         image="/images/Clinical Research Course/faculty/Dr. Nanasaheb Memane (1).png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 5. Dr. Sivaprasad Gourabathini */}
@@ -900,8 +887,6 @@ const FacultyContent = () => (
         qualification="MBBS, MS, MCh (Urology)"
         designation="Consultant Urologist"
         image="/images/Clinical Research Course/faculty/Dr. Siva Prasad Gourabathini.png"
-        customScale={1.05}
-        translateY={10}
       />
 
       {/* 6. Dr. Girish Rathod */}
@@ -910,8 +895,6 @@ const FacultyContent = () => (
         qualification="MBBS, MS (Orthopaedics)"
         designation="HOD – Orthopaedics"
         image="/images/Clinical Research Course/faculty/Dr. Girish Rathod.png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 7. Dr. Nirmal Raut */}
@@ -920,8 +903,6 @@ const FacultyContent = () => (
         qualification="MD, ECMO, PDCR"
         designation="Consultant Medical Oncology"
         image="/images/Clinical Research Course/faculty/Dr. Nirmal Raut.png"
-        customScale={1.05}
-        translateY={15}
       />
 
       {/* 8. Dr. Ajay Godse */}
@@ -930,8 +911,6 @@ const FacultyContent = () => (
         qualification="MD, FAASM"
         designation="Consultant Pulmonologist & Sleep Specialist"
         image="/images/Clinical Research Course/faculty/Dr. Ajay Godse.png"
-        customScale={1.0}
-        translateY={15}
       />
 
       {/* 9. Dr. Ameya Joshi */}
@@ -940,8 +919,6 @@ const FacultyContent = () => (
         qualification="MBBS, MD, DNB (Endocrinology)"
         designation="Consultant Endocridologist"
         image="/images/Clinical Research Course/faculty/Dr. Ameya Joshi.png"
-        customScale={1.05}
-        translateY={10}
       />
 
       {/* 10. Dr. Shubham Jain */}
@@ -950,8 +927,6 @@ const FacultyContent = () => (
         qualification="DM, MD, MBBS"
         designation="Consultant Gastroenterologist"
         image="/images/Clinical Research Course/faculty/Dr. Shubham Jain.png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 11. Dr. Jyotsna Zope */}
@@ -960,8 +935,6 @@ const FacultyContent = () => (
         qualification="MD, DNB (Nephrology)"
         designation="Consultant Nephrologist"
         image="/images/Clinical Research Course/faculty/Dr. Jyotsna D Zope.png"
-        customScale={1.05}
-        translateY={15}
       />
 
       {/* 12. Dr. Kirti Mutreja */}
@@ -970,8 +943,6 @@ const FacultyContent = () => (
         qualification="BHMS, MD (Hom)"
         designation="Integrated Medicine Consultant"
         image="/images/Clinical Research Course/faculty/Dr. Kirti Mutreja.png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 13. Dr. Sandeep Patil */}
@@ -980,8 +951,6 @@ const FacultyContent = () => (
         qualification="MD, DNB, DM (Cardiology)"
         designation="HOD – Cardiology"
         image="/images/Clinical Research Course/faculty/Dr. Sandeep Patil.png"
-        customScale={1.05}
-        translateY={15}
       />
 
       {/* 14. Dr. Sandeep Garg */}
@@ -990,8 +959,6 @@ const FacultyContent = () => (
         qualification="MD, DNB"
         designation="Paediatric Cardiologist"
         image="/images/Clinical Research Course/faculty/Dr. Sandeep Garg.png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 15. Dr. Yogesh Patidar */}
@@ -1000,8 +967,6 @@ const FacultyContent = () => (
         qualification="MD, DM (Neurology)"
         designation="Consultant Neurologist"
         image="/images/Clinical Research Course/faculty/Dr. Yogesh Patidar.png"
-        customScale={1.1}
-        translateY={15}
       />
 
       {/* 16. Dr. Kamalapriya Thiyagarajan */}
@@ -1010,8 +975,6 @@ const FacultyContent = () => (
         qualification="MD, DGO"
         designation="Consultant – Obstetrics & Gynaecology"
         image="/images/Clinical Research Course/faculty/Dr. Kamalpriya Thiyagarajan.png"
-        customScale={1.1}
-        translateY={20}
       />
 
       {/* 17. Dr. Saurabh Sadekar */}
@@ -1020,8 +983,6 @@ const FacultyContent = () => (
         qualification="MD, DNB (Neurology)"
         designation="Consultant Neurologist"
         image="/images/Clinical Research Course/faculty/Dr. Saurabh Sadekar.png"
-        customScale={0.9}
-        translateY={20}
       />
 
       {/* 18. Dr. Dhaval Dalal */}
@@ -1030,8 +991,6 @@ const FacultyContent = () => (
         qualification="MBBS, MD"
         designation="HOD – Integrated Medicine"
         image="/images/Clinical Research Course/faculty/Dr. Dhaval Dalal.png"
-        customScale={1.1}
-        translateY={10}
       />
 
       {/* 19. Dr. Tejasvee Kadam */}
@@ -1041,8 +1000,6 @@ const FacultyContent = () => (
         designation="Lead – Clinical Research"
         image="/images/Clinical Research Course/faculty/Dr. Tejasvee Kadam.png"
         contact="+91 98190 82833 | drtejasvee.k@bhaktivedantahospital.com"
-        customScale={1.15}
-        translateY={5}
       />
     </div>
   </div>
